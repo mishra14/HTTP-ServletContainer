@@ -2,8 +2,11 @@ package edu.upenn.cis.cis455.thread;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
 public class ThreadPool {
 	
+	private static final Logger logger= Logger.getLogger(ThreadPool.class);
 	private String threadPoolName;
 	private ArrayList<ServerThread> threadPool;
 	private int threadCount;
@@ -46,8 +49,8 @@ public class ThreadPool {
 	}
 	public void displayPool()
 	{
-		System.out.println("Name - "+threadPoolName);
-		System.out.println("Size - "+threadPool.size());
+		logger.info("Name - "+threadPoolName);
+		logger.info("Size - "+threadPool.size());
 		/*for(ServerThread serverThread:threadPool)
 		{
 			System.out.println(serverThread.getId());

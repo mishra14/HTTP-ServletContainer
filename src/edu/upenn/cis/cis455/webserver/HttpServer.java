@@ -22,7 +22,7 @@ public class HttpServer {
 		
 		if(args.length !=ARGS_LENGTH)
 		{
-			System.out.println("Invalid number of arguments\nAnkit Mishra\nmankit");
+			logger.warn("Invalid number of arguments\nAnkit Mishra\nmankit");
 			System.exit(1);
 		}
 		
@@ -50,7 +50,7 @@ public class HttpServer {
 				else	//TODO no threads free
 				{
 					//send 500 to client
-					System.out.println("No threads free; handle this");
+					logger.warn("No threads free; handle this");
 				}
 			} 
 			

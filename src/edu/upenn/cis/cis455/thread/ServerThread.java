@@ -8,6 +8,8 @@ import java.net.Socket;
 
 import org.apache.log4j.Logger;
 
+import edu.upenn.cis.cis455.http.HttpRequest;
+
 public class ServerThread extends Thread {
 	
 	private static final Logger logger = Logger.getLogger(ServerThread.class);
@@ -54,14 +56,23 @@ public class ServerThread extends Thread {
 						String inputData, outputData;
 						PrintWriter out = new PrintWriter(socket.getOutputStream(),true);
 						BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-						while((inputData=in.readLine()) != null)
+						HttpRequest httpRequest=parseRequest(in);
+						if(httpRequest==null)
 						{
-							System.out.println(inputData);
+							//TODO respond with error code 400
+						}
+						else if(!httpRequest.isValidRequest())
+						{
+							//TODO respond with error code 400
+						}
+						else
+						{
+							System.out.println(httpRequest);
 						}
 					}
 					else 	//error in socket log it and retry
 					{
-						System.out.println("Error in getting socket; trying again - "+id);
+						logger.warn("Error in getting socket; trying again - "+id);
 					}
 					if(!parentThreadPool.getThreadPool().contains(this))
 					{
@@ -70,11 +81,32 @@ public class ServerThread extends Thread {
 					}
 				}
 			} catch (InterruptedException e) {
-				System.out.println("Interrupted Exception while waiting on socket "+e);
+				logger.error("Interrupted Exception while waiting on socket ",e);
 			} catch (IOException e) {
-				System.out.println("IOException while reading from socket "+e);
+				logger.error("IOException while reading from socket ",e);
 			}
 		}
+	}
+
+	private HttpRequest parseRequest(BufferedReader in) throws IOException {
+
+		String inLineString;
+		StringBuilder requestString=null;
+		HttpRequest httpRequest=null;
+		while(!((inLineString=in.readLine()).equals("")))
+		{
+			if(requestString==null)	//the request was valid
+			{
+				requestString = new StringBuilder();
+			}
+			requestString.append(inLineString+"\n");
+		}
+		if(requestString!=null)	//the request was valid
+		{
+			httpRequest=new HttpRequest(requestString.toString());
+		}
+		
+		return httpRequest;
 	}
 
 }

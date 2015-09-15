@@ -1,0 +1,5 @@
+IO exception while opening serversocket
+IO exception while opening serversocket
+java.net.SocketException: Socket is closed
+	at java.net.ServerSocket.accept(ServerSocket.java:494)
+	at edu.upenn.cis.cis455.webserver.HttpServer.main(HttpServer.java:38)

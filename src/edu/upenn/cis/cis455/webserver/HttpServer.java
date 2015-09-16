@@ -3,20 +3,22 @@ package edu.upenn.cis.cis455.webserver;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
-import edu.upenn.cis.cis455.thread.ServerThread;
-import edu.upenn.cis.cis455.thread.ThreadPool;
+import edu.upenn.cis.cis455.queue.Queue;
+import edu.upenn.cis.cis455.thread.DaemonThread;
 
 public class HttpServer {
 
 	private static final Logger logger = Logger.getLogger(HttpServer.class);
 	private static final int ARGS_LENGTH=2;
+	private static final int QUEUE_LENGTH=10;
+	private static final int THREAD_POOL_SIZE=2;
 	private static int port;
 	private static String homeDirectory;
-	private static ThreadPool threadPool = new ThreadPool(100,"ThreadPool");
+	private static Queue requestQueue;
+	private static DaemonThread daemonThread;
 	
 	public static void main(String[] args) {
 		
@@ -25,10 +27,12 @@ public class HttpServer {
 			logger.warn("Invalid number of arguments\nAnkit Mishra\nmankit");
 			System.exit(1);
 		}
-		
-		threadPool.startThreadPool();
+		int i=0;
 		port=Integer.valueOf(args[0]);
 		homeDirectory=args[1];
+		requestQueue = new Queue(QUEUE_LENGTH);
+		daemonThread = new DaemonThread(requestQueue,THREAD_POOL_SIZE, homeDirectory);
+		daemonThread.start();	//start daemon thread that starts the thread pool
 		ServerSocket daemonSocket = null;
 		try 
 		{
@@ -36,24 +40,17 @@ public class HttpServer {
 			while(true)
 			{	
 				Socket socket=daemonSocket.accept();
-				if(threadPool.getThreadPool().size()>0)
+				if(requestQueue.enqueue(socket)==0)
 				{
-					threadPool.displayPool();
-					ServerThread serverThread=threadPool.getThreadPool().remove(0);
-					threadPool.displayPool();
-					synchronized(serverThread)
-					{
-						serverThread.setSocket(socket);
-						serverThread.notify();
-					}
+					//thread pool and the request queue are full
+					//send a 500 error message
+					logger.warn("Queue is also full; handle this");
 				}
-				else	//TODO no threads free
+				else
 				{
-					//send 500 to client
-					logger.warn("No threads free; handle this");
+					logger.info("Entered request - " +(++i) );
 				}
 			} 
-			
 		}
 		catch (IOException e){
 				logger.error("IO exception while opening serversocket",e);

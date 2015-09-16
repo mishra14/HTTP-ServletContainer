@@ -10,12 +10,14 @@ public class ThreadPool {
 	private String threadPoolName;
 	private ArrayList<ServerThread> threadPool;
 	private int threadCount;
+	private String homeDirectory;
 	
-	public ThreadPool(int threadCount, String threadPoolName) {
+	public ThreadPool(int threadCount, String threadPoolName, String homeDirectory) {
 		super();
 		this.threadPool = new ArrayList<ServerThread>();
 		this.threadCount = threadCount;
 		this.threadPoolName = threadPoolName;
+		this.homeDirectory = homeDirectory;
 	}
 	
 	public synchronized ArrayList<ServerThread> getThreadPool() {
@@ -39,7 +41,7 @@ public class ThreadPool {
 	{
 		for(int i=0;i<threadCount;i++)
 		{
-			threadPool.add(new ServerThread(i,this));
+			threadPool.add(new ServerThread(i,this, homeDirectory));
 		}
 		System.out.println("Thread pool has "+threadPool.size()+" free threads");
 		for(ServerThread thread : threadPool)

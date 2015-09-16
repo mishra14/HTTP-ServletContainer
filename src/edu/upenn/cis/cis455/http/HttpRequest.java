@@ -6,14 +6,13 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 /*
- * GET /test HTTP/1.1 
- * Host: localhost:8080
- * User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
- * Accept: text/html,application/xhtml+xml,application/xml;q=0.9;q=0.8
- * Accept-Language: en-US,en;q=0.5
- * Accept-Encoding: gzip, deflate
- * Connection: keep-alive
- * 
+ GET /test HTTP/1.1 
+ Host: localhost:8080
+ User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+ Accept: text/html,application/xhtml+xml,application/xml;q=0.9;q=0.8
+ Accept-Language: en-US,en;q=0.5
+ Accept-Encoding: gzip, deflate
+ Connection: keep-alive 
  */
 public class HttpRequest 
 {
@@ -39,10 +38,10 @@ public class HttpRequest
 		}
 		else
 		{
-			operation=firstLineSplit[0];
-			resource=firstLineSplit[1];
-			protocol=firstLineSplit[2].split("/")[0];
-			version=firstLineSplit[2].split("/")[1];
+			operation=firstLineSplit[0].trim();
+			resource=firstLineSplit[1].trim();
+			protocol=firstLineSplit[2].split("/")[0].trim();
+			version=firstLineSplit[2].split("/")[1].trim();
 		}
 		for(int i=1;i<requestSplit.length;i++)
 		{
@@ -52,8 +51,12 @@ public class HttpRequest
 			}
 			else
 			{
-				headers.put(requestSplit[i].split(":")[0], requestSplit[i].split(":")[1]);
+				headers.put(requestSplit[i].split(":")[0].trim().toLowerCase(), requestSplit[i].split(":")[1].trim());
 			}
+		}
+		if(!headers.containsKey("host"))
+		{
+			//invalid http 1.1 request; respond with 400 error;
 		}
 	}
 

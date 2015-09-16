@@ -85,3 +85,739 @@ Name - ThreadPool
 Size - 99
 invalid request - fnwkfnqwkfqw
 
+Name - ThreadPool
+Size - 100
+Name - ThreadPool
+Size - 99
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+No threads free; handle this
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+invalid request - helo
+
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+invalid request - [D
+
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Entered request - 1
+Removed request
+Entered request - 1
+Removed request
+Entered request - 2
+Removed request
+Entered request - 3
+Removed request
+Entered request - 1
+Removed request
+Entered request - 2
+Removed request
+Entered request - 3
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 3
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 4
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 5
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 6
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 7
+Entered request - 8
+Entered request - 9
+Entered request - 10
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on thread pool
+Daemon thread waking on thread pool
+Removed request
+Daemon thread sleeping on thread pool
+Daemon thread waking on thread pool
+Removed request
+Daemon thread sleeping on thread pool
+Daemon thread waking on thread pool
+Removed request
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Thread recovering from error 0
+Thread recovering from error - synchronized 0
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Thread recovering from error 1
+Thread recovering from error - synchronized 1
+Entered request - 3
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Thread recovering from error 0
+Thread recovering from error - synchronized 0
+Entered request - 2
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Thread recovering from error 1
+Thread recovering from error - synchronized 1
+Entered request - 3
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Thread recovering from error 0
+Thread recovering from error - synchronized 0
+Daemon thread sleeping on request queue
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 1
+Thread recovering from error 0
+Thread recovering from error - synchronized 0
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+invalid request - quit
+
+Entered request - 2
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 3
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Removed request
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:118)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Thread recovering from error 0
+Thread recovering from error - synchronized 0
+Thread recovering from error - finally 0
+Entered request - 2
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 3
+Entered request - 4
+Entered request - 5
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Removed request
+Daemon thread sleeping on thread pool
+Thread recovering from error 0
+Thread recovering from error - synchronized 0
+Thread recovering from error - finally 0
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Removed request
+Daemon thread sleeping on thread pool
+Thread recovering from error 0
+Thread recovering from error - synchronized 0
+Thread recovering from error - finally 0
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Removed request
+Thread recovering from error 1
+Thread recovering from error - synchronized 1
+Thread recovering from error - finally 1
+Thread recovering from error 0
+Thread recovering from error - synchronized 0
+Thread recovering from error - finally 0
+Daemon thread sleeping on request queue
+Entered request - 6
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 2
+Daemon thread waking on request queue
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Removed request
+Daemon thread sleeping on request queue
+Entered request - 3
+Daemon thread waking on request queue
+Daemon thread sleeping on thread pool
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Daemon thread sleeping on request queue
+Entered request - 3
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on thread pool
+Entered request - 4
+Entered request - 5
+Entered request - 6
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Removed request
+Daemon thread sleeping on thread pool
+Entered request - 7
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Daemon thread sleeping on request queue
+Entered request - 3
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on thread pool
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+IO exception while opening serversocket
+java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:376)
+	at java.net.ServerSocket.bind(ServerSocket.java:376)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:128)
+	at edu.upenn.cis.cis455.webserver.HttpServer.main(HttpServer.java:40)
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Passing request to thread 0
+Daemon thread sleeping on request queue
+Daemon thread waking on request queue
+Removed request
+Entered request - 2
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Passing request to thread 1
+Daemon thread sleeping on request queue
+Entered request - 3
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on thread pool
+Entered request - 4
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Passing request to thread 0
+Removed request
+Daemon thread sleeping on thread pool
+Entered request - 5
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Passing request to thread 1
+Removed request
+Daemon thread sleeping on thread pool
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Passing request to thread 0
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Passing request to thread 0
+Daemon thread sleeping on request queue
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Passing request to thread 1
+Daemon thread sleeping on request queue
+Entered request - 3
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on thread pool
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Passing request to thread 0
+Daemon thread sleeping on request queue
+Entered request - 4
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on thread pool
+Entered request - 5
+Entered request - 6
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Passing request to thread 1
+Removed request
+Daemon thread sleeping on thread pool
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Passing request to thread 0
+Removed request
+Daemon thread sleeping on thread pool
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Daemon thread sleeping on request queue
+Entered request - 3
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on thread pool
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Daemon thread waking on thread pool
+Name - ThreadPool
+Size - 1
+Name - ThreadPool
+Size - 0
+Daemon thread sleeping on request queue
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.parseRequest(ServerThread.java:115)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:59)
+Entered request - 4
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers=null]
+HTTP/1.1 200 OK
+
+Daemon thread sleeping on request queue
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers=null]
+HTTP/1.1 200 OK
+
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers=null]
+HTTP/1.1 200 OK
+
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers=null]
+HTTP/1.1 200 OK
+
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html, Date=Wed Sep 16 01:34:35 EDT 2015, Content-Length=35, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html
+Date:Wed Sep 16 01:34:35 EDT 2015
+Content-Length:35
+Connection:Close
+<html><body>It works!</body></html>
+Daemon thread sleeping on request queue
+Daemon thread waking on request queue
+Entered request - 1
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html, Date=Wed Sep 16 01:35:28 EDT 2015, Content-Length=35, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html
+Date:Wed Sep 16 01:35:28 EDT 2015
+Content-Length:35
+Connection:Close
+<html><body>It works!</body></html>
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html, Date=Wed Sep 16 01:37:08 EDT 2015, Content-Length=35, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html
+Date:Wed Sep 16 01:37:08 EDT 2015
+Content-Length:35
+Connection:Close
+
+<html><body>It works!</body></html>
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html, Date=Wed Sep 16 01:37:27 EDT 2015, Content-Length=35, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html
+Date:Wed Sep 16 01:37:27 EDT 2015
+Content-Length:35
+Connection:Close
+
+<html><body>It works!</body></html>
+Entered request - 3
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html, Date=Wed Sep 16 01:37:31 EDT 2015, Content-Length=35, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html
+Date:Wed Sep 16 01:37:31 EDT 2015
+Content-Length:35
+Connection:Close
+
+<html><body>It works!</body></html>
+Daemon thread sleeping on request queue
+Entered request - 1
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Wed Sep 16 01:39:41 EDT 2015, Content-Length=35, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Wed Sep 16 01:39:41 EDT 2015
+Content-Length:35
+Connection:Close
+
+<html><body>It works!</body></html>
+Entered request - 2
+Daemon thread waking on request queue
+Removed request
+Name - ThreadPool
+Size - 2
+Name - ThreadPool
+Size - 1
+Daemon thread sleeping on request queue
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Wed Sep 16 01:39:46 EDT 2015, Content-Length=35, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Wed Sep 16 01:39:46 EDT 2015
+Content-Length:35
+Connection:Close
+
+<html><body>It works!</body></html>

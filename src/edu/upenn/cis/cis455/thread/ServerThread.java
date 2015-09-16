@@ -1,10 +1,13 @@
 package edu.upenn.cis.cis455.thread;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -74,9 +77,40 @@ public class ServerThread extends Thread {
 						}
 						else
 						{
-							System.out.println(httpRequest);
-							
 							String data="<html><body>It works!</body></html>";
+							System.out.println(httpRequest);
+							logger.info("Requesting - "+homeDirectory.concat(httpRequest.getResource()));
+							File resourceFile=new File(homeDirectory.concat(httpRequest.getResource()));
+							if(resourceFile.exists())
+							{
+								//valid file request
+								if(resourceFile.isDirectory())
+								{
+									//send the list of all the files inside
+									File[] filesInDirectory = resourceFile.listFiles();
+									StringBuilder dataBuilder=new StringBuilder();
+									dataBuilder.append("<html><body>"+httpRequest.getResource()+"<br/>");
+									for(File file : filesInDirectory)
+									{
+										dataBuilder.append("<a href=\"localhost:8080/"+file.getName()+"\">"+file.getName()+"</a><br/>");
+									}
+									dataBuilder.append("</body></html>");
+									data=dataBuilder.toString();
+								}
+								else if(resourceFile.isFile())
+								{
+									//send the file
+								}
+								else
+								{
+									//send some error code
+								}
+							}
+							else
+							{
+								logger.info("requested file does not exist");
+								//invalid request
+							}
 							Map<String, String> headers=new HashMap<String, String>();
 							headers.put(DATE_KEY, new Date().toString());
 							headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");

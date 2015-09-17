@@ -22,18 +22,28 @@ public class HttpResponse
 		this.data = data;
 	}
 	
+	public HttpResponse(String protocol, String version, String responseCode,
+			String responseCodeString, Map<String, String> headers) {
+		super();
+		this.protocol = protocol;
+		this.version = version;
+		this.responseCode = responseCode;
+		this.responseCodeString = responseCodeString;
+		this.headers = headers;
+	}
+	
 	public String getResponseString()
 	{
 		StringBuilder response = new StringBuilder();
-		response.append(protocol+"/"+version+" "+responseCode+" "+responseCodeString+"\n");
+		response.append(protocol+"/"+version+" "+responseCode+" "+responseCodeString+"\r\n");
 		if(headers!=null)
 		{
 			for(Map.Entry<String, String> header : headers.entrySet())
 			{
-				response.append(header.getKey()+":"+header.getValue()+"\n");
+				response.append(header.getKey()+":"+header.getValue()+"\r\n");
 			}
 		}
-		response.append("\n");
+		response.append("\r\n");
 		if(data!=null)
 		{
 			response.append(data);

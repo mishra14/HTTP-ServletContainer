@@ -38,6 +38,7 @@ public class HttpRequest
 		}
 		else
 		{
+			System.out.println(requestSplit[0]);
 			operation=firstLineSplit[0].trim();
 			resource=firstLineSplit[1].trim();
 			protocol=firstLineSplit[2].split("/")[0].trim();
@@ -51,6 +52,7 @@ public class HttpRequest
 			}
 			else
 			{
+				System.out.println(requestSplit[i]);
 				headers.put(requestSplit[i].split(":")[0].trim().toLowerCase(), requestSplit[i].split(":")[1].trim());
 			}
 		}

@@ -1,11 +1,15 @@
 package edu.upenn.cis.cis455.thread;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Date;
@@ -64,7 +68,8 @@ public class ServerThread extends Thread {
 					System.out.println("obtained request - "+id);
 					if(socket!=null)	//correct transfer of socket to handler thread
 					{
-						PrintWriter out = new PrintWriter(socket.getOutputStream(),true);
+						OutputStream out=socket.getOutputStream();
+						//PrintWriter out = new PrintWriter(socket.getOutputStream(),true);
 						BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 						HttpRequest httpRequest=parseRequest(in);
 						if(httpRequest==null)
@@ -77,7 +82,16 @@ public class ServerThread extends Thread {
 						}
 						else
 						{
+							Map<String, String> headers=new HashMap<String, String>();
+							headers.put(DATE_KEY, new Date().toString());
+							headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
 							String data="<html><body>It works!</body></html>";
+							headers.put(CONTENT_LENGTH_KEY,""+data.length());
+							headers.put(CONNECTION_KEY,"Close");
+							String protocol = HTTP.getProtocol();
+							String version = HTTP.getVersion11();
+							String responseCode = "200";
+							String responseCodeString = HTTP.getResponseCodes().get(responseCode);
 							System.out.println(httpRequest);
 							logger.info("Requesting - "+homeDirectory.concat(httpRequest.getResource()));
 							File resourceFile=new File(homeDirectory.concat(httpRequest.getResource()));
@@ -90,16 +104,56 @@ public class ServerThread extends Thread {
 									File[] filesInDirectory = resourceFile.listFiles();
 									StringBuilder dataBuilder=new StringBuilder();
 									dataBuilder.append("<html><body>"+httpRequest.getResource()+"<br/>");
+									logger.info(homeDirectory);
 									for(File file : filesInDirectory)
 									{
-										dataBuilder.append("<a href=\"localhost:8080/"+file.getName()+"\">"+file.getName()+"</a><br/>");
+										if(!file.getName().endsWith("~"))
+											dataBuilder.append("<a href=\"http://localhost:8080"+file.getAbsolutePath().substring(homeDirectory.length())+"\">"+file.getName()+"</a><br/>");
 									}
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
+									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
+									headers.put(CONTENT_LENGTH_KEY,""+data.length());
+									headers.put(CONNECTION_KEY,"Close");
+									HttpResponse httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
+									logger.info(httpResponse.toString());
+									logger.info(httpResponse.getResponseString());
+									out.write(httpResponse.getResponseString().getBytes());
+									
 								}
 								else if(resourceFile.isFile())
 								{
 									//send the file
+									FileInputStream fis = new FileInputStream(resourceFile);
+									byte[] bytes = new byte[(int) resourceFile.length()];
+									if(fis.read(bytes, 0, bytes.length)!=resourceFile.length())
+									{
+										//did not read the file completely; send back an error code 500
+										logger.warn("Length error while reading file - "+resourceFile.getAbsolutePath());
+									}
+									else
+									{
+										//read the file correctly; send the file over
+										if(Files.probeContentType(resourceFile.toPath())==null)
+										{
+											//no content type; send an error code 500
+											logger.warn("Error in detecting file type on file- "+resourceFile.getAbsolutePath());
+										}
+										else
+										{
+											data=new String(bytes);
+											logger.info(bytes);
+											headers.put(CONTENT_TYPE_KEY,Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+											headers.put(CONTENT_LENGTH_KEY,""+data.length());
+											HttpResponse httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers);
+											logger.info(httpResponse.toString());
+											logger.info(httpResponse.getResponseString());
+											out.write(httpResponse.getResponseString().getBytes());
+											out.write(bytes);
+											logger.info(bytes.toString());
+										}
+									}
+									fis.close();
 								}
 								else
 								{
@@ -111,23 +165,15 @@ public class ServerThread extends Thread {
 								logger.info("requested file does not exist");
 								//invalid request
 							}
-							Map<String, String> headers=new HashMap<String, String>();
-							headers.put(DATE_KEY, new Date().toString());
-							headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
-							headers.put(CONTENT_LENGTH_KEY,""+data.length());
-							headers.put(CONNECTION_KEY,"Close");
-							String protocol = HTTP.getProtocol();
-							String version = HTTP.getVersion11();
-							String responseCode = "200";
-							String responseCodeString = HTTP.getResponseCodes().get(responseCode);
-							HttpResponse httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
-							logger.info(httpResponse.toString());
-							logger.info(httpResponse.getResponseString());
-							out.println(httpResponse.getResponseString());
+							
+							//out1.write(httpResponse.getResponseString());
+							out.flush();
+							out.close();
 							//generate response header
 							//generate response data
 							//send response
 						}
+						socket.close();
 					}
 					else 	//error in socket log it and retry
 					{

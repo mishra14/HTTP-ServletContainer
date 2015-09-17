@@ -29,7 +29,11 @@ public class HttpServer {
 		}
 		int i=0;
 		port=Integer.valueOf(args[0]);
-		homeDirectory=args[1];
+		homeDirectory=args[1].trim();
+		if(homeDirectory.endsWith("/"))
+		{
+			homeDirectory=new String(homeDirectory.substring(0,homeDirectory.length()-1));
+		}
 		requestQueue = new Queue(QUEUE_LENGTH);
 		daemonThread = new DaemonThread(requestQueue,THREAD_POOL_SIZE, homeDirectory);
 		daemonThread.start();	//start daemon thread that starts the thread pool

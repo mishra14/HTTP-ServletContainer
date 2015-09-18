@@ -157,16 +157,18 @@ public class ServerThread extends Thread {
 								}
 								else
 								{
+									//requested data is niether file nor directory
 									//send some error code
+									out.write(HTTP.getError400().getResponseString().getBytes());
 								}
 							}
 							else
 							{
 								logger.info("requested file does not exist");
-								//invalid request
+								//invalid request; respond with 404
+								out.write(HTTP.getError404().getResponseString().getBytes());
 							}
 							
-							//out1.write(httpResponse.getResponseString());
 							out.flush();
 							out.close();
 							//generate response header
@@ -230,5 +232,5 @@ public class ServerThread extends Thread {
 
 		return httpRequest;
 	}
-
+	
 }

@@ -29,7 +29,7 @@ public class HttpRequest
 		headers=new HashMap<String, String>();
 		validRequest=true;
 		String[] requestSplit=httpRequest.split("\n");
-		String[] firstLineSplit=requestSplit[0].split(" ");
+		String[] firstLineSplit=requestSplit[0].trim().split(" ");
 		if(firstLineSplit.length<3)
 		{
 			logger.warn("invalid request - "+httpRequest);
@@ -59,6 +59,7 @@ public class HttpRequest
 		if(!headers.containsKey("host"))
 		{
 			//invalid http 1.1 request; respond with 400 error;
+			validRequest=false;
 		}
 	}
 

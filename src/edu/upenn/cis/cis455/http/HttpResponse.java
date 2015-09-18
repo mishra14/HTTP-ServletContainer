@@ -51,6 +51,21 @@ public class HttpResponse
 		return response.toString();
 	}
 	
+	public String getResponseStringHeadersOnly()
+	{
+		StringBuilder response = new StringBuilder();
+		response.append(protocol+"/"+version+" "+responseCode+" "+responseCodeString+"\r\n");
+		if(headers!=null)
+		{
+			for(Map.Entry<String, String> header : headers.entrySet())
+			{
+				response.append(header.getKey()+":"+header.getValue()+"\r\n");
+			}
+		}
+		response.append("\r\n");
+		return response.toString();
+	}
+	
 	@Override
 	public String toString() {
 		return "HttpResponse [protocol=" + protocol + ", version=" + version

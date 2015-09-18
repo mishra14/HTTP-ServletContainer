@@ -1,5 +1,6 @@
 package edu.upenn.cis.cis455.http;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ public class HTTP {
 	private static final String KEY_400 = "400";
 	private static final String KEY_404 = "404";
 	private static final String KEY_500 = "500";
+	private static final String KEY_POST = "POST";
 	private static final String CONTENT_TYPE_KEY="Content-type";
 	private static final String CONTENT_LENGTH_KEY="Content-Length";
 	private static final String LAST_MODIFIED_KEY="Last-Modified";
@@ -24,20 +26,23 @@ public class HTTP {
 	private static HttpResponse error400;
 	private static HttpResponse error500;
 	private static HttpResponse error300;
+	private static HttpResponse errorPOST;
 	
 	static
 	{
 		responseCodes = new HashMap<String, String>();
 		errorHeaders = new HashMap<String, String>();
-		responseCodes.put("200","OK");
-		responseCodes.put("404","NOT FOUND");
-		responseCodes.put("500", "SERVER ERROR");
-		responseCodes.put("400", "BAD REQUEST");
-		responseCodes.put("300", "REDIRECTED");
+		responseCodes.put(KEY_200,"OK");
+		responseCodes.put(KEY_404,"NOT FOUND");
+		responseCodes.put(KEY_500, "SERVER ERROR");
+		responseCodes.put(KEY_400, "BAD REQUEST");
+		responseCodes.put(KEY_300, "REDIRECTED");
+		responseCodes.put(KEY_POST, "CALL NOT SUPPORTED");
 		String dataPre = "<html><body>";
 		String dataPost = "<br/><br/>Ankit Mishra<br/>mankit<br/></body></html>";
 		//error response for 404
 		String data = dataPre+KEY_404+" : "+responseCodes.get(KEY_404)+dataPost;
+		errorHeaders.put(DATE_KEY, new Date().toString());
 		errorHeaders.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
 		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
 		errorHeaders.put(CONNECTION_KEY,"Close");
@@ -54,6 +59,10 @@ public class HTTP {
 		data = dataPre+KEY_300+" : "+responseCodes.get(KEY_300)+dataPost;
 		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
 		error300 = new HttpResponse(protocol,version11,KEY_300,responseCodes.get(KEY_300),errorHeaders,data);
+		//error response for POST
+		data = dataPre+KEY_POST+" : "+responseCodes.get(KEY_POST)+dataPost;
+		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		errorPOST = new HttpResponse(protocol,version11,KEY_400,responseCodes.get(KEY_400),errorHeaders,data);
 	}
 
 	public static String getProtocol() {
@@ -130,6 +139,14 @@ public class HTTP {
 
 	public static HttpResponse getError300() {
 		return error300;
+	}
+
+	public static String getKeyPost() {
+		return KEY_POST;
+	}
+
+	public static HttpResponse getErrorPOST() {
+		return errorPOST;
 	}
 
 	

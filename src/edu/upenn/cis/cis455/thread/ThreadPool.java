@@ -13,8 +13,10 @@ public class ThreadPool {
 	private int threadCount;
 	private String homeDirectory;
 	private int port;
+	private boolean run;
+	private DaemonThread daemonThread;
 	
-	public ThreadPool(int threadCount, String threadPoolName, String homeDirectory, int port) {
+	public ThreadPool(int threadCount, String threadPoolName, String homeDirectory, int port, DaemonThread daemonThread) {
 		super();
 		this.threadPool = new ArrayList<ServerThread>();
 		this.threadList = new ArrayList<ServerThread>();
@@ -22,6 +24,8 @@ public class ThreadPool {
 		this.threadPoolName = threadPoolName;
 		this.homeDirectory = homeDirectory;
 		this.port=port;
+		this.run=true;
+		this.daemonThread = daemonThread;
 	}
 	
 	public synchronized ArrayList<ServerThread> getThreadPool() {
@@ -60,6 +64,20 @@ public class ThreadPool {
 		return port;
 	}
 
+	
+	public synchronized boolean isRun() {
+		return run;
+	}
+
+	public synchronized void setRun(boolean run) {
+		this.run = run;
+	}
+
+	
+	public DaemonThread getDaemonThread() {
+		return daemonThread;
+	}
+
 	public void startThreadPool()
 	{
 		for(int i=0;i<threadCount;i++)
@@ -67,7 +85,7 @@ public class ThreadPool {
 			threadPool.add(new ServerThread(i,this, homeDirectory));
 			threadList.add(threadPool.get(i));
 		}
-		System.out.println("Thread pool has "+threadPool.size()+" free threads");
+		logger.info("Thread pool has "+threadPool.size()+" free threads");
 		for(ServerThread thread : threadPool)
 		{
 			thread.start(); 
@@ -79,16 +97,13 @@ public class ThreadPool {
 		logger.info("Free Size - "+threadPool.size());
 		/*for(ServerThread serverThread:threadPool)
 		{
-			System.out.println(serverThread.getId());
+			logger.info(serverThread.getId());
 		}*/
 		logger.info("Total Size - "+threadList.size());
 		/*for(ServerThread serverThread:threadList)
 		{
-			System.out.println(serverThread.getId());
+			logger.info(serverThread.getId());
 		}*/
 	}
-	public void clearThreadPool()
-	{
-		//TODO stop all runing threads and delete them
-	}
+	
 }

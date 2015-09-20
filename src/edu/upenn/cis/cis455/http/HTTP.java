@@ -12,6 +12,7 @@ public class HTTP {
 	private static final String KEY_200 = "200";
 	private static final String KEY_300 = "300";
 	private static final String KEY_400 = "400";
+	private static final String KEY_403 = "403";
 	private static final String KEY_404 = "404";
 	private static final String KEY_500 = "500";
 	private static final String KEY_POST = "POST";
@@ -26,6 +27,7 @@ public class HTTP {
 	private static HttpResponse error400;
 	private static HttpResponse error500;
 	private static HttpResponse error300;
+	private static HttpResponse error403;
 	private static HttpResponse errorPOST;
 	
 	static
@@ -34,6 +36,7 @@ public class HTTP {
 		errorHeaders = new HashMap<String, String>();
 		responseCodes.put(KEY_200,"OK");
 		responseCodes.put(KEY_404,"NOT FOUND");
+		responseCodes.put(KEY_403,"FORBIDDEN");
 		responseCodes.put(KEY_500, "SERVER ERROR");
 		responseCodes.put(KEY_400, "BAD REQUEST");
 		responseCodes.put(KEY_300, "REDIRECTED");
@@ -63,6 +66,10 @@ public class HTTP {
 		data = dataPre+KEY_POST+" : "+responseCodes.get(KEY_POST)+dataPost;
 		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
 		errorPOST = new HttpResponse(protocol,version11,KEY_400,responseCodes.get(KEY_400),errorHeaders,data);
+		//error response for POST
+		data = dataPre+KEY_403+" : "+responseCodes.get(KEY_403)+dataPost;
+		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		error403 = new HttpResponse(protocol,version11,KEY_403,responseCodes.get(KEY_403),errorHeaders,data);
 	}
 
 	public static String getProtocol() {
@@ -147,6 +154,14 @@ public class HTTP {
 
 	public static HttpResponse getErrorPOST() {
 		return errorPOST;
+	}
+
+	public static String getKey403() {
+		return KEY_403;
+	}
+
+	public static HttpResponse getError403() {
+		return error403;
 	}
 
 	

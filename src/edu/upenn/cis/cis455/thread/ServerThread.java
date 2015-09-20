@@ -64,16 +64,16 @@ public class ServerThread extends Thread {
 
 	public void run()
 	{
-		///System.out.println("Starting thread "+id);
-		while(true)
+		///logger.info("Starting thread "+id);
+		while(parentThreadPool.isRun())
 		{
 			try 
 			{
 				synchronized(this)
 				{
-					System.out.println("Waiting for request - "+id);
+					logger.info("Waiting for request - "+id);
 					wait();
-					System.out.println("obtained request - "+id);
+					logger.info("obtained request - "+id);
 					//parentThreadPool.displayPool();
 					if(socket!=null)	//correct transfer of socket to handler thread
 					{
@@ -98,7 +98,7 @@ public class ServerThread extends Thread {
 							String version = HTTP.getVersion11();
 							String responseCode = "200";
 							String responseCodeString = HTTP.getResponseCodes().get(responseCode);
-							System.out.println(httpRequest);
+							logger.info(httpRequest);
 							logger.info("Requesting - "+homeDirectory.concat(httpRequest.getResource()));
 							File resourceFile=new File(homeDirectory.concat(httpRequest.getResource()));
 							if(resourceFile.exists())
@@ -217,9 +217,12 @@ public class ServerThread extends Thread {
 									for(ServerThread thread : parentThreadPool.getThreadList())
 									{
 										dataBuilder.append(thread.id+" "+thread.getState());
+										logger.info(thread.id+" "+thread.getState());
 										if(thread.getState().equals(Thread.State.RUNNABLE))
 										{
-											String url = "http://localhost:"+parentThreadPool.getPort()+thread.getHttpRequest().getResource();
+											int threadPoolPort = parentThreadPool.getPort();
+											String threadResource = (thread.getHttpRequest()!=null)?thread.getHttpRequest().getResource():"";
+											String url = "http://localhost:"+threadPoolPort+threadResource;
 											dataBuilder.append(" <a href=\""+url+"\">"+url+"</a>");
 										}
 										dataBuilder.append("<br/>");
@@ -253,6 +256,10 @@ public class ServerThread extends Thread {
 								}
 								else if(httpRequest.getResource().equalsIgnoreCase("/shutdown"))
 								{
+									//indicate to all threads that a shut down has been initiated
+									parentThreadPool.setRun(false);
+									//interrupt daemon and main threads
+									parentThreadPool.getDaemonThread().interrupt();
 									StringBuilder dataBuilder=new StringBuilder();
 									dataBuilder.append("<html><body>"+httpRequest.getResource()+"<br/>Ankit Mishra<br/>mankit<br/><br/>");
 									dataBuilder.append("This page has started the server shutdown <br/>");
@@ -307,7 +314,7 @@ public class ServerThread extends Thread {
 						{
 							parentThreadPool.getThreadPool().add(this);
 							parentThreadPool.notify();
-							System.out.println("Thread "+id+" going back into threadpool");
+							logger.info("Thread "+id+" going back into threadpool");
 						}
 					}
 					
@@ -327,11 +334,12 @@ public class ServerThread extends Thread {
 					{
 						parentThreadPool.getThreadPool().add(this);
 						parentThreadPool.notify();
-						System.out.println("Thread going back into threadpool "+id);
+						logger.info("Thread going back into threadpool "+id);
 					}
 				}
 			}
 		}
+		logger.warn("Thread Shutting down - "+id);
 	}
 
 	private HttpRequest parseRequest(BufferedReader in) throws IOException {

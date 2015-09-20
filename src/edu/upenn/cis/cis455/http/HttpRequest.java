@@ -38,7 +38,7 @@ public class HttpRequest
 		}
 		else
 		{
-			System.out.println(requestSplit[0].trim());
+			logger.info(requestSplit[0].trim());
 			operation=firstLineSplit[0].trim();
 			resource=firstLineSplit[1].trim();
 			protocol=firstLineSplit[2].split("/")[0].trim();
@@ -52,11 +52,11 @@ public class HttpRequest
 			}
 			else
 			{
-				System.out.println(requestSplit[i]);
+				logger.info(requestSplit[i]);
 				headers.put(requestSplit[i].split(":")[0].trim().toLowerCase(), requestSplit[i].split(":")[1].trim());
 			}
 		}
-		if(!headers.containsKey("host"))
+		if(!headers.containsKey("host") && version.equalsIgnoreCase("1.1"))
 		{
 			//invalid http 1.1 request; respond with 400 error;
 			validRequest=false;

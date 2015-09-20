@@ -1,5 +1,7 @@
 package edu.upenn.cis.cis455.thread;
 
+import java.io.IOException;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 import org.apache.log4j.Logger;
@@ -11,22 +13,28 @@ public class DaemonThread extends Thread{
 	private static final Logger logger = Logger.getLogger(DaemonThread.class);
 	private Queue requestQueue;
 	private ThreadPool threadPool;
+	private ServerSocket daemonSocket;
 	
-	public DaemonThread(Queue requestQueue, int threadPoolSize, String homeDirectory, int port) {
+	public DaemonThread(Queue requestQueue, int threadPoolSize, String homeDirectory, int port, ServerSocket daemonSocket) {
 		this.requestQueue = requestQueue;
-		this.threadPool = new ThreadPool(threadPoolSize,"ThreadPool", homeDirectory, port);
+		this.threadPool = new ThreadPool(threadPoolSize,"ThreadPool", homeDirectory, port, this);
+		this.daemonSocket = daemonSocket;
 	}
 	
+	public ThreadPool getThreadPool() {
+		return threadPool;
+	}
+
 	public void run()
 	{
 		threadPool.startThreadPool();
 		threadPool.displayPool();
 		ServerThread serverThread;
 		Socket socket;
-		while(true)
+		while(threadPool.isRun())
 		{
 			socket=null;
-			while(socket==null)
+			while(threadPool.isRun() && socket==null)
 			{
 				synchronized(requestQueue)
 				{
@@ -39,9 +47,9 @@ public class DaemonThread extends Thread{
 					{
 						try 
 						{
-							logger.info("Daemon thread sleeping on request queue");
+							logger.warn("Daemon thread sleeping on request queue");
 							requestQueue.wait();
-							logger.info("Daemon thread waking on request queue");
+							logger.warn("Daemon thread waking on request queue");
 						} 
 						catch (InterruptedException e) 
 						{
@@ -51,16 +59,16 @@ public class DaemonThread extends Thread{
 				}
 			}
 			serverThread=null;
-			while(serverThread==null)
+			while(threadPool.isRun() && serverThread==null)
 			{
 				synchronized(threadPool)
 				{
 					if(threadPool.getThreadPool().size()>0)
 					{
-						System.out.println("Before - ");
+						logger.info("Before - ");
 						threadPool.displayPool();
 						serverThread=threadPool.getThreadPool().remove(0);
-						System.out.println("After - ");
+						logger.info("After - ");
 						threadPool.displayPool();
 						synchronized(serverThread)
 						{
@@ -84,7 +92,31 @@ public class DaemonThread extends Thread{
 					}
 				}
 			}
-			
 		}
+		logger.warn("Daemon thread killing the request queue to stop the main thread");
+		try {
+			daemonSocket.close();
+		} 
+		catch (NullPointerException e) {
+			logger.error("Exception while closing the daemon socket - The server will shut down after accepting 1 new request",e);
+		}
+		catch (IOException e) {
+			logger.error("Exception while closing the daemon socket - The server will shut down after accepting 1 new request",e);
+		}
+		logger.warn("Daemon Thread killing free threads from the thread pool");
+		for(ServerThread thread : threadPool.getThreadPool())
+		{
+			thread.interrupt();
+		}
+		logger.warn("Daemon Thread waiting for thread pool to shut down");
+		for(ServerThread thread : threadPool.getThreadList())
+		{
+			try {
+				thread.join();
+			} catch (InterruptedException e) {
+				logger.error("Exception while joining thread pool threads",e);
+			}
+		}
+		logger.warn("Daemon Thread Shutting down");
 	}
 }

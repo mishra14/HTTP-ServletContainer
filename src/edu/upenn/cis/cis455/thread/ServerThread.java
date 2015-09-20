@@ -8,7 +8,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.file.Files;
-import java.util.Date;
+import java.text.ParseException;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -92,6 +94,18 @@ public class ServerThread extends Thread {
 						}
 						else
 						{
+							//deal with an Expect header
+							if(httpRequest.getHeaders().containsKey("expect"))
+							{
+								//respond with a 100 error code
+								out.write(HTTP.getError100().getResponseString().getBytes());
+							}
+							//dead with absolute urls
+							if(httpRequest.getResource().contains("http://localhost:"+parentThreadPool.getPort()))
+							{
+								logger.info("Absolute url in GET request - "+httpRequest.getResource());
+								httpRequest.setResource(httpRequest.getResource().substring(("http://localhost:"+parentThreadPool.getPort()).length()));
+							}
 							Map<String, String> headers=new HashMap<String, String>();
 							String data = "";
 							String protocol = HTTP.getProtocol();
@@ -118,7 +132,7 @@ public class ServerThread extends Thread {
 									}
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
-									headers.put(DATE_KEY, new Date().toString());
+									headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));																						
 									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
 									headers.put(CONTENT_LENGTH_KEY,""+data.length());
 									headers.put(CONNECTION_KEY,"Close");
@@ -133,7 +147,7 @@ public class ServerThread extends Thread {
 									}
 									else if(httpRequest.getOperation().equalsIgnoreCase("POST"))
 									{
-										out.write(HTTP.getErrorPOST().getResponseString().getBytes());
+										out.write(HTTP.getError405().getResponseString().getBytes());
 									}
 									else
 									{
@@ -163,34 +177,110 @@ public class ServerThread extends Thread {
 											logger.warn("Error in detecting file type on file- "+resourceFile.getAbsolutePath());
 											out.write(HTTP.getError500().getResponseString().getBytes());
 										}
+										else if(!resourceFile.canRead()) //403 if the file is not readable
+										{
+											logger.warn("User accessing non readable file - "+resourceFile.getAbsolutePath());
+											out.write(HTTP.getError403().getResponseString().getBytes());
+										}
+
 										else
 										{
-											data=new String(bytes);
-											logger.info(bytes);
-											headers.put(CONTENT_TYPE_KEY,Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
-											headers.put(CONTENT_LENGTH_KEY,""+data.length());
-											headers.put(DATE_KEY, new Date().toString());
-											httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
-											//logger.info(httpResponse.toString());
-											//logger.info(httpResponse.getResponseString());
-											if(httpRequest.getOperation().equalsIgnoreCase("GET"))
+											if(httpRequest.getHeaders().containsKey("if-modified-since") || httpRequest.getHeaders().containsKey("if-unmodified-since"))
 											{
-												out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
-												out.write(bytes);
-											}
-											else if(httpRequest.getOperation().equalsIgnoreCase("HEAD"))
-											{
-												out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
-											}
-											else if(httpRequest.getOperation().equalsIgnoreCase("POST"))
-											{
-												out.write(HTTP.getErrorPOST().getResponseString().getBytes());
+												logger.info("if-modified or if-unmodified header detected");
+												Calendar ifModifiedDate = new GregorianCalendar();
+												try {
+													ifModifiedDate.setTime(httpRequest.getHeaders().containsKey("if-modified-since")?HTTP.getHttpDateFormat().parse(httpRequest.getHeaders().get("if-modified-since")):HTTP.getHttpDateFormat().parse(httpRequest.getHeaders().get("if-unmodified-since")));
+												} catch (ParseException e) {
+													logger.error("ParseException while parsing if-modified-date  ",e);
+													out.write(HTTP.getError500().getResponseString().getBytes());
+												}
+												Calendar fileModifiedDate=new GregorianCalendar();
+												fileModifiedDate.setTimeInMillis(resourceFile.lastModified());
+												logger.info("File modified Date - "+HTTP.getHttpDateFormat().format(fileModifiedDate.getTime()));
+												logger.info("If modified Date - "+HTTP.getHttpDateFormat().format(ifModifiedDate.getTime()));
+												if(fileModifiedDate.after(ifModifiedDate))
+												{
+													logger.info("File modified since if modified date");
+												}
+												else
+												{
+													logger.info("File not modified since if modified date");
+												}
+												if(!fileModifiedDate.after(ifModifiedDate) && httpRequest.getHeaders().containsKey("if-modified-since"))
+												{
+													logger.info("Requesting a non modified file through if-modified - "+resourceFile.getAbsolutePath());
+													//send a 304 error code
+													out.write(HTTP.getError304().getResponseString().getBytes());
+												}
+												else if(fileModifiedDate.after(ifModifiedDate) && httpRequest.getHeaders().containsKey("if-unmodified-since"))
+												{
+													logger.info("Requesting a modified file through if-unmodified - "+resourceFile.getAbsolutePath());
+													//send a 412 error code
+													out.write(HTTP.getError412().getResponseString().getBytes());
+												}
+												else
+												{
+													data=new String(bytes);
+													logger.info(bytes);
+													headers.put(CONTENT_TYPE_KEY,Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+													headers.put(CONTENT_LENGTH_KEY,""+data.length());
+													headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));													
+													httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
+													
+													//logger.info(httpResponse.toString());
+													//logger.info(httpResponse.getResponseString());
+													if(httpRequest.getOperation().equalsIgnoreCase("GET"))
+													{
+														out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
+														out.write(bytes);
+													}
+													else if(httpRequest.getOperation().equalsIgnoreCase("HEAD"))
+													{
+														out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
+													}
+													else if(httpRequest.getOperation().equalsIgnoreCase("POST"))
+													{
+														out.write(HTTP.getError405().getResponseString().getBytes());
+													}
+													else
+													{
+														out.write(HTTP.getError400().getResponseString().getBytes());
+													}
+													logger.info(bytes.toString());
+												}
 											}
 											else
 											{
-												out.write(HTTP.getError400().getResponseString().getBytes());
+												data=new String(bytes);
+												logger.info(bytes);
+												headers.put(CONTENT_TYPE_KEY,Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+												headers.put(CONTENT_LENGTH_KEY,""+data.length());
+												headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));													
+												httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
+												//logger.info(httpResponse.toString());
+												//logger.info(httpResponse.getResponseString());
+												if(httpRequest.getOperation().equalsIgnoreCase("GET"))
+												{
+													out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
+													out.write(bytes);
+												}
+												else if(httpRequest.getOperation().equalsIgnoreCase("HEAD"))
+												{
+													out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
+												}
+												else if(httpRequest.getOperation().equalsIgnoreCase("POST"))
+												{
+													out.write(HTTP.getError405().getResponseString().getBytes());
+												}
+												else
+												{
+													out.write(HTTP.getError400().getResponseString().getBytes());
+												}
+												logger.info(bytes.toString());
 											}
-											logger.info(bytes.toString());
+
+											
 										}
 									}
 									fis.close();
@@ -229,7 +319,7 @@ public class ServerThread extends Thread {
 									}
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
-									headers.put(DATE_KEY, new Date().toString());
+									headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));													
 									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
 									headers.put(CONTENT_LENGTH_KEY,""+data.length());
 									headers.put(CONNECTION_KEY,"Close");
@@ -244,7 +334,7 @@ public class ServerThread extends Thread {
 									}
 									else if(httpRequest.getOperation().equalsIgnoreCase("POST"))
 									{
-										out.write(HTTP.getErrorPOST().getResponseString().getBytes());
+										out.write(HTTP.getError405().getResponseString().getBytes());
 									}
 									else
 									{
@@ -265,7 +355,7 @@ public class ServerThread extends Thread {
 									dataBuilder.append("This page has started the server shutdown <br/>");
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
-									headers.put(DATE_KEY, new Date().toString());
+									headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
 									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
 									headers.put(CONTENT_LENGTH_KEY,""+data.length());
 									headers.put(CONNECTION_KEY,"Close");
@@ -280,7 +370,7 @@ public class ServerThread extends Thread {
 									}
 									else if(httpRequest.getOperation().equalsIgnoreCase("POST"))
 									{
-										out.write(HTTP.getErrorPOST().getResponseString().getBytes());
+										out.write(HTTP.getError405().getResponseString().getBytes());
 									}
 									else
 									{

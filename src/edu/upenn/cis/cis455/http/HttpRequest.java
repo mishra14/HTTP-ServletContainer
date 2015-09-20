@@ -53,7 +53,13 @@ public class HttpRequest
 			else
 			{
 				logger.info(requestSplit[i]);
-				headers.put(requestSplit[i].split(":")[0].trim().toLowerCase(), requestSplit[i].split(":")[1].trim());
+				String key = requestSplit[i].split(":")[0].trim().toLowerCase();
+				String value = requestSplit[i].trim().split(":")[1].trim();
+				if(requestSplit[i].split(":").length>2)
+				{
+					value=requestSplit[i].substring(requestSplit[i].indexOf(":")+1).trim();
+				}
+				headers.put(key, value);
 			}
 		}
 		if(!headers.containsKey("host") && version.equalsIgnoreCase("1.1"))

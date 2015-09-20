@@ -13,8 +13,8 @@ public class HttpServer {
 
 	private static final Logger logger = Logger.getLogger(HttpServer.class);
 	private static final int ARGS_LENGTH=2;
-	private static final int QUEUE_LENGTH=10;
-	private static final int THREAD_POOL_SIZE=2;
+	private static final int QUEUE_LENGTH=50;
+	private static final int THREAD_POOL_SIZE=10;
 	private static int port;
 	private static String homeDirectory;
 	private static Queue requestQueue;
@@ -35,7 +35,7 @@ public class HttpServer {
 			homeDirectory=new String(homeDirectory.substring(0,homeDirectory.length()-1));
 		}
 		requestQueue = new Queue(QUEUE_LENGTH);
-		daemonThread = new DaemonThread(requestQueue,THREAD_POOL_SIZE, homeDirectory);
+		daemonThread = new DaemonThread(requestQueue,THREAD_POOL_SIZE, homeDirectory,port);
 		daemonThread.start();	//start daemon thread that starts the thread pool
 		ServerSocket daemonSocket = null;
 		try 

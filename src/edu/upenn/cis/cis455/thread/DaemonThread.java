@@ -11,14 +11,16 @@ public class DaemonThread extends Thread{
 	private static final Logger logger = Logger.getLogger(DaemonThread.class);
 	private Queue requestQueue;
 	private ThreadPool threadPool;
-	public DaemonThread(Queue requestQueue, int threadPoolSize, String homeDirectory) {
+	
+	public DaemonThread(Queue requestQueue, int threadPoolSize, String homeDirectory, int port) {
 		this.requestQueue = requestQueue;
-		threadPool = new ThreadPool(threadPoolSize,"ThreadPool", homeDirectory);
+		this.threadPool = new ThreadPool(threadPoolSize,"ThreadPool", homeDirectory, port);
 	}
 	
 	public void run()
 	{
 		threadPool.startThreadPool();
+		threadPool.displayPool();
 		ServerThread serverThread;
 		Socket socket;
 		while(true)

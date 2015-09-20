@@ -29,12 +29,17 @@ public class ServerThread extends Thread {
 	private int id;
 	private Socket socket;
 	private String homeDirectory;
+	private HttpResponse httpResponse;
+	private HttpRequest httpRequest;
+	
 	public ServerThread(int id, ThreadPool parentThreadPool,
 			String homeDirectory) {
 		this.id = id;
 		this.socket = new Socket();
 		this.parentThreadPool = parentThreadPool;
 		this.homeDirectory = homeDirectory;
+		this.httpRequest=null;
+		this.httpResponse=null;
 	}
 
 	public long getId() {
@@ -47,6 +52,14 @@ public class ServerThread extends Thread {
 
 	public void setSocket(Socket socket) {
 		this.socket = socket;
+	}
+	
+	public HttpResponse getHttpResponse() {
+		return httpResponse;
+	}
+
+	public HttpRequest getHttpRequest() {
+		return httpRequest;
 	}
 
 	public void run()
@@ -61,11 +74,12 @@ public class ServerThread extends Thread {
 					System.out.println("Waiting for request - "+id);
 					wait();
 					System.out.println("obtained request - "+id);
+					//parentThreadPool.displayPool();
 					if(socket!=null)	//correct transfer of socket to handler thread
 					{
 						OutputStream out=socket.getOutputStream();
 						BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-						HttpRequest httpRequest=parseRequest(in);
+						httpRequest=parseRequest(in);
 						if(httpRequest==null)
 						{
 							// respond with error code 400
@@ -100,7 +114,7 @@ public class ServerThread extends Thread {
 									for(File file : filesInDirectory)
 									{
 										if(!file.getName().endsWith("~"))
-											dataBuilder.append("<a href=\"http://localhost:8080"+file.getAbsolutePath().substring(homeDirectory.length())+"\">"+file.getName()+"</a><br/>");
+											dataBuilder.append("<a href=\"http://localhost:"+parentThreadPool.getPort()+file.getAbsolutePath().substring(homeDirectory.length())+"\">"+file.getName()+"</a><br/>");
 									}
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
@@ -108,7 +122,7 @@ public class ServerThread extends Thread {
 									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
 									headers.put(CONTENT_LENGTH_KEY,""+data.length());
 									headers.put(CONNECTION_KEY,"Close");
-									HttpResponse httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
+									httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
 									if(httpRequest.getOperation().equalsIgnoreCase("GET"))
 									{
 										out.write(httpResponse.getResponseString().getBytes());
@@ -127,8 +141,6 @@ public class ServerThread extends Thread {
 									}
 									logger.info(httpResponse.toString());
 									logger.info(httpResponse.getResponseString());
-
-									
 								}
 								else if(resourceFile.isFile())
 								{
@@ -158,7 +170,7 @@ public class ServerThread extends Thread {
 											headers.put(CONTENT_TYPE_KEY,Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
 											headers.put(CONTENT_LENGTH_KEY,""+data.length());
 											headers.put(DATE_KEY, new Date().toString());
-											HttpResponse httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
+											httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
 											//logger.info(httpResponse.toString());
 											//logger.info(httpResponse.getResponseString());
 											if(httpRequest.getOperation().equalsIgnoreCase("GET"))
@@ -192,16 +204,96 @@ public class ServerThread extends Thread {
 							}
 							else
 							{
-								logger.warn("requested file does not exist - "+resourceFile.getAbsolutePath());
-								//invalid request; respond with 404
-								out.write(HTTP.getError404().getResponseString().getBytes());
+								
+								if(httpRequest.getResource().equalsIgnoreCase("/control"))
+								{
+									StringBuilder dataBuilder=new StringBuilder();
+									dataBuilder.append("<html><body>"+httpRequest.getResource()+"<br/>Ankit Mishra<br/>mankit<br/><br/>");
+									dataBuilder.append("ThreadPool Stats - <br/>Total Threads = "+parentThreadPool.getThreadList().size()+"<br/>");
+									dataBuilder.append("Free Threads = "+parentThreadPool.getThreadPool().size()+"<br/>");
+									dataBuilder.append("Busy Threads = "+(parentThreadPool.getThreadList().size()-parentThreadPool.getThreadPool().size())+"<br/>");
+									dataBuilder.append("<a href=\"http://localhost:"+parentThreadPool.getPort()+"/shutdown\">Shut Down Server</a><br/>");
+									dataBuilder.append("<br/>List of all threads - <br/>");
+									for(ServerThread thread : parentThreadPool.getThreadList())
+									{
+										dataBuilder.append(thread.id+" "+thread.getState());
+										if(thread.getState().equals(Thread.State.RUNNABLE))
+										{
+											String url = "http://localhost:"+parentThreadPool.getPort()+thread.getHttpRequest().getResource();
+											dataBuilder.append(" <a href=\""+url+"\">"+url+"</a>");
+										}
+										dataBuilder.append("<br/>");
+									}
+									dataBuilder.append("</body></html>");
+									data=dataBuilder.toString();
+									headers.put(DATE_KEY, new Date().toString());
+									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
+									headers.put(CONTENT_LENGTH_KEY,""+data.length());
+									headers.put(CONNECTION_KEY,"Close");
+									httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
+									if(httpRequest.getOperation().equalsIgnoreCase("GET"))
+									{
+										out.write(httpResponse.getResponseString().getBytes());
+									}
+									else if(httpRequest.getOperation().equalsIgnoreCase("HEAD"))
+									{
+										out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
+									}
+									else if(httpRequest.getOperation().equalsIgnoreCase("POST"))
+									{
+										out.write(HTTP.getErrorPOST().getResponseString().getBytes());
+									}
+									else
+									{
+										out.write(HTTP.getError400().getResponseString().getBytes());
+									}
+									logger.info(httpResponse.toString());
+									logger.info(httpResponse.getResponseString());
+
+								}
+								else if(httpRequest.getResource().equalsIgnoreCase("/shutdown"))
+								{
+									StringBuilder dataBuilder=new StringBuilder();
+									dataBuilder.append("<html><body>"+httpRequest.getResource()+"<br/>Ankit Mishra<br/>mankit<br/><br/>");
+									dataBuilder.append("This page has started the server shutdown <br/>");
+									dataBuilder.append("</body></html>");
+									data=dataBuilder.toString();
+									headers.put(DATE_KEY, new Date().toString());
+									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
+									headers.put(CONTENT_LENGTH_KEY,""+data.length());
+									headers.put(CONNECTION_KEY,"Close");
+									httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
+									if(httpRequest.getOperation().equalsIgnoreCase("GET"))
+									{
+										out.write(httpResponse.getResponseString().getBytes());
+									}
+									else if(httpRequest.getOperation().equalsIgnoreCase("HEAD"))
+									{
+										out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
+									}
+									else if(httpRequest.getOperation().equalsIgnoreCase("POST"))
+									{
+										out.write(HTTP.getErrorPOST().getResponseString().getBytes());
+									}
+									else
+									{
+										out.write(HTTP.getError400().getResponseString().getBytes());
+									}
+									logger.info(httpResponse.toString());
+									logger.info(httpResponse.getResponseString());
+								}
+								else
+								{
+									logger.warn("requested file does not exist - "+resourceFile.getAbsolutePath());
+									//invalid request; respond with 404
+									out.write(HTTP.getError404().getResponseString().getBytes());
+								}
 							}
 							
 							out.flush();
-							out.close();
-							//generate response header
-							//generate response data
-							//send response
+							out.close();		//close the output buffer
+							httpRequest=null;	//clear the http request object
+							httpResponse=null;	//clear the http response object
 						}
 						socket.close();
 					}

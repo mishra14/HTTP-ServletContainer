@@ -1,5 +1,6 @@
 package edu.upenn.cis.cis455.webserver;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -26,9 +27,23 @@ public class HttpServer {
 			logger.warn("Invalid number of arguments\nAnkit Mishra\nmankit");
 			System.exit(1);
 		}
-		int i=0;
-		port=Integer.valueOf(args[0]);
-		homeDirectory=args[1].trim();
+		try
+		{
+			port=Integer.valueOf(args[0]);
+			homeDirectory=args[1].trim();
+			if(!(new File(homeDirectory).exists()))
+			{
+				logger.warn("Invalid home directory\nAnkit Mishra\nmankit");
+				System.exit(1);
+			}
+		}
+		catch(NumberFormatException e)
+		{
+			logger.warn("Invalid port number\nAnkit Mishra\nmankit");
+			System.exit(1);
+		}
+		
+		
 		if(homeDirectory.endsWith("/"))
 		{
 			homeDirectory=new String(homeDirectory.substring(0,homeDirectory.length()-1));
@@ -45,14 +60,16 @@ public class HttpServer {
 				Socket socket=daemonSocket.accept();
 				logger.info("Main thread finished waiting on daemonSocket.accept");
 				requestQueue.enqueue(socket);
-				logger.warn("Entered request - " +(++i) );
 			} 
 			logger.warn("Main Thread waiting for Daemon thread to shut down");
 			daemonSocket.close();
 			daemonThread.join();
 		}
 		catch (IOException e){
-			logger.error("IO exception while opening serversocket",e);
+			if(daemonThread.getThreadPool().isRun())
+			{
+				logger.error("IO exception while opening serversocket",e);
+			}
 		} 
 		catch (InterruptedException e) {
 			logger.error("Exception while joining daemon thread",e);

@@ -53,7 +53,10 @@ public class DaemonThread extends Thread{
 						} 
 						catch (InterruptedException e) 
 						{
-							logger.error("Exception while waiting for request queue",e);
+							if(threadPool.isRun())
+							{
+								logger.error("Exception while waiting for request queue",e);
+							}
 						}
 					}
 				}
@@ -65,11 +68,11 @@ public class DaemonThread extends Thread{
 				{
 					if(threadPool.getThreadPool().size()>0)
 					{
-						logger.info("Before - ");
-						threadPool.displayPool();
+						//logger.info("Before - ");
+						//threadPool.displayPool();
 						serverThread=threadPool.getThreadPool().remove(0);
-						logger.info("After - ");
-						threadPool.displayPool();
+						//logger.info("After - ");
+						//threadPool.displayPool();
 						synchronized(serverThread)
 						{
 							//logger.info("Passing request to thread "+serverThread.getId());
@@ -87,7 +90,10 @@ public class DaemonThread extends Thread{
 						} 
 						catch (InterruptedException e) 
 						{
-							logger.error("Exception while waiting for request queue",e);
+							if(threadPool.isRun())
+							{
+								logger.error("Exception while waiting for thread pool",e);
+							}
 						}
 					}
 				}

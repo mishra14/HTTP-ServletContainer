@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -80,7 +81,9 @@ public class ServerThread extends Thread {
 					if(socket!=null)	//correct transfer of socket to handler thread
 					{
 						OutputStream out=socket.getOutputStream();
-						BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+						InputStream socketInputStream = socket.getInputStream();
+						InputStreamReader inputStreamReader = new InputStreamReader(socketInputStream);
+						BufferedReader in = new BufferedReader(inputStreamReader);
 						httpRequest=parseRequest(in);
 						if(httpRequest==null)
 						{
@@ -117,8 +120,13 @@ public class ServerThread extends Thread {
 							File resourceFile=new File(homeDirectory.concat(httpRequest.getResource()));
 							if(resourceFile.exists())
 							{
+								if(!resourceFile.canRead()) //403 if the file is not readable
+								{
+									logger.warn("User accessing non readable file - "+resourceFile.getAbsolutePath());
+									out.write(HTTP.getError403().getResponseString().getBytes());
+								}
 								//valid file request
-								if(resourceFile.isDirectory())
+								else if(resourceFile.isDirectory())
 								{
 									//send the list of all the files inside
 									File[] filesInDirectory = resourceFile.listFiles();
@@ -158,6 +166,7 @@ public class ServerThread extends Thread {
 								}
 								else if(resourceFile.isFile())
 								{
+
 									//send the file
 									FileInputStream fis = new FileInputStream(resourceFile);
 									byte[] bytes = new byte[(int) resourceFile.length()];
@@ -177,12 +186,6 @@ public class ServerThread extends Thread {
 											logger.warn("Error in detecting file type on file- "+resourceFile.getAbsolutePath());
 											out.write(HTTP.getError500().getResponseString().getBytes());
 										}
-										else if(!resourceFile.canRead()) //403 if the file is not readable
-										{
-											logger.warn("User accessing non readable file - "+resourceFile.getAbsolutePath());
-											out.write(HTTP.getError403().getResponseString().getBytes());
-										}
-
 										else
 										{
 											if(httpRequest.getHeaders().containsKey("if-modified-since") || httpRequest.getHeaders().containsKey("if-unmodified-since"))
@@ -263,6 +266,7 @@ public class ServerThread extends Thread {
 												if(httpRequest.getOperation().equalsIgnoreCase("GET"))
 												{
 													out.write(httpResponse.getResponseStringHeadersOnly().getBytes());
+													out.flush();
 													out.write(bytes);
 												}
 												else if(httpRequest.getOperation().equalsIgnoreCase("HEAD"))
@@ -386,12 +390,14 @@ public class ServerThread extends Thread {
 									out.write(HTTP.getError404().getResponseString().getBytes());
 								}
 							}
-							
-							out.flush();
-							out.close();		//close the output buffer
-							httpRequest=null;	//clear the http request object
-							httpResponse=null;	//clear the http response object
 						}
+						in.close();
+						inputStreamReader.close();
+						socketInputStream.close();
+						out.flush();
+						out.close();		//close the output buffer
+						httpRequest=null;	//clear the http request object
+						httpResponse=null;	//clear the http response object
 						socket.close();
 					}
 					else 	//error in socket log it and retry
@@ -410,7 +416,10 @@ public class ServerThread extends Thread {
 					
 				}
 			} catch (InterruptedException e) {
-				logger.error("Interrupted Exception while waiting on socket ",e);
+				if(parentThreadPool.isRun())
+				{
+					logger.error("Interrupted Exception while waiting on socket ",e);
+				}
 			} catch (IOException e) {
 				logger.error("IOException while reading from socket ",e);
 			} catch (NullPointerException e) {
@@ -432,19 +441,19 @@ public class ServerThread extends Thread {
 		logger.warn("Thread Shutting down - "+id);
 	}
 
-	private HttpRequest parseRequest(BufferedReader in) throws IOException {
+	private HttpRequest parseRequest(BufferedReader in) throws IOException, NullPointerException {
 
 		logger.info("parsing request");
 		String inLineString="";
 		StringBuilder requestString = null;
 		HttpRequest httpRequest = null;
-		while (inLineString != null && in != null && !((inLineString = in.readLine()).equals(""))) {
+		while (((inLineString = in.readLine())!=null && !inLineString.equals(""))) {
 			if (requestString == null) {
 				requestString = new StringBuilder();
 				logger.info("string builder created");
 			}
 			requestString.append(inLineString + "\n");
-			logger.info(inLineString);
+			logger.warn(inLineString);
 		}
 		if (requestString != null) // the request was valid
 		{

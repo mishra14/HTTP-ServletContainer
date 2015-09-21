@@ -42712,3 +42712,1249 @@ Thread Shutting down - 7
 Thread Shutting down - 57
 Main Thread Shutting down
 Daemon Thread waiting for thread pool to shut down
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 2
+Waiting for request - 6
+Waiting for request - 5
+Waiting for request - 7
+Waiting for request - 9
+Waiting for request - 8
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 13
+Waiting for request - 12
+Waiting for request - 15
+Waiting for request - 14
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 22
+Waiting for request - 18
+Waiting for request - 21
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 27
+Waiting for request - 26
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 32
+Waiting for request - 31
+Waiting for request - 34
+Waiting for request - 30
+Waiting for request - 33
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 37
+Waiting for request - 42
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 54
+Waiting for request - 50
+Waiting for request - 48
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 87
+Waiting for request - 53
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 49
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Waiting for request - 97
+Waiting for request - 99
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 58
+Waiting for request - 57
+Daemon thread sleeping on request queue
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /control HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+GET /control HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/control, headers={host=localhost:8080, accept=*/*, user-agent=curl/7.35.0}, validRequest=true]
+Requesting - /home/cis455/git/cis455homework1/www/control
+0 RUNNABLE
+1 WAITING
+2 WAITING
+3 WAITING
+4 WAITING
+5 WAITING
+6 WAITING
+7 WAITING
+8 WAITING
+9 WAITING
+10 WAITING
+11 WAITING
+12 WAITING
+13 WAITING
+14 WAITING
+15 WAITING
+16 WAITING
+17 WAITING
+18 WAITING
+19 WAITING
+20 WAITING
+21 WAITING
+22 WAITING
+23 WAITING
+24 WAITING
+25 WAITING
+26 WAITING
+27 WAITING
+28 WAITING
+29 WAITING
+30 WAITING
+31 WAITING
+32 WAITING
+33 WAITING
+34 WAITING
+35 WAITING
+36 WAITING
+37 WAITING
+38 WAITING
+39 WAITING
+40 WAITING
+41 WAITING
+42 WAITING
+43 WAITING
+44 WAITING
+45 WAITING
+46 WAITING
+47 WAITING
+48 WAITING
+49 WAITING
+50 WAITING
+51 WAITING
+52 WAITING
+53 WAITING
+54 WAITING
+55 WAITING
+56 WAITING
+57 WAITING
+58 WAITING
+59 WAITING
+60 WAITING
+61 WAITING
+62 WAITING
+63 WAITING
+64 WAITING
+65 WAITING
+66 WAITING
+67 WAITING
+68 WAITING
+69 WAITING
+70 WAITING
+71 WAITING
+72 WAITING
+73 WAITING
+74 WAITING
+75 WAITING
+76 WAITING
+77 WAITING
+78 WAITING
+79 WAITING
+80 WAITING
+81 WAITING
+82 WAITING
+83 WAITING
+84 WAITING
+85 WAITING
+86 WAITING
+87 WAITING
+88 WAITING
+89 WAITING
+90 WAITING
+91 WAITING
+92 WAITING
+93 WAITING
+94 WAITING
+95 WAITING
+96 WAITING
+97 WAITING
+98 WAITING
+99 WAITING
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Mon, 21 Sep 2015 03:38:15 GMT, Content-Length=1826, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Mon, 21 Sep 2015 03:38:15 GMT
+Content-Length:1826
+Connection:Close
+
+<html><body>/control<br/>Ankit Mishra<br/>mankit<br/><br/>ThreadPool Stats - <br/>Total Threads = 100<br/>Free Threads = 99<br/>Busy Threads = 1<br/><a href="http://localhost:8080/shutdown">Shut Down Server</a><br/><br/>List of all threads - <br/>0 RUNNABLE <a href="http://localhost:8080/control">http://localhost:8080/control</a><br/>1 WAITING<br/>2 WAITING<br/>3 WAITING<br/>4 WAITING<br/>5 WAITING<br/>6 WAITING<br/>7 WAITING<br/>8 WAITING<br/>9 WAITING<br/>10 WAITING<br/>11 WAITING<br/>12 WAITING<br/>13 WAITING<br/>14 WAITING<br/>15 WAITING<br/>16 WAITING<br/>17 WAITING<br/>18 WAITING<br/>19 WAITING<br/>20 WAITING<br/>21 WAITING<br/>22 WAITING<br/>23 WAITING<br/>24 WAITING<br/>25 WAITING<br/>26 WAITING<br/>27 WAITING<br/>28 WAITING<br/>29 WAITING<br/>30 WAITING<br/>31 WAITING<br/>32 WAITING<br/>33 WAITING<br/>34 WAITING<br/>35 WAITING<br/>36 WAITING<br/>37 WAITING<br/>38 WAITING<br/>39 WAITING<br/>40 WAITING<br/>41 WAITING<br/>42 WAITING<br/>43 WAITING<br/>44 WAITING<br/>45 WAITING<br/>46 WAITING<br/>47 WAITING<br/>48 WAITING<br/>49 WAITING<br/>50 WAITING<br/>51 WAITING<br/>52 WAITING<br/>53 WAITING<br/>54 WAITING<br/>55 WAITING<br/>56 WAITING<br/>57 WAITING<br/>58 WAITING<br/>59 WAITING<br/>60 WAITING<br/>61 WAITING<br/>62 WAITING<br/>63 WAITING<br/>64 WAITING<br/>65 WAITING<br/>66 WAITING<br/>67 WAITING<br/>68 WAITING<br/>69 WAITING<br/>70 WAITING<br/>71 WAITING<br/>72 WAITING<br/>73 WAITING<br/>74 WAITING<br/>75 WAITING<br/>76 WAITING<br/>77 WAITING<br/>78 WAITING<br/>79 WAITING<br/>80 WAITING<br/>81 WAITING<br/>82 WAITING<br/>83 WAITING<br/>84 WAITING<br/>85 WAITING<br/>86 WAITING<br/>87 WAITING<br/>88 WAITING<br/>89 WAITING<br/>90 WAITING<br/>91 WAITING<br/>92 WAITING<br/>93 WAITING<br/>94 WAITING<br/>95 WAITING<br/>96 WAITING<br/>97 WAITING<br/>98 WAITING<br/>99 WAITING<br/></body></html>
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /shutdown HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+GET /shutdown HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/shutdown, headers={host=localhost:8080, accept=*/*, user-agent=curl/7.35.0}, validRequest=true]
+Requesting - /home/cis455/git/cis455homework1/www/shutdown
+Daemon thread killing the request queue to stop the main thread
+Daemon Thread killing free threads from the thread pool
+Thread Shutting down - 2
+Thread Shutting down - 66
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Mon, 21 Sep 2015 03:38:15 GMT, Content-Length=120, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Mon, 21 Sep 2015 03:38:15 GMT
+Content-Length:120
+Connection:Close
+
+<html><body>/shutdown<br/>Ankit Mishra<br/>mankit<br/><br/>This page has started the server shutdown <br/></body></html>
+Thread 1 going back into threadpool
+Thread Shutting down - 1
+Thread Shutting down - 99
+Thread Shutting down - 98
+Thread Shutting down - 89
+Thread Shutting down - 87
+Thread Shutting down - 86
+Thread Shutting down - 85
+Thread Shutting down - 84
+Thread Shutting down - 83
+Thread Shutting down - 82
+Thread Shutting down - 81
+Thread Shutting down - 80
+Thread Shutting down - 79
+Thread Shutting down - 78
+Thread Shutting down - 77
+Thread Shutting down - 0
+Main Thread Shutting down
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 16
+Waiting for request - 15
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 31
+Waiting for request - 39
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 48
+Waiting for request - 50
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 42
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 85
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 82
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 67
+Waiting for request - 66
+Waiting for request - 65
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 58
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 98
+Waiting for request - 97
+Waiting for request - 96
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 49
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /control HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+GET /control HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/control, headers={host=localhost:8080, accept=*/*, user-agent=curl/7.35.0}, validRequest=true]
+Requesting - /home/cis455/git/cis455homework1/www/control
+0 RUNNABLE
+1 WAITING
+2 WAITING
+3 WAITING
+4 WAITING
+5 WAITING
+6 WAITING
+7 WAITING
+8 WAITING
+9 WAITING
+10 WAITING
+11 WAITING
+12 WAITING
+13 WAITING
+14 WAITING
+15 WAITING
+16 WAITING
+17 WAITING
+18 WAITING
+19 WAITING
+20 WAITING
+21 WAITING
+22 WAITING
+23 WAITING
+24 WAITING
+25 WAITING
+26 WAITING
+27 WAITING
+28 WAITING
+29 WAITING
+30 WAITING
+31 WAITING
+32 WAITING
+33 WAITING
+34 WAITING
+35 WAITING
+36 WAITING
+37 WAITING
+38 WAITING
+39 WAITING
+40 WAITING
+41 WAITING
+42 WAITING
+43 WAITING
+44 WAITING
+45 WAITING
+46 WAITING
+47 WAITING
+48 WAITING
+49 WAITING
+50 WAITING
+51 WAITING
+52 WAITING
+53 WAITING
+54 WAITING
+55 WAITING
+56 WAITING
+57 WAITING
+58 WAITING
+59 WAITING
+60 WAITING
+61 WAITING
+62 WAITING
+63 WAITING
+64 WAITING
+65 WAITING
+66 WAITING
+67 WAITING
+68 WAITING
+69 WAITING
+70 WAITING
+71 WAITING
+72 WAITING
+73 WAITING
+74 WAITING
+75 WAITING
+76 WAITING
+77 WAITING
+78 WAITING
+79 WAITING
+80 WAITING
+81 WAITING
+82 WAITING
+83 WAITING
+84 WAITING
+85 WAITING
+86 WAITING
+87 WAITING
+88 WAITING
+89 WAITING
+90 WAITING
+91 WAITING
+92 WAITING
+93 WAITING
+94 WAITING
+95 WAITING
+96 WAITING
+97 WAITING
+98 WAITING
+99 WAITING
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Mon, 21 Sep 2015 03:38:23 GMT, Content-Length=1826, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Mon, 21 Sep 2015 03:38:23 GMT
+Content-Length:1826
+Connection:Close
+
+<html><body>/control<br/>Ankit Mishra<br/>mankit<br/><br/>ThreadPool Stats - <br/>Total Threads = 100<br/>Free Threads = 99<br/>Busy Threads = 1<br/><a href="http://localhost:8080/shutdown">Shut Down Server</a><br/><br/>List of all threads - <br/>0 RUNNABLE <a href="http://localhost:8080/control">http://localhost:8080/control</a><br/>1 WAITING<br/>2 WAITING<br/>3 WAITING<br/>4 WAITING<br/>5 WAITING<br/>6 WAITING<br/>7 WAITING<br/>8 WAITING<br/>9 WAITING<br/>10 WAITING<br/>11 WAITING<br/>12 WAITING<br/>13 WAITING<br/>14 WAITING<br/>15 WAITING<br/>16 WAITING<br/>17 WAITING<br/>18 WAITING<br/>19 WAITING<br/>20 WAITING<br/>21 WAITING<br/>22 WAITING<br/>23 WAITING<br/>24 WAITING<br/>25 WAITING<br/>26 WAITING<br/>27 WAITING<br/>28 WAITING<br/>29 WAITING<br/>30 WAITING<br/>31 WAITING<br/>32 WAITING<br/>33 WAITING<br/>34 WAITING<br/>35 WAITING<br/>36 WAITING<br/>37 WAITING<br/>38 WAITING<br/>39 WAITING<br/>40 WAITING<br/>41 WAITING<br/>42 WAITING<br/>43 WAITING<br/>44 WAITING<br/>45 WAITING<br/>46 WAITING<br/>47 WAITING<br/>48 WAITING<br/>49 WAITING<br/>50 WAITING<br/>51 WAITING<br/>52 WAITING<br/>53 WAITING<br/>54 WAITING<br/>55 WAITING<br/>56 WAITING<br/>57 WAITING<br/>58 WAITING<br/>59 WAITING<br/>60 WAITING<br/>61 WAITING<br/>62 WAITING<br/>63 WAITING<br/>64 WAITING<br/>65 WAITING<br/>66 WAITING<br/>67 WAITING<br/>68 WAITING<br/>69 WAITING<br/>70 WAITING<br/>71 WAITING<br/>72 WAITING<br/>73 WAITING<br/>74 WAITING<br/>75 WAITING<br/>76 WAITING<br/>77 WAITING<br/>78 WAITING<br/>79 WAITING<br/>80 WAITING<br/>81 WAITING<br/>82 WAITING<br/>83 WAITING<br/>84 WAITING<br/>85 WAITING<br/>86 WAITING<br/>87 WAITING<br/>88 WAITING<br/>89 WAITING<br/>90 WAITING<br/>91 WAITING<br/>92 WAITING<br/>93 WAITING<br/>94 WAITING<br/>95 WAITING<br/>96 WAITING<br/>97 WAITING<br/>98 WAITING<br/>99 WAITING<br/></body></html>
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /shutdown HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+GET /shutdown HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/shutdown, headers={host=localhost:8080, accept=*/*, user-agent=curl/7.35.0}, validRequest=true]
+Requesting - /home/cis455/git/cis455homework1/www/shutdown
+Daemon thread killing the request queue to stop the main thread
+Daemon Thread killing free threads from the thread pool
+Main Thread Shutting down
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Mon, 21 Sep 2015 03:38:23 GMT, Content-Length=120, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Mon, 21 Sep 2015 03:38:23 GMT
+Content-Length:120
+Connection:Close
+
+<html><body>/shutdown<br/>Ankit Mishra<br/>mankit<br/><br/>This page has started the server shutdown <br/></body></html>
+Thread 1 going back into threadpool
+Thread Shutting down - 1
+Thread Shutting down - 2
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 18
+Waiting for request - 17
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 27
+Waiting for request - 26
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 40
+Waiting for request - 39
+Waiting for request - 38
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 41
+Waiting for request - 34
+Waiting for request - 42
+Waiting for request - 63
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 64
+Waiting for request - 68
+Waiting for request - 70
+Waiting for request - 67
+Waiting for request - 69
+Waiting for request - 72
+Waiting for request - 71
+Waiting for request - 73
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 77
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 84
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 97
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 99
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 98
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /control HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+GET /control HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/control, headers={host=localhost:8080, accept=*/*, user-agent=curl/7.35.0}, validRequest=true]
+Requesting - /home/cis455/git/cis455homework1/www/control
+0 RUNNABLE
+1 WAITING
+2 WAITING
+3 WAITING
+4 WAITING
+5 WAITING
+6 WAITING
+7 WAITING
+8 WAITING
+9 WAITING
+10 WAITING
+11 WAITING
+12 WAITING
+13 WAITING
+14 WAITING
+15 WAITING
+16 WAITING
+17 WAITING
+18 WAITING
+19 WAITING
+20 WAITING
+21 WAITING
+22 WAITING
+23 WAITING
+24 WAITING
+25 WAITING
+26 WAITING
+27 WAITING
+28 WAITING
+29 WAITING
+30 WAITING
+31 WAITING
+32 WAITING
+33 WAITING
+34 WAITING
+35 WAITING
+36 WAITING
+37 WAITING
+38 WAITING
+39 WAITING
+40 WAITING
+41 WAITING
+42 WAITING
+43 WAITING
+44 WAITING
+45 WAITING
+46 WAITING
+47 WAITING
+48 WAITING
+49 WAITING
+50 WAITING
+51 WAITING
+52 WAITING
+53 WAITING
+54 WAITING
+55 WAITING
+56 WAITING
+57 WAITING
+58 WAITING
+59 WAITING
+60 WAITING
+61 WAITING
+62 WAITING
+63 WAITING
+64 WAITING
+65 WAITING
+66 WAITING
+67 WAITING
+68 WAITING
+69 WAITING
+70 WAITING
+71 WAITING
+72 WAITING
+73 WAITING
+74 WAITING
+75 WAITING
+76 WAITING
+77 WAITING
+78 WAITING
+79 WAITING
+80 WAITING
+81 WAITING
+82 WAITING
+83 WAITING
+84 WAITING
+85 WAITING
+86 WAITING
+87 WAITING
+88 WAITING
+89 WAITING
+90 WAITING
+91 WAITING
+92 WAITING
+93 WAITING
+94 WAITING
+95 WAITING
+96 WAITING
+97 WAITING
+98 WAITING
+99 WAITING
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Mon, 21 Sep 2015 03:38:37 GMT, Content-Length=1826, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Mon, 21 Sep 2015 03:38:37 GMT
+Content-Length:1826
+Connection:Close
+
+<html><body>/control<br/>Ankit Mishra<br/>mankit<br/><br/>ThreadPool Stats - <br/>Total Threads = 100<br/>Free Threads = 99<br/>Busy Threads = 1<br/><a href="http://localhost:8080/shutdown">Shut Down Server</a><br/><br/>List of all threads - <br/>0 RUNNABLE <a href="http://localhost:8080/control">http://localhost:8080/control</a><br/>1 WAITING<br/>2 WAITING<br/>3 WAITING<br/>4 WAITING<br/>5 WAITING<br/>6 WAITING<br/>7 WAITING<br/>8 WAITING<br/>9 WAITING<br/>10 WAITING<br/>11 WAITING<br/>12 WAITING<br/>13 WAITING<br/>14 WAITING<br/>15 WAITING<br/>16 WAITING<br/>17 WAITING<br/>18 WAITING<br/>19 WAITING<br/>20 WAITING<br/>21 WAITING<br/>22 WAITING<br/>23 WAITING<br/>24 WAITING<br/>25 WAITING<br/>26 WAITING<br/>27 WAITING<br/>28 WAITING<br/>29 WAITING<br/>30 WAITING<br/>31 WAITING<br/>32 WAITING<br/>33 WAITING<br/>34 WAITING<br/>35 WAITING<br/>36 WAITING<br/>37 WAITING<br/>38 WAITING<br/>39 WAITING<br/>40 WAITING<br/>41 WAITING<br/>42 WAITING<br/>43 WAITING<br/>44 WAITING<br/>45 WAITING<br/>46 WAITING<br/>47 WAITING<br/>48 WAITING<br/>49 WAITING<br/>50 WAITING<br/>51 WAITING<br/>52 WAITING<br/>53 WAITING<br/>54 WAITING<br/>55 WAITING<br/>56 WAITING<br/>57 WAITING<br/>58 WAITING<br/>59 WAITING<br/>60 WAITING<br/>61 WAITING<br/>62 WAITING<br/>63 WAITING<br/>64 WAITING<br/>65 WAITING<br/>66 WAITING<br/>67 WAITING<br/>68 WAITING<br/>69 WAITING<br/>70 WAITING<br/>71 WAITING<br/>72 WAITING<br/>73 WAITING<br/>74 WAITING<br/>75 WAITING<br/>76 WAITING<br/>77 WAITING<br/>78 WAITING<br/>79 WAITING<br/>80 WAITING<br/>81 WAITING<br/>82 WAITING<br/>83 WAITING<br/>84 WAITING<br/>85 WAITING<br/>86 WAITING<br/>87 WAITING<br/>88 WAITING<br/>89 WAITING<br/>90 WAITING<br/>91 WAITING<br/>92 WAITING<br/>93 WAITING<br/>94 WAITING<br/>95 WAITING<br/>96 WAITING<br/>97 WAITING<br/>98 WAITING<br/>99 WAITING<br/></body></html>
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /shutdown HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+GET /shutdown HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/shutdown, headers={host=localhost:8080, accept=*/*, user-agent=curl/7.35.0}, validRequest=true]
+Requesting - /home/cis455/git/cis455homework1/www/shutdown
+Daemon thread killing the request queue to stop the main thread
+Daemon Thread killing free threads from the thread pool
+Daemon Thread waiting for thread pool to shut down
+Thread Shutting down - 2
+Thread Shutting down - 99
+Thread Shutting down - 98
+Thread Shutting down - 97
+Thread Shutting down - 96
+Thread Shutting down - 95
+Thread Shutting down - 93
+Thread Shutting down - 89
+Thread Shutting down - 84
+Thread Shutting down - 83
+Thread Shutting down - 82
+Thread Shutting down - 81
+Thread Shutting down - 80
+Thread Shutting down - 79
+Thread Shutting down - 3
+Thread Shutting down - 77
+Thread Shutting down - 76
+Thread Shutting down - 75
+Thread Shutting down - 74
+Thread Shutting down - 72
+Thread Shutting down - 71
+Thread Shutting down - 68
+Thread Shutting down - 67
+Thread Shutting down - 64
+Thread Shutting down - 32
+Thread Shutting down - 30
+Thread Shutting down - 29
+Thread Shutting down - 25
+Thread Shutting down - 21
+Thread Shutting down - 18
+Thread Shutting down - 16
+Thread Shutting down - 15
+Thread Shutting down - 12
+Thread Shutting down - 9
+Thread Shutting down - 6
+Thread Shutting down - 5
+Main Thread Shutting down
+Thread Shutting down - 94
+Thread Shutting down - 92
+Thread Shutting down - 91
+Thread Shutting down - 90
+Thread Shutting down - 88
+Thread Shutting down - 87
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 4
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 7
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 18
+Waiting for request - 20
+Waiting for request - 19
+Waiting for request - 22
+Waiting for request - 17
+Waiting for request - 24
+Waiting for request - 23
+Waiting for request - 21
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 32
+Waiting for request - 38
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 34
+Waiting for request - 33
+Waiting for request - 39
+Waiting for request - 31
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 49
+Waiting for request - 48
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 50
+Waiting for request - 52
+Waiting for request - 51
+Waiting for request - 54
+Waiting for request - 53
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 64
+Waiting for request - 68
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 73
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 85
+Waiting for request - 84
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 97
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Waiting for request - 98
+Waiting for request - 99
+Daemon thread sleeping on request queue
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /control HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+GET /control HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/control, headers={host=localhost:8080, accept=*/*, user-agent=curl/7.35.0}, validRequest=true]
+Requesting - /home/cis455/git/cis455homework1/www/control
+0 RUNNABLE
+1 WAITING
+2 WAITING
+3 WAITING
+4 WAITING
+5 WAITING
+6 WAITING
+7 WAITING
+8 WAITING
+9 WAITING
+10 WAITING
+11 WAITING
+12 WAITING
+13 WAITING
+14 WAITING
+15 WAITING
+16 WAITING
+17 WAITING
+18 WAITING
+19 WAITING
+20 WAITING
+21 WAITING
+22 WAITING
+23 WAITING
+24 WAITING
+25 WAITING
+26 WAITING
+27 WAITING
+28 WAITING
+29 WAITING
+30 WAITING
+31 WAITING
+32 WAITING
+33 WAITING
+34 WAITING
+35 WAITING
+36 WAITING
+37 WAITING
+38 WAITING
+39 WAITING
+40 WAITING
+41 WAITING
+42 WAITING
+43 WAITING
+44 WAITING
+45 WAITING
+46 WAITING
+47 WAITING
+48 WAITING
+49 WAITING
+50 WAITING
+51 WAITING
+52 WAITING
+53 WAITING
+54 WAITING
+55 WAITING
+56 WAITING
+57 WAITING
+58 WAITING
+59 WAITING
+60 WAITING
+61 WAITING
+62 WAITING
+63 WAITING
+64 WAITING
+65 WAITING
+66 WAITING
+67 WAITING
+68 WAITING
+69 WAITING
+70 WAITING
+71 WAITING
+72 WAITING
+73 WAITING
+74 WAITING
+75 WAITING
+76 WAITING
+77 WAITING
+78 WAITING
+79 WAITING
+80 WAITING
+81 WAITING
+82 WAITING
+83 WAITING
+84 WAITING
+85 WAITING
+86 WAITING
+87 WAITING
+88 WAITING
+89 WAITING
+90 WAITING
+91 WAITING
+92 WAITING
+93 WAITING
+94 WAITING
+95 WAITING
+96 WAITING
+97 WAITING
+98 WAITING
+99 WAITING
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Mon, 21 Sep 2015 03:38:41 GMT, Content-Length=1826, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Mon, 21 Sep 2015 03:38:41 GMT
+Content-Length:1826
+Connection:Close
+
+<html><body>/control<br/>Ankit Mishra<br/>mankit<br/><br/>ThreadPool Stats - <br/>Total Threads = 100<br/>Free Threads = 99<br/>Busy Threads = 1<br/><a href="http://localhost:8080/shutdown">Shut Down Server</a><br/><br/>List of all threads - <br/>0 RUNNABLE <a href="http://localhost:8080/control">http://localhost:8080/control</a><br/>1 WAITING<br/>2 WAITING<br/>3 WAITING<br/>4 WAITING<br/>5 WAITING<br/>6 WAITING<br/>7 WAITING<br/>8 WAITING<br/>9 WAITING<br/>10 WAITING<br/>11 WAITING<br/>12 WAITING<br/>13 WAITING<br/>14 WAITING<br/>15 WAITING<br/>16 WAITING<br/>17 WAITING<br/>18 WAITING<br/>19 WAITING<br/>20 WAITING<br/>21 WAITING<br/>22 WAITING<br/>23 WAITING<br/>24 WAITING<br/>25 WAITING<br/>26 WAITING<br/>27 WAITING<br/>28 WAITING<br/>29 WAITING<br/>30 WAITING<br/>31 WAITING<br/>32 WAITING<br/>33 WAITING<br/>34 WAITING<br/>35 WAITING<br/>36 WAITING<br/>37 WAITING<br/>38 WAITING<br/>39 WAITING<br/>40 WAITING<br/>41 WAITING<br/>42 WAITING<br/>43 WAITING<br/>44 WAITING<br/>45 WAITING<br/>46 WAITING<br/>47 WAITING<br/>48 WAITING<br/>49 WAITING<br/>50 WAITING<br/>51 WAITING<br/>52 WAITING<br/>53 WAITING<br/>54 WAITING<br/>55 WAITING<br/>56 WAITING<br/>57 WAITING<br/>58 WAITING<br/>59 WAITING<br/>60 WAITING<br/>61 WAITING<br/>62 WAITING<br/>63 WAITING<br/>64 WAITING<br/>65 WAITING<br/>66 WAITING<br/>67 WAITING<br/>68 WAITING<br/>69 WAITING<br/>70 WAITING<br/>71 WAITING<br/>72 WAITING<br/>73 WAITING<br/>74 WAITING<br/>75 WAITING<br/>76 WAITING<br/>77 WAITING<br/>78 WAITING<br/>79 WAITING<br/>80 WAITING<br/>81 WAITING<br/>82 WAITING<br/>83 WAITING<br/>84 WAITING<br/>85 WAITING<br/>86 WAITING<br/>87 WAITING<br/>88 WAITING<br/>89 WAITING<br/>90 WAITING<br/>91 WAITING<br/>92 WAITING<br/>93 WAITING<br/>94 WAITING<br/>95 WAITING<br/>96 WAITING<br/>97 WAITING<br/>98 WAITING<br/>99 WAITING<br/></body></html>
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /shutdown HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+GET /shutdown HTTP/1.1
+User-Agent: curl/7.35.0
+Host: localhost:8080
+Accept: */*
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/shutdown, headers={host=localhost:8080, accept=*/*, user-agent=curl/7.35.0}, validRequest=true]
+Requesting - /home/cis455/git/cis455homework1/www/shutdown
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=text/html; charset=utf-8, Date=Mon, 21 Sep 2015 03:38:41 GMT, Content-Length=120, Connection=Close}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Mon, 21 Sep 2015 03:38:41 GMT
+Content-Length:120
+Connection:Close
+
+<html><body>/shutdown<br/>Ankit Mishra<br/>mankit<br/><br/>This page has started the server shutdown <br/></body></html>
+Thread 1 going back into threadpool
+Thread Shutting down - 1
+Daemon thread killing the request queue to stop the main thread
+Daemon Thread killing free threads from the thread pool
+Thread Shutting down - 3
+Thread Shutting down - 2
+Thread Shutting down - 5
+Thread Shutting down - 6
+Thread Shutting down - 8
+Thread Shutting down - 7
+Thread Shutting down - 12
+Thread Shutting down - 9
+Thread Shutting down - 14
+Thread Shutting down - 10
+Thread Shutting down - 17
+Thread Shutting down - 11
+Thread Shutting down - 18
+Thread Shutting down - 13
+Thread Shutting down - 19
+Thread Shutting down - 15
+Thread Shutting down - 21
+Thread Shutting down - 16
+Thread Shutting down - 23
+Thread Shutting down - 20
+Main Thread Shutting down
+Thread Shutting down - 22
+Thread Shutting down - 4
+Thread Shutting down - 24
+Invalid home directory
+Ankit Mishra
+mankit
+Invalid port number
+Ankit Mishra
+mankit
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 22
+Waiting for request - 21
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 39
+Waiting for request - 38
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 34
+Waiting for request - 33
+Waiting for request - 32
+Waiting for request - 31
+Waiting for request - 30
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 27
+Waiting for request - 26
+Waiting for request - 25
+Waiting for request - 42
+Waiting for request - 54
+Waiting for request - 52
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 53
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 82
+Waiting for request - 86
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 85
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 98
+Waiting for request - 97
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99

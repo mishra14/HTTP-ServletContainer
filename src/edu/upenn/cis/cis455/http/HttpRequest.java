@@ -39,6 +39,13 @@ public class HttpRequest
 		else
 		{
 			logger.info(requestSplit[0].trim());
+			if(firstLineSplit.length<3 || firstLineSplit[2].split("/").length<2 || !firstLineSplit[2].split("/")[0].trim().equalsIgnoreCase("HTTP") || (!firstLineSplit[2].split("/")[1].trim().equalsIgnoreCase("1.0") && !firstLineSplit[2].split("/")[1].trim().equalsIgnoreCase("1.1")))
+			{
+				logger.warn("invalid first line in request - "+httpRequest);
+				validRequest=false;
+				return;
+			}
+			
 			operation=firstLineSplit[0].trim();
 			resource=firstLineSplit[1].trim();
 			protocol=firstLineSplit[2].split("/")[0].trim();
@@ -65,6 +72,7 @@ public class HttpRequest
 		if(!headers.containsKey("host") && version.equalsIgnoreCase("1.1"))
 		{
 			//invalid http 1.1 request; respond with 400 error;
+			logger.warn("HTTP 1.1 request without Host header - "+httpRequest);
 			validRequest=false;
 		}
 	}

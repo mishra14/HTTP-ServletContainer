@@ -87,11 +87,13 @@ public class ServerThread extends Thread {
 						httpRequest=parseRequest(in);
 						if(httpRequest==null)
 						{
+							logger.info("null Http Request ");
 							// respond with error code 400
 							out.write(HTTP.getError400().getResponseString().getBytes());
 						}
 						else if(!httpRequest.isValidRequest())
 						{
+							logger.info("Invalid http request - "+httpRequest.getResource());
 							// respond with error code 400
 							out.write(HTTP.getError400().getResponseString().getBytes());
 						}
@@ -136,7 +138,7 @@ public class ServerThread extends Thread {
 									for(File file : filesInDirectory)
 									{
 										if(!file.getName().endsWith("~"))
-											dataBuilder.append("<a href=\"http://localhost:"+parentThreadPool.getPort()+file.getAbsolutePath().substring(homeDirectory.length())+"\">"+file.getName()+"</a><br/>");
+											dataBuilder.append("<a href=\"http://localhost:"+parentThreadPool.getPort()+httpRequest.getResource()+"/"+file.getName()+"\">"+file.getName()+"</a><br/>");
 									}
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
@@ -159,6 +161,7 @@ public class ServerThread extends Thread {
 									}
 									else
 									{
+										logger.info("Unknown operation in request - "+httpRequest.getResource());
 										out.write(HTTP.getError400().getResponseString().getBytes());
 									}
 									logger.info(httpResponse.toString());
@@ -248,6 +251,7 @@ public class ServerThread extends Thread {
 													}
 													else
 													{
+														logger.info("Unknown operation in request - "+httpRequest.getResource());
 														out.write(HTTP.getError400().getResponseString().getBytes());
 													}
 													logger.info(bytes.toString());
@@ -279,6 +283,7 @@ public class ServerThread extends Thread {
 												}
 												else
 												{
+													logger.info("Unknown operation in request - "+httpRequest.getResource());
 													out.write(HTTP.getError400().getResponseString().getBytes());
 												}
 												logger.info(bytes.toString());
@@ -342,6 +347,7 @@ public class ServerThread extends Thread {
 									}
 									else
 									{
+										logger.info("Unknown operation in request - "+httpRequest.getResource());
 										out.write(HTTP.getError400().getResponseString().getBytes());
 									}
 									logger.info(httpResponse.toString());
@@ -378,6 +384,7 @@ public class ServerThread extends Thread {
 									}
 									else
 									{
+										logger.info("Unknown operation in request - "+httpRequest.getResource());
 										out.write(HTTP.getError400().getResponseString().getBytes());
 									}
 									logger.info(httpResponse.toString());

@@ -33,7 +33,7 @@ public class HttpServer {
 			homeDirectory=args[1].trim();
 			if(!(new File(homeDirectory).exists()))
 			{
-				logger.warn("Invalid home directory\nAnkit Mishra\nmankit");
+				logger.warn("Invalid home directory = "+homeDirectory+"\nAnkit Mishra\nmankit");
 				System.exit(1);
 			}
 		}

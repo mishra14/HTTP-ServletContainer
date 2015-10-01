@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
  Accept-Encoding: gzip, deflate
  Connection: keep-alive 
  */
+
 public class HttpRequest 
 {
 	private static final Logger logger = Logger.getLogger(HttpRequest.class);
@@ -23,6 +24,10 @@ public class HttpRequest
 	private String resource;
 	private Map<String,String> headers;
 	private boolean validRequest;
+	private String contextPath;
+	private String servletPath;
+	private String pathInfo;
+	private String queryString;
 	
 	public HttpRequest(String httpRequest)
 	{
@@ -76,7 +81,14 @@ public class HttpRequest
 			validRequest=false;
 		}
 	}
-
+	
+	public void parseResource()
+	{
+		//TODO fix this code
+		String servletPath="/servlet-path/still";
+		String pathInfo=resource.substring(servletPath.length());
+		String queryString= pathInfo.split("\\?")[1];
+	}
 	public String getOperation() {
 		return operation;
 	}

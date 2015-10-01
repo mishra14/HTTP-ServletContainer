@@ -1,26 +1,39 @@
 package edu.upenn.cis.cis455.webserver;
 
+
 import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
+
+import javax.servlet.http.HttpServlet;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 
 import org.apache.log4j.Logger;
 
 import edu.upenn.cis.cis455.queue.Queue;
+import edu.upenn.cis.cis455.servlet.Context;
+import edu.upenn.cis.cis455.servlet.Handler;
+import edu.upenn.cis.cis455.servlet.Config;
+import edu.upenn.cis.cis455.servlet.Session;
 import edu.upenn.cis.cis455.thread.DaemonThread;
 
 public class HttpServer {
 
 	private static final Logger logger = Logger.getLogger(HttpServer.class);
-	private static final int ARGS_LENGTH=2;
+	private static final int ARGS_LENGTH=3;
 	private static final int THREAD_POOL_SIZE=100;
 	private static int port;
 	private static String homeDirectory;
+	private static String webXmlPath;
+	private static File webXml;
 	private static Queue requestQueue;
 	private static DaemonThread daemonThread;
 	private static ServerSocket daemonSocket;
-	public static void main(String[] args) {
+	
+public static void main(String[] args) {
 		
 		if(args.length !=ARGS_LENGTH)
 		{
@@ -36,6 +49,13 @@ public class HttpServer {
 				logger.warn("Invalid home directory = "+homeDirectory+"\nAnkit Mishra\nmankit");
 				System.exit(1);
 			}
+			webXmlPath=args[1].trim();
+			webXml=new File(webXmlPath);
+			if(!(webXml.exists()))
+			{
+				logger.warn("Invalid web xml directory = "+homeDirectory+"\nAnkit Mishra\nmankit");
+				System.exit(1);
+			}
 		}
 		catch(NumberFormatException e)
 		{
@@ -48,6 +68,20 @@ public class HttpServer {
 		{
 			homeDirectory=new String(homeDirectory.substring(0,homeDirectory.length()-1));
 		}		
+		
+		Handler handler;
+		try {
+			handler = parseWebdotxml(args[2]);
+			Context context = createContext(handler);
+			HashMap<String,HttpServlet> servlets = createServlets(handler, context);
+			Session session = null;
+			logger.info(servlets.toString());
+			logger.info(handler.getM_servletParams().toString());
+			logger.info(handler.getM_servlets());
+			logger.info(handler.toString());
+		} catch (Exception e) {
+			logger.error("Exception while parsing web xml", e);
+		}
 		try 
 		{
 			daemonSocket= new ServerSocket(port);
@@ -76,5 +110,43 @@ public class HttpServer {
 		}
 		logger.warn("Main Thread Shutting down");
 		System.exit(0);
+	}
+	
+	private static Handler parseWebdotxml(String webdotxml) throws Exception {
+		Handler handler = new Handler();
+		File file = new File(webdotxml);
+		if (file.exists() == false) {
+			System.err.println("error: cannot find " + file.getPath());
+			System.exit(-1);
+		}
+		SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
+		parser.parse(file, handler);
+		return handler;
+	}
+	
+	private static Context createContext(Handler h) {
+		Context context = new Context();
+		for (String param : h.getM_contextParams().keySet()) {
+			context.setInitParam(param, h.getM_contextParams().get(param));
+		}
+		return context;
+	}
+	private static HashMap<String,HttpServlet> createServlets(Handler handler, Context context) throws Exception {
+		HashMap<String,HttpServlet> servlets = new HashMap<String,HttpServlet>();
+		for (String servletName : handler.getM_servlets().keySet()) {
+			Config config = new Config(servletName, context);
+			String className = handler.getM_servlets().get(servletName);
+			Class servletClass = Class.forName(className);
+			HttpServlet servlet = (HttpServlet) servletClass.newInstance();
+			HashMap<String,String> servletParams = handler.getM_servletParams().get(servletName);
+			if (servletParams != null) {
+				for (String param : servletParams.keySet()) {
+					config.setInitParam(param, servletParams.get(param));
+				}
+			}
+			servlet.init(config);
+			servlets.put(servletName, servlet);
+		}
+		return servlets;
 	}
 }

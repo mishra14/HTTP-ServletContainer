@@ -1,13 +1,20 @@
 package edu.upenn.cis.cis455.http;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 
+import org.apache.log4j.Logger;
+
 public class HTTP {
 	
+	private static final Logger logger = Logger.getLogger(HTTP.class);
 	private static final String protocol = "HTTP";
 	private static final String version1 = "1";
 	private static final String version11 = "1.1";
@@ -29,6 +36,7 @@ public class HTTP {
 	private static final String CONNECTION_KEY="Connection";
 	private static final String ACCEPT_KEY = "Accept";
 	private static SimpleDateFormat httpDateFormat;
+	private static ArrayList <SimpleDateFormat> httpDateFormats;
 	private static Map<String, String> errorHeaders;
 	private static Map<String, String> responseCodes;
 	private static HttpResponse error100;
@@ -44,6 +52,11 @@ public class HTTP {
 	
 	static
 	{
+		httpDateFormats = new ArrayList<SimpleDateFormat>();
+		httpDateFormats.add(new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z",Locale.ENGLISH));
+		httpDateFormats.add(new SimpleDateFormat("EEEEEE, dd-MMM-yy HH:mm:ss z",Locale.ENGLISH));
+		httpDateFormats.add(new SimpleDateFormat("EEE MMM dd HH:mm:ss yyyy",Locale.ENGLISH));
+		
 		httpDateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z");
 		httpDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
 		responseCodes = new HashMap<String, String>();
@@ -107,7 +120,25 @@ public class HTTP {
 		error412 = new HttpResponse(protocol,version11,KEY_412,responseCodes.get(KEY_412),errorHeaders,data);			
 		
 	}
-
+	
+	public static Calendar getDateFromString(String dateString)
+	{
+		Calendar date = new GregorianCalendar();
+		for(SimpleDateFormat format : httpDateFormats)
+		{
+			try 
+			{
+				date.setTime(format.parse(dateString));
+				logger.info("Success in parsing date with format - "+format.toString()+" and date - "+dateString);
+				return date;
+			} catch (ParseException e)
+			{
+				logger.warn("ParseException while parsing date with format - "+format.toString()+" and date - "+dateString);
+			}
+		}
+		return null;
+	}
+	
 	public static String getProtocol() {
 		return protocol;
 	}

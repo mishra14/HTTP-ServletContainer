@@ -32,6 +32,8 @@ public class HttpServer {
 	private static Queue requestQueue;
 	private static DaemonThread daemonThread;
 	private static ServerSocket daemonSocket;
+	private static HashMap<String, String> urlPatterns;
+	private static HashMap<String,HttpServlet> servlets;
 	
 public static void main(String[] args) {
 		
@@ -74,6 +76,7 @@ public static void main(String[] args) {
 			handler = parseWebdotxml(args[2]);
 			Context context = createContext(handler);
 			HashMap<String,HttpServlet> servlets = createServlets(handler, context);
+			urlPatterns = new HashMap<String, String>(handler.getM_urlPattern());
 			Session session = null;
 			logger.info(servlets.toString());
 			logger.info(handler.getM_servletParams().toString());
@@ -132,7 +135,7 @@ public static void main(String[] args) {
 		return context;
 	}
 	private static HashMap<String,HttpServlet> createServlets(Handler handler, Context context) throws Exception {
-		HashMap<String,HttpServlet> servlets = new HashMap<String,HttpServlet>();
+		servlets = new HashMap<String,HttpServlet>();
 		for (String servletName : handler.getM_servlets().keySet()) {
 			Config config = new Config(servletName, context);
 			String className = handler.getM_servlets().get(servletName);
@@ -149,4 +152,54 @@ public static void main(String[] args) {
 		}
 		return servlets;
 	}
+
+	public static Logger getLogger() {
+		return logger;
+	}
+
+	public static int getArgsLength() {
+		return ARGS_LENGTH;
+	}
+
+	public static int getThreadPoolSize() {
+		return THREAD_POOL_SIZE;
+	}
+
+	public static int getPort() {
+		return port;
+	}
+
+	public static String getHomeDirectory() {
+		return homeDirectory;
+	}
+
+	public static String getWebXmlPath() {
+		return webXmlPath;
+	}
+
+	public static File getWebXml() {
+		return webXml;
+	}
+
+	public static Queue getRequestQueue() {
+		return requestQueue;
+	}
+
+	public static DaemonThread getDaemonThread() {
+		return daemonThread;
+	}
+
+	public static ServerSocket getDaemonSocket() {
+		return daemonSocket;
+	}
+
+	public static HashMap<String, String> getUrlPatterns() {
+		return urlPatterns;
+	}
+
+	public static HashMap<String, HttpServlet> getServlets() {
+		return servlets;
+	}
+	
+	
 }

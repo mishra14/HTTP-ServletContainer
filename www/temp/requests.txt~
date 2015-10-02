@@ -1,4 +1,4 @@
-GET http://localhost:8080/ HTTP/1.1
+GET http://localhost:8080/ HTTP/1.0
 
 GET /temp/hello.txt HTTP/1.1
 Host: localhost:8080
@@ -10,3 +10,5 @@ Referer: http://localhost:8080/temp/
 Connection: keep-alive
 If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
 
+
+GET / HTTP/1.0

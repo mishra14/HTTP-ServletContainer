@@ -1,5 +1,6 @@
 package edu.upenn.cis.cis455.http;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,16 +23,17 @@ public class HttpRequest
 	private String protocol;
 	private String version;
 	private String resource;
-	private Map<String,String> headers;
+	private Map<String,ArrayList<String>> headers;
 	private boolean validRequest;
-	private String contextPath;
+	private String servletUrl;
+	private String contextPath="";
 	private String servletPath;
 	private String pathInfo;
 	private String queryString;
 	
 	public HttpRequest(String httpRequest)
 	{
-		headers=new HashMap<String, String>();
+		headers=new HashMap<String, ArrayList<String>>();
 		validRequest=true;
 		String[] requestSplit=httpRequest.split("\n");
 		String[] firstLineSplit=requestSplit[0].trim().split(" ");
@@ -71,7 +73,16 @@ public class HttpRequest
 				{
 					value=requestSplit[i].substring(requestSplit[i].indexOf(":")+1).trim();
 				}
-				headers.put(key, value);
+				if(headers.containsKey(key))
+				{
+					headers.get(key).add(value);
+				}
+				else
+				{
+					ArrayList<String> valueList = new ArrayList<String>();
+					valueList.add(value);
+					headers.put(key, valueList);
+				}
 			}
 		}
 		if(!headers.containsKey("host") && version.equalsIgnoreCase("1.1"))
@@ -82,13 +93,27 @@ public class HttpRequest
 		}
 	}
 	
-	public void parseResource()
+	public void updatePaths()
 	{
-		//TODO fix this code
-		String servletPath="/servlet-path/still";
-		String pathInfo=resource.substring(servletPath.length());
-		String queryString= pathInfo.split("\\?")[1];
+		if(servletUrl!=null)
+		{
+			if(servletUrl.contains(".*"))
+			{
+				servletPath = servletUrl.substring(0, servletUrl.indexOf(".*")-1);
+			}
+			else
+			{
+				servletPath = servletUrl;
+			}
+			String path = resource.substring(servletPath.length());
+			if(path.contains("?"))
+			{
+				pathInfo = path.split("\\?")[0];
+				queryString = path.split("\\?")[1];
+			}
+		}
 	}
+	
 	public String getOperation() {
 		return operation;
 	}
@@ -121,11 +146,11 @@ public class HttpRequest
 		this.resource = resource;
 	}
 
-	public Map<String, String> getHeaders() {
+	public Map<String, ArrayList<String>> getHeaders() {
 		return headers;
 	}
 
-	public void setHeaders(Map<String, String> headers) {
+	public void setHeaders(Map<String, ArrayList<String>> headers) {
 		this.headers = headers;
 	}
 
@@ -143,6 +168,46 @@ public class HttpRequest
 				+ ", version=" + version + ", resource=" + resource
 				+ ", headers=" + headers + ", validRequest=" + validRequest
 				+ "]";
+	}
+
+	public String getServletUrl() {
+		return servletUrl;
+	}
+
+	public void setServletUrl(String servletUrl) {
+		this.servletUrl = servletUrl;
+	}
+
+	public String getContextPath() {
+		return contextPath;
+	}
+
+	public void setContextPath(String contextPath) {
+		this.contextPath = contextPath;
+	}
+
+	public String getServletPath() {
+		return servletPath;
+	}
+
+	public void setServletPath(String servletPath) {
+		this.servletPath = servletPath;
+	}
+
+	public String getPathInfo() {
+		return pathInfo;
+	}
+
+	public void setPathInfo(String pathInfo) {
+		this.pathInfo = pathInfo;
+	}
+
+	public String getQueryString() {
+		return queryString;
+	}
+
+	public void setQueryString(String queryString) {
+		this.queryString = queryString;
 	}
 	
 	

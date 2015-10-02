@@ -8,11 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 public class WebServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	
-	 private String message;
+	private static final Logger logger = Logger.getLogger(WebServlet.class);
+	private String urlPattern;
+	private String message;
 
 	  public void init() throws ServletException
 	  {
@@ -24,12 +27,13 @@ public class WebServlet extends HttpServlet {
 	                    HttpServletResponse response)
 	            throws ServletException, IOException
 	  {
-	      // Set response content type
+		  logger.info("Servlet in WebServlet");
+	      /*// Set response content type
 	      response.setContentType("text/html");
 
 	      // Actual logic goes here.
 	      PrintWriter out = response.getWriter();
-	      out.println("<h1>" + message + "</h1>");
+	      out.println("<h1>" + message + "</h1>");*/
 	  }
 	  
 	  public void destroy()

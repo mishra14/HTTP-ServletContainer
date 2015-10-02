@@ -13,9 +13,12 @@ public class Handler extends DefaultHandler{
 	HashMap<String,String> m_servlets = new HashMap<String,String>();
 	HashMap<String,String> m_contextParams = new HashMap<String,String>();
 	HashMap<String,HashMap<String,String>> m_servletParams = new HashMap<String,HashMap<String,String>>();
+	HashMap<String, String> m_urlPattern = new HashMap<String, String>();
+	private String tempServletName;
 	public void startElement(String uri, String localName, String qName, Attributes attributes) {
+		System.out.println("Start element "+m_state);
 		if (qName.compareTo("servlet-name") == 0) {
-			m_state = 1;
+			m_state = (m_state == 5) ? 15 : 1;
 		} else if (qName.compareTo("servlet-class") == 0) {
 			m_state = 2;
 		} else if (qName.compareTo("context-param") == 0) {
@@ -26,7 +29,12 @@ public class Handler extends DefaultHandler{
 			m_state = (m_state == 3) ? 10 : 20;
 		} else if (qName.compareTo("param-value") == 0) {
 			m_state = (m_state == 10) ? 11 : 21;
+		} else if(qName.compareTo("servlet-mapping") == 0) {
+			m_state = 5;
+		} else if(qName.compareTo("url-pattern") == 0) {
+			m_state = (m_state == 15) ? 25 : 35;
 		}
+		System.out.println("Start element "+qName+" "+m_state);
 	}
 	public void characters(char[] ch, int start, int length) {
 		String value = new String(ch, start, length);
@@ -59,7 +67,19 @@ public class Handler extends DefaultHandler{
 			p.put(m_paramName, value);
 			m_paramName = null;
 			m_state = 0;
+		} else if(m_state == 15) {
+			tempServletName = value;
+		} else if(m_state == 25) {
+			if(value.contains("/*"))
+			{
+				value=value.replace("/*", ".*");
+			}
+			m_urlPattern.put(value, tempServletName);
+			m_state = 0;
+		} else if(m_state == 35) {
+			m_state=0;
 		}
+		System.out.println("character");
 	}
 	public int getM_state() {
 		return m_state;
@@ -97,6 +117,9 @@ public class Handler extends DefaultHandler{
 	public void setM_servletParams(
 			HashMap<String, HashMap<String, String>> m_servletParams) {
 		this.m_servletParams = m_servletParams;
+	}	
+	public HashMap<String, String> getM_urlPattern() {
+		return m_urlPattern;
 	}
 	@Override
 	public String toString() {
@@ -104,7 +127,9 @@ public class Handler extends DefaultHandler{
 				+ m_servletName + ", m_paramName=" + m_paramName
 				+ ", m_servlets=" + m_servlets + ", m_contextParams="
 				+ m_contextParams + ", m_servletParams=" + m_servletParams
-				+ "]";
+				+ ", m_urlPattern=" + m_urlPattern + ", tempServletName="
+				+ tempServletName + "]";
 	}
+	
 	
 }

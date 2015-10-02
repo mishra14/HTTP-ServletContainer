@@ -5,6 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
@@ -22,25 +23,36 @@ import edu.upenn.cis.cis455.http.HttpRequest;
 /**
  * @author Todd J. Green
  */
-class Request implements HttpServletRequest {
+public class Request implements HttpServletRequest {
 
 	private Properties m_params = new Properties();
 	private Properties m_props = new Properties();
 	private Session m_session = null;
 	private String m_method;
+	private String urlpattern;
 	private HttpRequest httpRequest;
 	private ArrayList<Cookie> cookies = new ArrayList<Cookie>();
-	Request() {
+	public Request() {
 	}
 	
-	Request(Session session) {
+	public Request(Session session) {
 		m_session = session;
 	}
 	
-	Request(HttpRequest httpRequest)
+	public Request(HttpRequest httpRequest)
 	{
 		this.httpRequest = httpRequest;
 	}
+	
+	
+	public String getUrlpattern() {
+		return urlpattern;
+	}
+
+	public void setUrlpattern(String urlpattern) {
+		this.urlpattern = urlpattern;
+	}
+
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#getAuthType()
 	 */
@@ -62,7 +74,7 @@ class Request implements HttpServletRequest {
 
 		if(httpRequest.getHeaders().containsKey(headerName))
 		{
-			String dateString = httpRequest.getHeaders().get(headerName);
+			String dateString = httpRequest.getHeaders().get(headerName).get(0);
 			Calendar date = HTTP.getDateFromString(dateString);
 			if(date == null)
 			{
@@ -83,24 +95,49 @@ class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#getHeader(java.lang.String)
 	 */
 	public String getHeader(String headerName) {
-		// TODO Auto-generated method stub
-		return null;
+		if(httpRequest.getHeaders().containsKey(headerName))
+		{
+			return httpRequest.getHeaders().get(headerName).get(0);
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#getHeaders(java.lang.String)
 	 */
-	public Enumeration getHeaders(String arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public Enumeration getHeaders(String headerName) {
+		if(httpRequest.getHeaders().containsKey(headerName))
+		{
+			return Collections.enumeration(httpRequest.getHeaders().get(headerName));
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#getHeaderNames()
 	 */
 	public Enumeration getHeaderNames() {
-		// TODO Auto-generated method stub
-		return null;
+		if(httpRequest.getHeaders()!=null)
+		{
+			if(httpRequest.getHeaders().isEmpty())
+			{
+				return Collections.emptyEnumeration();
+			}
+			else
+			{
+				return Collections.enumeration(httpRequest.getHeaders().keySet());
+			}
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	/* (non-Javadoc)
@@ -109,7 +146,7 @@ class Request implements HttpServletRequest {
 	public int getIntHeader(String headerName) throws NumberFormatException {
 		if(httpRequest.getHeaders().containsKey(headerName))
 		{
-			int result = Integer.parseInt(httpRequest.getHeaders().get(headerName));
+			int result = Integer.parseInt(httpRequest.getHeaders().get(headerName).get(0));
 			return result;
 		}
 		else
@@ -129,8 +166,7 @@ class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#getPathInfo()
 	 */
 	public String getPathInfo() {
-		// TODO Auto-generated method stub
-		return null;
+		return httpRequest.getPathInfo();
 	}
 
 	/* (non-Javadoc)
@@ -512,5 +548,7 @@ class Request implements HttpServletRequest {
 	boolean hasSession() {
 		return ((m_session != null) && m_session.isValid());
 	}
+
+	
 		
 }

@@ -14,12 +14,20 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.servlet.ServletException;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
 
 import edu.upenn.cis.cis455.http.HTTP;
 import edu.upenn.cis.cis455.http.HttpRequest;
 import edu.upenn.cis.cis455.http.HttpResponse;
+import edu.upenn.cis.cis455.servlet.Request;
+import edu.upenn.cis.cis455.servlet.Response;
+import edu.upenn.cis.cis455.webserver.HttpServer;
 
 public class ServerThread extends Thread {
 
@@ -111,6 +119,23 @@ public class ServerThread extends Thread {
 								logger.info("Absolute url in GET request - "+httpRequest.getResource());
 								httpRequest.setResource(httpRequest.getResource().substring(("http://localhost:"+parentThreadPool.getPort()).length()));
 							}
+							for(Map.Entry<String, String> entry : HttpServer.getUrlPatterns().entrySet())
+							{
+								System.out.println("Pattern - "+entry.getKey());
+								System.out.println("Resource - "+httpRequest.getResource());
+								Pattern urlPattern = Pattern.compile(entry.getKey());
+								if(urlPattern.matcher(httpRequest.getResource()).matches())
+								{
+									//send request to servlet 
+									System.out.println("Matching - "+HttpServer.getServlets().get(entry.getValue()));
+									httpRequest.setServletUrl(entry.getKey());
+									httpRequest.updatePaths();
+									Request request = new Request(httpRequest);
+									Response response = new Response(httpResponse);
+									HttpServer.getServlets().get(entry.getValue()).service(request, response);
+									break;
+								}
+							}
 							Map<String, String> headers=new HashMap<String, String>();
 							String data = "";
 							String protocol = HTTP.getProtocol();
@@ -196,7 +221,7 @@ public class ServerThread extends Thread {
 												logger.info("if-modified or if-unmodified header detected");
 												Calendar ifModifiedDate = new GregorianCalendar();
 												try {
-													ifModifiedDate.setTime(httpRequest.getHeaders().containsKey("if-modified-since")?HTTP.getHttpDateFormat().parse(httpRequest.getHeaders().get("if-modified-since")):HTTP.getHttpDateFormat().parse(httpRequest.getHeaders().get("if-unmodified-since")));
+													ifModifiedDate.setTime(httpRequest.getHeaders().containsKey("if-modified-since")?HTTP.getHttpDateFormat().parse(httpRequest.getHeaders().get("if-modified-since").get(0)):HTTP.getHttpDateFormat().parse(httpRequest.getHeaders().get("if-unmodified-since").get(0)));
 												} catch (ParseException e) {
 													logger.error("ParseException while parsing if-modified-date  ",e);
 													out.write(HTTP.getError500().getResponseString().getBytes());
@@ -423,14 +448,15 @@ public class ServerThread extends Thread {
 					
 				}
 			} catch (InterruptedException e) {
-				if(parentThreadPool.isRun())
-				{
+				if(parentThreadPool.isRun()) {
 					logger.error("Interrupted Exception while waiting on socket ",e);
 				}
 			} catch (IOException e) {
 				logger.error("IOException while reading from socket ",e);
 			} catch (NullPointerException e) {
 				logger.error("NullPointerException while reading from socket ",e);
+			} catch (ServletException e) {
+				logger.error("ServletException while sending request to servlet ",e);
 			}
 			finally
 			{

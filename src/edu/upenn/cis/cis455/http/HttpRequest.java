@@ -99,7 +99,14 @@ public class HttpRequest
 		{
 			if(servletUrl.contains(".*"))
 			{
-				servletPath = servletUrl.substring(0, servletUrl.indexOf(".*")-1);
+				if(servletUrl.startsWith(".*"))
+				{
+					servletPath="";
+				}
+				else
+				{
+					servletPath = servletUrl.substring(0, servletUrl.indexOf(".*"));
+				}
 			}
 			else
 			{

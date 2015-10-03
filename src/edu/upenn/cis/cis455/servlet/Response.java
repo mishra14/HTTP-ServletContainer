@@ -1,24 +1,27 @@
 package edu.upenn.cis.cis455.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
+import edu.upenn.cis.cis455.http.HTTP;
 import edu.upenn.cis.cis455.http.HttpResponse;
 
 /**
  * @author tjgreen
  *
- * TODO To change the template for this generated type comment go to
+ * 
  * Window - Preferences - Java - Code Style - Code Templates
  */
 public class Response implements HttpServletResponse {
 
 	private HttpResponse httpResponse;
-	
+	private String characterEncoding = "ISO-8859-1";
 	public Response(HttpResponse httpResponse)
 	{
 		this.httpResponse = httpResponse;
@@ -34,9 +37,8 @@ public class Response implements HttpServletResponse {
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#containsHeader(java.lang.String)
 	 */
-	public boolean containsHeader(String arg0) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean containsHeader(String headerName) {
+		return httpResponse.getHeaders().containsKey(headerName);
 	}
 
 	/* (non-Javadoc)
@@ -109,48 +111,80 @@ public class Response implements HttpServletResponse {
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#addDateHeader(java.lang.String, long)
 	 */
-	public void addDateHeader(String arg0, long arg1) {
-		// TODO Auto-generated method stub
+	public void addDateHeader(String headerName, long time) {
+		if(httpResponse.getHeaders().containsKey(headerName))
+		{
+			httpResponse.getHeaders().get(headerName).add(HTTP.getHttpDateFormat().format(new Date(time)));
+		}
+		else
+		{
+			ArrayList<String> values = new ArrayList<String>();
+			values.add(HTTP.getHttpDateFormat().format(new Date(time)));
+			httpResponse.getHeaders().put(headerName, values);
+		}
 
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#setHeader(java.lang.String, java.lang.String)
 	 */
-	public void setHeader(String arg0, String arg1) {
-		// TODO Auto-generated method stub
-
+	public void setHeader(String headerName, String headerValue) {
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(headerValue);
+		httpResponse.getHeaders().put(headerName, values);
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#addHeader(java.lang.String, java.lang.String)
 	 */
-	public void addHeader(String arg0, String arg1) {
-		// TODO Auto-generated method stub
+	public void addHeader(String headerName, String headerValue) {
+		if(httpResponse.getHeaders().containsKey(headerName))
+		{
+			httpResponse.getHeaders().get(headerName).add(headerValue);
+		}
+		else
+		{
+			ArrayList<String> values = new ArrayList<String>();
+			values.add(headerValue);
+			httpResponse.getHeaders().put(headerName, values);
+		}
 
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#setIntHeader(java.lang.String, int)
 	 */
-	public void setIntHeader(String arg0, int arg1) {
-		// TODO Auto-generated method stub
+	public void setIntHeader(String headerName, int headerValue) {
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(String.valueOf(headerValue));
+		httpResponse.getHeaders().put(headerName, values);
 
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#addIntHeader(java.lang.String, int)
 	 */
-	public void addIntHeader(String arg0, int arg1) {
-		// TODO Auto-generated method stub
-
+	public void addIntHeader(String headerName, int headerValue) {
+		if(httpResponse.getHeaders().containsKey(headerName))
+		{
+			httpResponse.getHeaders().get(headerName).add(String.valueOf(headerValue));
+		}
+		else
+		{
+			ArrayList<String> values = new ArrayList<String>();
+			values.add(String.valueOf(headerValue));
+			httpResponse.getHeaders().put(headerName, values);
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#setStatus(int)
 	 */
-	public void setStatus(int arg0) {
-		// TODO Auto-generated method stub
+	public void setStatus(int statusCode) {
+		if(statusCode >=200 && statusCode<600)
+		{
+			httpResponse.setResponseCode(String.valueOf(statusCode));
+		}
 
 	}
 
@@ -158,7 +192,7 @@ public class Response implements HttpServletResponse {
 	 * @see javax.servlet.http.HttpServletResponse#setStatus(int, java.lang.String)
 	 */
 	public void setStatus(int arg0, String arg1) {
-		// TODO Auto-generated method stub
+		//deprecated
 
 	}
 
@@ -166,10 +200,8 @@ public class Response implements HttpServletResponse {
 	 * @see javax.servlet.ServletResponse#getCharacterEncoding()
 	 */
 	public String getCharacterEncoding() {
-		// TODO Auto-generated method stub
-		return null;
+		return characterEncoding;
 	}
-
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletResponse#getContentType()
 	 */
@@ -196,8 +228,9 @@ public class Response implements HttpServletResponse {
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletResponse#setCharacterEncoding(java.lang.String)
 	 */
-	public void setCharacterEncoding(String arg0) {
-		// TODO Auto-generated method stub
+	public void setCharacterEncoding(String encoding) {
+		
+		characterEncoding = encoding;
 
 	}
 

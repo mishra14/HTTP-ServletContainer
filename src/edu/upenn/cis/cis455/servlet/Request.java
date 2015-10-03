@@ -2,6 +2,7 @@ package edu.upenn.cis.cis455.servlet;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.Socket;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpSession;
 
 import edu.upenn.cis.cis455.http.HTTP;
 import edu.upenn.cis.cis455.http.HttpRequest;
+import edu.upenn.cis.cis455.webserver.HttpServer;
 
 /**
  * @author Todd J. Green
@@ -31,7 +33,10 @@ public class Request implements HttpServletRequest {
 	private String m_method;
 	private String urlpattern;
 	private HttpRequest httpRequest;
+	private Socket socket;
 	private ArrayList<Cookie> cookies = new ArrayList<Cookie>();
+	private String characterEncoding = "ISO-8859-1";
+	private Locale locale;
 	public Request() {
 	}
 	
@@ -173,7 +178,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#getPathTranslated()
 	 */
 	public String getPathTranslated() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -188,15 +192,13 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#getQueryString()
 	 */
 	public String getQueryString() {
-		// TODO Auto-generated method stub
-		return null;
+		return httpRequest.getQueryString();
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#getRemoteUser()
 	 */
 	public String getRemoteUser() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -204,7 +206,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#isUserInRole(java.lang.String)
 	 */
 	public boolean isUserInRole(String arg0) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -212,7 +213,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#getUserPrincipal()
 	 */
 	public Principal getUserPrincipal() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -228,24 +228,30 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#getRequestURI()
 	 */
 	public String getRequestURI() {
-		// TODO Auto-generated method stub
-		return null;
+		if(httpRequest.getResource().contains("?"))
+		{
+			return httpRequest.getResource().split("\\?")[0];
+		}
+		else
+		{
+			return httpRequest.getResource();
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#getRequestURL()
 	 */
 	public StringBuffer getRequestURL() {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuffer result = new StringBuffer();
+		result.append("http://localhost:"+HttpServer.getPort()+getRequestURI());
+		return result;
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#getServletPath()
 	 */
 	public String getServletPath() {
-		// TODO Auto-generated method stub
-		return null;
+		return httpRequest.getServletPath();
 	}
 
 	/* (non-Javadoc)
@@ -307,7 +313,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getAttribute(java.lang.String)
 	 */
 	public Object getAttribute(String arg0) {
-		// TODO Auto-generated method stub
 		return m_props.get(arg0);
 	}
 
@@ -315,7 +320,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getAttributeNames()
 	 */
 	public Enumeration getAttributeNames() {
-		// TODO Auto-generated method stub
 		return m_props.keys();
 	}
 
@@ -323,17 +327,14 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getCharacterEncoding()
 	 */
 	public String getCharacterEncoding() {
-		// TODO Auto-generated method stub
-		return null;
+		return characterEncoding;
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#setCharacterEncoding(java.lang.String)
 	 */
-	public void setCharacterEncoding(String arg0)
-			throws UnsupportedEncodingException {
-		// TODO Auto-generated method stub
-
+	public void setCharacterEncoding(String encoding) throws UnsupportedEncodingException {
+		characterEncoding = encoding;
 	}
 
 	/* (non-Javadoc)
@@ -378,7 +379,7 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getParameterValues(java.lang.String)
 	 */
 	public String[] getParameterValues(String arg0) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
@@ -394,32 +395,58 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getProtocol()
 	 */
 	public String getProtocol() {
-		// TODO Auto-generated method stub
-		return null;
+		return httpRequest.getProtocol()+"/"+httpRequest.getVersion();
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getScheme()
 	 */
 	public String getScheme() {
-		// TODO Auto-generated method stub
-		return null;
+		return "http";
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getServerName()
 	 */
 	public String getServerName() {
-		// TODO Auto-generated method stub
-		return null;
+		if(httpRequest.getHeaders().containsKey("host"))
+		{
+			String host = httpRequest.getHeaders().get("host").get(0);
+			if(host.contains(":"))
+			{
+				return host.split(":")[0];
+			}
+			else
+			{
+				return host;
+			}
+		}
+		else
+		{
+			return HttpServer.getDaemonSocket().getInetAddress().getHostAddress();
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getServerPort()
 	 */
 	public int getServerPort() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(httpRequest.getHeaders().containsKey("host"))
+		{
+			String host = httpRequest.getHeaders().get("host").get(0);
+			if(host.contains(":"))
+			{
+				return Integer.valueOf(host.split(":")[1]);
+			}
+			else
+			{
+				return HttpServer.getDaemonSocket().getLocalPort();
+			}
+		}
+		else
+		{
+			return HttpServer.getDaemonSocket().getLocalPort();
+		}
 	}
 
 	/* (non-Javadoc)
@@ -434,8 +461,23 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getRemoteAddr()
 	 */
 	public String getRemoteAddr() {
-		// TODO Auto-generated method stub
-		return null;
+		String remote = socket.getRemoteSocketAddress().toString();
+		if(remote!=null)
+		{
+			if(remote.contains("/"))
+			{
+				remote = remote.substring(remote.indexOf("/")+1);
+			}
+			if(remote.contains(":"))
+			{
+				return remote.split(":")[0];
+			}
+			else
+			{
+				return remote;
+			}
+		}
+		return remote;
 	}
 
 	/* (non-Javadoc)
@@ -456,24 +498,25 @@ public class Request implements HttpServletRequest {
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#removeAttribute(java.lang.String)
 	 */
-	public void removeAttribute(String arg0) {
-		// TODO Auto-generated method stub
-
+	public void removeAttribute(String key) {
+		m_props.remove(key);
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getLocale()
 	 */
 	public Locale getLocale() {
-		// TODO Auto-generated method stub
-		return null;
+		return locale;
 	}
-
+	
+	public void setLocale(Locale locale)
+	{
+		this.locale = locale;
+	}
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getLocales()
 	 */
 	public Enumeration getLocales() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -481,7 +524,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#isSecure()
 	 */
 	public boolean isSecure() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -489,7 +531,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getRequestDispatcher(java.lang.String)
 	 */
 	public RequestDispatcher getRequestDispatcher(String arg0) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -497,7 +538,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getRealPath(java.lang.String)
 	 */
 	public String getRealPath(String arg0) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -505,8 +545,23 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getRemotePort()
 	 */
 	public int getRemotePort() {
-		// TODO Auto-generated method stub
-		return 0;
+		String remote = socket.getRemoteSocketAddress().toString();
+		if(remote!=null)
+		{
+			if(remote.contains("/"))
+			{
+				remote = remote.substring(remote.indexOf("/")+1);
+			}
+			if(remote.contains(":"))
+			{
+				return Integer.valueOf(remote.split(":")[1]);
+			}
+			else
+			{
+				return -1;	//error case
+			}
+		}
+		return -1;	//error case
 	}
 
 	/* (non-Javadoc)
@@ -514,7 +569,7 @@ public class Request implements HttpServletRequest {
 	 */
 	public String getLocalName() {
 		// TODO Auto-generated method stub
-		return null;
+		return HttpServer.getDaemonSocket().getInetAddress().getHostName();
 	}
 
 	/* (non-Javadoc)
@@ -522,15 +577,14 @@ public class Request implements HttpServletRequest {
 	 */
 	public String getLocalAddr() {
 		// TODO Auto-generated method stub
-		return null;
+		return HttpServer.getDaemonSocket().getInetAddress().getHostAddress();
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getLocalPort()
 	 */
 	public int getLocalPort() {
-		// TODO Auto-generated method stub
-		return 0;
+		return HttpServer.getDaemonSocket().getLocalPort();
 	}
 
 	void setMethod(String method) {
@@ -549,6 +603,58 @@ public class Request implements HttpServletRequest {
 		return ((m_session != null) && m_session.isValid());
 	}
 
+	public Properties getM_params() {
+		return m_params;
+	}
+
+	public void setM_params(Properties m_params) {
+		this.m_params = m_params;
+	}
+
+	public Properties getM_props() {
+		return m_props;
+	}
+
+	public void setM_props(Properties m_props) {
+		this.m_props = m_props;
+	}
+
+	public Session getM_session() {
+		return m_session;
+	}
+
+	public void setM_session(Session m_session) {
+		this.m_session = m_session;
+	}
+
+	public String getM_method() {
+		return m_method;
+	}
+
+	public void setM_method(String m_method) {
+		this.m_method = m_method;
+	}
+
+	public HttpRequest getHttpRequest() {
+		return httpRequest;
+	}
+
+	public void setHttpRequest(HttpRequest httpRequest) {
+		this.httpRequest = httpRequest;
+	}
+
+	public Socket getSocket() {
+		return socket;
+	}
+
+	public void setSocket(Socket socket) {
+		this.socket = socket;
+	}
+
+	public void setCookies(ArrayList<Cookie> cookies) {
+		this.cookies = cookies;
+	}
+	
 	
 		
 }

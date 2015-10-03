@@ -10,17 +10,16 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
 
 import edu.upenn.cis.cis455.http.HTTP;
 import edu.upenn.cis.cis455.http.HttpRequest;
@@ -119,24 +118,30 @@ public class ServerThread extends Thread {
 								logger.info("Absolute url in GET request - "+httpRequest.getResource());
 								httpRequest.setResource(httpRequest.getResource().substring(("http://localhost:"+parentThreadPool.getPort()).length()));
 							}
-							for(Map.Entry<String, String> entry : HttpServer.getUrlPatterns().entrySet())
+							if(HttpServer.getUrlPatterns()!=null)
 							{
-								System.out.println("Pattern - "+entry.getKey());
-								System.out.println("Resource - "+httpRequest.getResource());
-								Pattern urlPattern = Pattern.compile(entry.getKey());
-								if(urlPattern.matcher(httpRequest.getResource()).matches())
+								for(Map.Entry<String, String> entry : HttpServer.getUrlPatterns().entrySet())
 								{
-									//send request to servlet 
-									System.out.println("Matching - "+HttpServer.getServlets().get(entry.getValue()));
-									httpRequest.setServletUrl(entry.getKey());
-									httpRequest.updatePaths();
-									Request request = new Request(httpRequest);
-									Response response = new Response(httpResponse);
-									HttpServer.getServlets().get(entry.getValue()).service(request, response);
-									break;
+									System.out.println("Pattern - "+entry.getKey());
+									System.out.println("Resource - "+httpRequest.getResource());
+									Pattern urlPattern = Pattern.compile(entry.getKey());
+									if(urlPattern.matcher(httpRequest.getResource()).matches())
+									{
+										//send request to servlet 
+										System.out.println("Matching - "+HttpServer.getServlets().get(entry.getValue()));
+										httpRequest.setServletUrl(entry.getKey());
+										httpRequest.updatePaths();
+										Request request = new Request(httpRequest);
+										Response response = new Response(httpResponse);
+										request.setSocket(socket);
+										logger.info("Client socket - "+request.getRemoteAddr());
+										HttpServer.getServlets().get(entry.getValue()).service(request, response);
+										break;
+									}
 								}
 							}
-							Map<String, String> headers=new HashMap<String, String>();
+							Map<String, ArrayList<String>> headers=new HashMap<String, ArrayList<String>>();
+							ArrayList<String> values;
 							String data = "";
 							String protocol = HTTP.getProtocol();
 							String version = HTTP.getVersion11();
@@ -167,10 +172,18 @@ public class ServerThread extends Thread {
 									}
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
-									headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));																						
-									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
-									headers.put(CONTENT_LENGTH_KEY,""+data.length());
-									headers.put(CONNECTION_KEY,"Close");
+									values = new ArrayList<String>();
+									values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+									headers.put(DATE_KEY, values);											
+									values = new ArrayList<String>();
+									values.add("text/html; charset=utf-8");
+									headers.put(CONTENT_TYPE_KEY, values);
+									values = new ArrayList<String>();
+									values.add(""+data.length());
+									headers.put(CONTENT_LENGTH_KEY, values);
+									values = new ArrayList<String>();
+									values.add("Close");
+									headers.put(CONNECTION_KEY, values);
 									httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
 									if(httpRequest.getOperation().equalsIgnoreCase("GET"))
 									{
@@ -254,9 +267,15 @@ public class ServerThread extends Thread {
 												{
 													data=new String(bytes);
 													logger.info(bytes);
-													headers.put(CONTENT_TYPE_KEY,Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
-													headers.put(CONTENT_LENGTH_KEY,""+data.length());
-													headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));													
+													values = new ArrayList<String>();
+													values.add(Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+													headers.put(CONTENT_TYPE_KEY, values);
+													values = new ArrayList<String>();
+													values.add(""+data.length());
+													headers.put(CONTENT_LENGTH_KEY,values);
+													values = new ArrayList<String>();
+													values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+													headers.put(DATE_KEY, values);													
 													httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
 													
 													//logger.info(httpResponse.toString());
@@ -286,9 +305,15 @@ public class ServerThread extends Thread {
 											{
 												data=new String(bytes);
 												logger.info(bytes);
-												headers.put(CONTENT_TYPE_KEY,Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
-												headers.put(CONTENT_LENGTH_KEY,""+data.length());
-												headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));													
+												values = new ArrayList<String>();
+												values.add(Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+												headers.put(CONTENT_TYPE_KEY, values);
+												values = new ArrayList<String>();
+												values.add(""+data.length());
+												headers.put(CONTENT_LENGTH_KEY,values);
+												values = new ArrayList<String>();
+												values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+												headers.put(DATE_KEY, values);	
 												httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
 												//logger.info(httpResponse.toString());
 												//logger.info(httpResponse.getResponseString());
@@ -353,10 +378,18 @@ public class ServerThread extends Thread {
 									}
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
-									headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));													
-									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
-									headers.put(CONTENT_LENGTH_KEY,""+data.length());
-									headers.put(CONNECTION_KEY,"Close");
+									values = new ArrayList<String>();
+									values.add(Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+									headers.put(CONTENT_TYPE_KEY, values);
+									values = new ArrayList<String>();
+									values.add(""+data.length());
+									headers.put(CONTENT_LENGTH_KEY,values);
+									values = new ArrayList<String>();
+									values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+									headers.put(DATE_KEY, values);	
+									values = new ArrayList<String>();
+									values.add("Close");
+									headers.put(CONNECTION_KEY,values);
 									httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
 									if(httpRequest.getOperation().equalsIgnoreCase("GET"))
 									{
@@ -390,10 +423,18 @@ public class ServerThread extends Thread {
 									dataBuilder.append("This page has started the server shutdown <br/>");
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
-									headers.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
-									headers.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
-									headers.put(CONTENT_LENGTH_KEY,""+data.length());
-									headers.put(CONNECTION_KEY,"Close");
+									values = new ArrayList<String>();
+									values.add(Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+									headers.put(CONTENT_TYPE_KEY, values);
+									values = new ArrayList<String>();
+									values.add(""+data.length());
+									headers.put(CONTENT_LENGTH_KEY,values);
+									values = new ArrayList<String>();
+									values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+									headers.put(DATE_KEY, values);	
+									values = new ArrayList<String>();
+									values.add("Close");
+									headers.put(CONNECTION_KEY,values);
 									httpResponse = new HttpResponse(protocol, version, responseCode, responseCodeString, headers, data);
 									if(httpRequest.getOperation().equalsIgnoreCase("GET"))
 									{

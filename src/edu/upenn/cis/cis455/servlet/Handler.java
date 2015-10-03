@@ -70,6 +70,10 @@ public class Handler extends DefaultHandler{
 		} else if(m_state == 15) {
 			tempServletName = value;
 		} else if(m_state == 25) {
+			if(!value.startsWith("/"))
+			{
+				value = "/"+value;
+			}
 			if(value.contains("/*"))
 			{
 				value=value.replace("/*", ".*");

@@ -37,7 +37,7 @@ public class HTTP {
 	private static final String ACCEPT_KEY = "Accept";
 	private static SimpleDateFormat httpDateFormat;
 	private static ArrayList <SimpleDateFormat> httpDateFormats;
-	private static Map<String, String> errorHeaders;
+	private static Map<String, ArrayList<String>> errorHeaders;
 	private static Map<String, String> responseCodes;
 	private static HttpResponse error100;
 	private static HttpResponse error404;
@@ -60,7 +60,7 @@ public class HTTP {
 		httpDateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z");
 		httpDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
 		responseCodes = new HashMap<String, String>();
-		errorHeaders = new HashMap<String, String>();
+		errorHeaders = new HashMap<String, ArrayList<String>>();
 		responseCodes.put(KEY_200,"OK");
 		responseCodes.put(KEY_404,"NOT FOUND");
 		responseCodes.put(KEY_403,"FORBIDDEN");
@@ -76,47 +76,76 @@ public class HTTP {
 		String dataPost = "<br/><br/>Ankit Mishra<br/>mankit<br/></body></html>\r\n";
 		//error response for 404
 		String data = dataPre+KEY_404+" : "+responseCodes.get(KEY_404)+dataPost;
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
-		errorHeaders.put(CONTENT_TYPE_KEY,"text/html; charset=utf-8");
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
-		errorHeaders.put(CONNECTION_KEY,"Close");
+		ArrayList<String> values;
+		values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
+		values = new ArrayList<String>();
+		values.add("text/html; charset=utf-8");
+		errorHeaders.put(CONTENT_TYPE_KEY, values);
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
+		values = new ArrayList<String>();
+		values.add("Close");
+		errorHeaders.put(CONNECTION_KEY,values);
 		error404 = new HttpResponse(protocol,version11,KEY_404,responseCodes.get(KEY_404),errorHeaders,data);
 		//error response for 400
 		data = dataPre+KEY_400+" : "+responseCodes.get(KEY_400)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
 		error400 = new HttpResponse(protocol,version11,KEY_400,responseCodes.get(KEY_400),errorHeaders,data);
 		//error response for 500
 		data = dataPre+KEY_500+" : "+responseCodes.get(KEY_500)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
 		error500 = new HttpResponse(protocol,version11,KEY_500,responseCodes.get(KEY_500),errorHeaders,data);
 		//error response for 300
 		data = dataPre+KEY_300+" : "+responseCodes.get(KEY_300)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
 		error300 = new HttpResponse(protocol,version11,KEY_300,responseCodes.get(KEY_300),errorHeaders,data);
 		//error response for POST
 		data = dataPre+KEY_POST+" : "+responseCodes.get(KEY_POST)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
 		errorPOST = new HttpResponse(protocol,version11,KEY_400,responseCodes.get(KEY_400),errorHeaders,data);
 		//error response for POST
 		data = dataPre+KEY_403+" : "+responseCodes.get(KEY_403)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
 		error403 = new HttpResponse(protocol,version11,KEY_403,responseCodes.get(KEY_403),errorHeaders,data);
 		//error response for 405
 		data = dataPre+KEY_405+" : "+responseCodes.get(KEY_405)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
-		errorHeaders.put(ACCEPT_KEY, "GET, HEAD");
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
+		values = new ArrayList<String>();
+		values.add("GET, HEAD");
+		errorHeaders.put(ACCEPT_KEY, values);
 		error405 = new HttpResponse(protocol,version11,KEY_405,responseCodes.get(KEY_405),errorHeaders,data);
 		//error response for 100
 		data = dataPre+KEY_100+" : "+responseCodes.get(KEY_100)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
 		error100 = new HttpResponse(protocol,version11,KEY_100,responseCodes.get(KEY_100),errorHeaders,data);	
 		//error response for 304
 		data = dataPre+KEY_304+" : "+responseCodes.get(KEY_304)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
 		error304 = new HttpResponse(protocol,version11,KEY_304,responseCodes.get(KEY_304),errorHeaders,data);	
 		//error response for 412
 		data = dataPre+KEY_412+" : "+responseCodes.get(KEY_412)+dataPost;
-		errorHeaders.put(CONTENT_LENGTH_KEY,""+data.length());
+		values = new ArrayList<String>();
+		values.add(""+data.length());
+		errorHeaders.put(CONTENT_LENGTH_KEY, values);
 		error412 = new HttpResponse(protocol,version11,KEY_412,responseCodes.get(KEY_412),errorHeaders,data);			
 		
 	}
@@ -191,7 +220,7 @@ public class HTTP {
 		return CONNECTION_KEY;
 	}
 
-	public static Map<String, String> getErrorHeaders() {
+	public static Map<String, ArrayList<String>> getErrorHeaders() {
 		return errorHeaders;
 	}
 
@@ -200,22 +229,30 @@ public class HTTP {
 	}
 
 	public static HttpResponse getError404() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error404;
 	}
 
 	public static HttpResponse getError400() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error400;
 	}
 
 	public static HttpResponse getError500() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error500;
 	}
 
 	public static HttpResponse getError300() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error300;
 	}
 
@@ -224,7 +261,9 @@ public class HTTP {
 	}
 
 	public static HttpResponse getErrorPOST() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return errorPOST;
 	}
 
@@ -233,7 +272,9 @@ public class HTTP {
 	}
 
 	public static HttpResponse getError403() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error403;
 	}
 
@@ -246,7 +287,9 @@ public class HTTP {
 	}
 
 	public static HttpResponse getError405() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error405;
 	}
 
@@ -255,7 +298,9 @@ public class HTTP {
 	}
 	
 	public static HttpResponse getError100() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error100;
 	}
 
@@ -264,7 +309,9 @@ public class HTTP {
 	}
 
 	public static HttpResponse getError304() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error304;
 	}
 
@@ -278,7 +325,9 @@ public class HTTP {
 	}
 
 	public static HttpResponse getError412() {
-		errorHeaders.put(DATE_KEY, HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(HTTP.getHttpDateFormat().format(new GregorianCalendar().getTime()));
+		errorHeaders.put(DATE_KEY, values);
 		return error412;
 	}
 	

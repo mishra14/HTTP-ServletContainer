@@ -1,6 +1,7 @@
 package edu.upenn.cis.cis455.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
@@ -20,6 +21,7 @@ import edu.upenn.cis.cis455.http.HttpResponse;
  */
 public class Response implements HttpServletResponse {
 
+	private Socket socket;
 	private HttpResponse httpResponse;
 	private String characterEncoding = "ISO-8859-1";
 	public Response(HttpResponse httpResponse)
@@ -222,7 +224,7 @@ public class Response implements HttpServletResponse {
 	 * @see javax.servlet.ServletResponse#getWriter()
 	 */
 	public PrintWriter getWriter() throws IOException {
-		return new PrintWriter(System.out, true);
+		return new PrintWriter(socket.getOutputStream(), true);
 	}
 
 	/* (non-Javadoc)
@@ -237,16 +239,21 @@ public class Response implements HttpServletResponse {
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletResponse#setContentLength(int)
 	 */
-	public void setContentLength(int arg0) {
-		// TODO Auto-generated method stub
-
+	public void setContentLength(int length) {
+		
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(String.valueOf(length));
+		httpResponse.getHeaders().put("content-length", values);
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletResponse#setContentType(java.lang.String)
 	 */
-	public void setContentType(String arg0) {
-		// TODO Auto-generated method stub
+	public void setContentType(String value) {
+
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(value);
+		httpResponse.getHeaders().put("content-length", values);
 
 	}
 
@@ -313,5 +320,19 @@ public class Response implements HttpServletResponse {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public Socket getSocket() {
+		return socket;
+	}
+	public void setSocket(Socket socket) {
+		this.socket = socket;
+	}
+	public HttpResponse getHttpResponse() {
+		return httpResponse;
+	}
+	public void setHttpResponse(HttpResponse httpResponse) {
+		this.httpResponse = httpResponse;
+	}
+	
+	
 
 }

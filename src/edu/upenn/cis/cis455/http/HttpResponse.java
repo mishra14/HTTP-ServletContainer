@@ -1,6 +1,7 @@
 package edu.upenn.cis.cis455.http;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class HttpResponse 
@@ -33,6 +34,15 @@ public class HttpResponse
 		this.headers = headers;
 	}
 	
+	public HttpResponse() {
+		this.protocol = "";
+		this.version = "";
+		this.responseCode = "";
+		this.responseCodeString = "";
+		this.headers = new HashMap<String, ArrayList<String>>();
+		this.data = "";
+	}
+
 	public String getResponseString()
 	{
 		StringBuilder response = new StringBuilder();

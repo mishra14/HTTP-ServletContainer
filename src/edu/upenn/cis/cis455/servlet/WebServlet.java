@@ -28,12 +28,12 @@ public class WebServlet extends HttpServlet {
 	            throws ServletException, IOException
 	  {
 		  logger.info("Servlet in WebServlet");
-	      /*// Set response content type
+	      // Set response content type
 	      response.setContentType("text/html");
 
 	      // Actual logic goes here.
 	      PrintWriter out = response.getWriter();
-	      out.println("<h1>" + message + "</h1>");*/
+	      out.println("<h1>" + message + "</h1>");
 	  }
 	  
 	  public void destroy()

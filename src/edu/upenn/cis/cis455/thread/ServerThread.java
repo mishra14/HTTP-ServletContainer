@@ -132,8 +132,9 @@ public class ServerThread extends Thread {
 										httpRequest.setServletUrl(entry.getKey());
 										httpRequest.updatePaths();
 										Request request = new Request(httpRequest);
-										Response response = new Response(httpResponse);
+										Response response = new Response(new HttpResponse());
 										request.setSocket(socket);
+										response.setSocket(socket);
 										logger.info("Client socket - "+request.getRemoteAddr());
 										HttpServer.getServlets().get(entry.getValue()).service(request, response);
 										break;

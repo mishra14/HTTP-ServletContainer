@@ -120,6 +120,8 @@ public class ServerThread extends Thread {
 							}
 							if(HttpServer.getUrlPatterns()!=null)
 							{
+								int longestLength=0;
+								String longestMatch="";
 								for(Map.Entry<String, String> entry : HttpServer.getUrlPatterns().entrySet())
 								{
 									System.out.println("Pattern - "+entry.getKey());
@@ -127,19 +129,30 @@ public class ServerThread extends Thread {
 									Pattern urlPattern = Pattern.compile(entry.getKey());
 									if(urlPattern.matcher(httpRequest.getResource()).matches())
 									{
-										//send request to servlet 
-										System.out.println("Matching - "+HttpServer.getServlets().get(entry.getValue()));
-										httpRequest.setServletUrl(entry.getKey());
-										httpRequest.updatePaths();
-										Request request = new Request(httpRequest);
-										Response response = new Response(new HttpResponse());
-										request.setSocket(socket);
-										response.setSocket(socket);
-										logger.info("Client socket - "+request.getRemoteAddr());
-										HttpServer.getServlets().get(entry.getValue()).service(request, response);
-										break;
+										int length = entry.getKey().contains("*")?entry.getKey().indexOf("*")-1:entry.getKey().length();
+										if(length>longestLength)
+										{
+											longestLength = length;
+											longestMatch = entry.getKey();
+										}
 									}
 								}
+
+								//send request to servlet 
+								if(HttpServer.getServlets().containsKey(longestMatch))
+								{
+									System.out.println("Matching - "+HttpServer.getServlets().get(longestMatch));
+									httpRequest.setServletUrl(longestMatch);
+									httpRequest.updatePaths();
+									Request request = new Request(httpRequest);
+									Response response = new Response(new HttpResponse());
+									request.setSocket(socket);
+									response.setSocket(socket);
+									logger.info("Client socket - "+request.getRemoteAddr());
+									HttpServer.getServlets().get(longestMatch).service(request, response);
+									continue;
+								}
+								
 							}
 							Map<String, ArrayList<String>> headers=new HashMap<String, ArrayList<String>>();
 							ArrayList<String> values;

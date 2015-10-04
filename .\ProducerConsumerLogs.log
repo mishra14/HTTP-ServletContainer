@@ -58736,3 +58736,4133 @@ File modified since if modified date
 Requesting a modified file through if-unmodified - /home/cis455/git/cis455homework1milestone2/./www/temp/hello.txt
 Thread 0 going back into threadpool
 Waiting for request - 0
+{WebServlet=WebServlet [message=Hello World]}
+{}
+{WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=WebServlet, m_paramName=null, m_servlets={WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+{WebServlet=WebServlet [message=Hello World]}
+{}
+{WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=WebServlet, m_paramName=null, m_servlets={WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+{WebServlet=WebServlet [message=Hello World]}
+{}
+{WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=WebServlet, m_paramName=null, m_servlets={WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 12
+Waiting for request - 11
+Waiting for request - 10
+Waiting for request - 9
+Waiting for request - 7
+Waiting for request - 15
+Waiting for request - 8
+Waiting for request - 17
+Waiting for request - 16
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 30
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 27
+Waiting for request - 33
+Waiting for request - 26
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 38
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 39
+Waiting for request - 40
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 41
+Waiting for request - 97
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 98
+Waiting for request - 84
+Waiting for request - 81
+Waiting for request - 78
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 66
+Waiting for request - 70
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 51
+Waiting for request - 48
+Waiting for request - 45
+Waiting for request - 42
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 46
+Waiting for request - 47
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 0
+parsing request
+Daemon thread sleeping on request queue
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp/hello.txt, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/temp/], accept-encoding=[gzip, deflate]}, validRequest=true]
+Requesting - ./www/temp/hello.txt
+[B@e6de16
+[B@e6de16
+Thread 0 going back into threadpool
+Waiting for request - 0
+{WebServlet=WebServlet [message=Hello World]}
+{}
+{WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=WebServlet, m_paramName=null, m_servlets={WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 10
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 11
+Waiting for request - 17
+Waiting for request - 16
+Waiting for request - 14
+Waiting for request - 18
+Waiting for request - 15
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 28
+Waiting for request - 27
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 37
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 31
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 44
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 45
+Waiting for request - 97
+Waiting for request - 94
+Waiting for request - 91
+Waiting for request - 88
+Waiting for request - 85
+Waiting for request - 99
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 95
+Waiting for request - 98
+Waiting for request - 96
+Waiting for request - 84
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 58
+Waiting for request - 72
+Waiting for request - 43
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 46
+Waiting for request - 40
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 63
+Waiting for request - 59
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 60
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 57
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp/hello.txt, headers={host=[localhost:8080]}, validRequest=true]
+Requesting - ./www/temp/hello.txt
+[B@1856a0a
+[B@1856a0a
+Thread 0 going back into threadpool
+Waiting for request - 0
+{WebServlet=WebServlet [message=Hello World]}
+{}
+{WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=WebServlet, m_paramName=null, m_servlets={WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 2
+Waiting for request - 7
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Waiting for request - 78
+Waiting for request - 80
+Waiting for request - 75
+Waiting for request - 81
+Waiting for request - 74
+Waiting for request - 82
+Waiting for request - 51
+Waiting for request - 83
+Waiting for request - 50
+Waiting for request - 84
+Waiting for request - 49
+Waiting for request - 85
+Waiting for request - 48
+Waiting for request - 86
+Waiting for request - 47
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 99
+Waiting for request - 98
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 43
+Waiting for request - 42
+Waiting for request - 46
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 97
+Daemon thread sleeping on request queue
+Waiting for request - 79
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 0
+parsing request
+Daemon thread sleeping on request queue
+string builder created
+logger.info("Match found");
+invalid request - logger.info("Match found");
+
+Invalid http request - null
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp/hello.txt, headers={host=[localhost:8080]}, validRequest=true]
+Requesting - ./www/temp/hello.txt
+[B@1bfd316
+[B@1bfd316
+Thread 1 going back into threadpool
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+string builder created
+����
+invalid request - ����
+
+Invalid http request - null
+Thread 2 going back into threadpool
+Waiting for request - 2
+{WebServlet=WebServlet [message=Hello World]}
+{}
+{WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=WebServlet, m_paramName=null, m_servlets={WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 0
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 13
+Waiting for request - 17
+Waiting for request - 16
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 15
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 14
+Waiting for request - 19
+Waiting for request - 18
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 43
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 34
+Waiting for request - 46
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 40
+Waiting for request - 39
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 85
+Waiting for request - 82
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 65
+Waiting for request - 64
+Waiting for request - 98
+Waiting for request - 63
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 58
+Waiting for request - 57
+Waiting for request - 56
+Waiting for request - 38
+Waiting for request - 55
+Waiting for request - 54
+Waiting for request - 53
+Waiting for request - 52
+Waiting for request - 51
+Waiting for request - 50
+Waiting for request - 49
+Waiting for request - 48
+Waiting for request - 47
+Waiting for request - 45
+Waiting for request - 44
+Waiting for request - 94
+Waiting for request - 97
+Waiting for request - 93
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp/hello.txt, headers={host=[localhost:8080]}, validRequest=true]
+Requesting - ./www/temp/hello.txt
+[B@1e28fe3
+[B@1e28fe3
+Thread 0 going back into threadpool
+Waiting for request - 0
+{WebServlet=WebServlet [message=Hello World]}
+{}
+{WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=WebServlet, m_paramName=null, m_servlets={WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 7
+Waiting for request - 6
+Waiting for request - 3
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 14
+Waiting for request - 13
+Waiting for request - 15
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 25
+Waiting for request - 24
+Waiting for request - 23
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 30
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 32
+Waiting for request - 31
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 40
+Waiting for request - 39
+Waiting for request - 38
+Name - ThreadPool
+Waiting for request - 68
+Waiting for request - 64
+Waiting for request - 61
+Waiting for request - 58
+Waiting for request - 55
+Waiting for request - 52
+Waiting for request - 44
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 98
+Waiting for request - 97
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 41
+Waiting for request - 99
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+Main thread waiting on daemonSocket.accept
+string builder created
+GET /temp/hello.txt HTTP/1.1
+��������
+GET /temp/hello.txt HTTP/1.1
+invalid header in request - GET /temp/hello.txt HTTP/1.1
+��������
+
+HTTP 1.1 request without Host header - GET /temp/hello.txt HTTP/1.1
+��������
+
+Invalid http request - /temp/hello.txt
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 16
+Waiting for request - 15
+Waiting for request - 14
+Waiting for request - 17
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 18
+Waiting for request - 11
+Waiting for request - 10
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 40
+Waiting for request - 47
+Waiting for request - 45
+Waiting for request - 48
+Waiting for request - 51
+Waiting for request - 50
+Waiting for request - 49
+Waiting for request - 46
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 57
+Waiting for request - 60
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 68
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 83
+Waiting for request - 88
+Waiting for request - 85
+Waiting for request - 84
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 98
+Waiting for request - 97
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+Main thread waiting on daemonSocket.accept
+string builder created
+GET /index.html HTTP/1.0
+GET /index.html HTTP/1.0
+Pattern - /temp.*
+Resource - /index.html
+Pattern - .*
+Resource - /index.html
+Match found
+HttpRequest [operation=GET, protocol=HTTP, version=1.0, resource=/index.html, headers={}, validRequest=true]
+Requesting - ./www/index.html
+[B@1bc8159
+[B@1bc8159
+Thread 1 going back into threadpool
+Waiting for request - 1
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 2
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 17
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 16
+Waiting for request - 15
+Waiting for request - 11
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 26
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 28
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 27
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 40
+Waiting for request - 43
+Waiting for request - 61
+Waiting for request - 58
+Waiting for request - 55
+Waiting for request - 52
+Waiting for request - 49
+Waiting for request - 46
+Waiting for request - 62
+Waiting for request - 45
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 39
+Waiting for request - 38
+Waiting for request - 37
+Waiting for request - 44
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 77
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 71
+Waiting for request - 65
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 87
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET / HTTP/1.0
+GET / HTTP/1.0
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Thread going back into threadpool 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 2
+Waiting for request - 8
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 17
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 16
+Waiting for request - 15
+Waiting for request - 19
+Waiting for request - 18
+Waiting for request - 11
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 31
+Waiting for request - 30
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 40
+Waiting for request - 39
+Waiting for request - 36
+Waiting for request - 41
+Waiting for request - 35
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 57
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 51
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 42
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 82
+Waiting for request - 88
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 81
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 92
+Waiting for request - 98
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 97
+Waiting for request - 96
+Waiting for request - 91
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 95
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET / HTTP/1.0
+GET / HTTP/1.0
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - DummyServlet
+Servlet PATH - DummyServlet
+Thread going back into threadpool 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.0
+GET /temp/hello.txt HTTP/1.0
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - WebServlet
+Servlet PATH - WebServlet
+Path info - o.txt
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 2
+Waiting for request - 5
+Waiting for request - 7
+Waiting for request - 6
+Waiting for request - 4
+Waiting for request - 1
+Waiting for request - 3
+Waiting for request - 0
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 26
+Waiting for request - 24
+Waiting for request - 27
+Waiting for request - 25
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 47
+Waiting for request - 37
+Waiting for request - 45
+Waiting for request - 40
+Waiting for request - 39
+Waiting for request - 38
+Waiting for request - 46
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 57
+Waiting for request - 56
+Waiting for request - 52
+Waiting for request - 58
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 60
+Waiting for request - 63
+Waiting for request - 59
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 64
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 94
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/ HTTP/1.0
+GET /temp/ HTTP/1.0
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Pattern - .*
+Resource - /temp/
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:157)
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 14
+Waiting for request - 17
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 18
+Waiting for request - 26
+Waiting for request - 25
+Waiting for request - 22
+Waiting for request - 24
+Waiting for request - 23
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 34
+Waiting for request - 33
+Waiting for request - 30
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 37
+Waiting for request - 38
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 39
+Waiting for request - 98
+Waiting for request - 94
+Waiting for request - 91
+Waiting for request - 83
+Waiting for request - 85
+Waiting for request - 87
+Waiting for request - 79
+Waiting for request - 76
+Waiting for request - 73
+Waiting for request - 70
+Waiting for request - 97
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 74
+Waiting for request - 65
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 58
+Waiting for request - 57
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 54
+Waiting for request - 53
+Waiting for request - 52
+Waiting for request - 75
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 88
+Waiting for request - 86
+Waiting for request - 84
+Waiting for request - 89
+Waiting for request - 82
+Waiting for request - 90
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 66
+Waiting for request - 48
+Waiting for request - 45
+Waiting for request - 41
+Waiting for request - 67
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 40
+Waiting for request - 44
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/ HTTP/1.0
+GET /temp/ HTTP/1.0
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Pattern - .*
+Resource - /temp/
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET / HTTP/1.0
+GET / HTTP/1.0
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 9
+Waiting for request - 8
+Waiting for request - 7
+Waiting for request - 2
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 16
+Waiting for request - 15
+Waiting for request - 12
+Waiting for request - 17
+Waiting for request - 21
+Waiting for request - 20
+Waiting for request - 19
+Waiting for request - 18
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 28
+Waiting for request - 27
+Waiting for request - 30
+Waiting for request - 29
+Waiting for request - 24
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 39
+Waiting for request - 38
+Waiting for request - 35
+Waiting for request - 84
+Waiting for request - 81
+Waiting for request - 86
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 79
+Waiting for request - 74
+Waiting for request - 92
+Waiting for request - 77
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 58
+Waiting for request - 57
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 54
+Waiting for request - 53
+Waiting for request - 52
+Waiting for request - 88
+Waiting for request - 85
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 97
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 93
+Waiting for request - 78
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 80
+Waiting for request - 89
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 96
+Waiting for request - 87
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 98
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:23
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:23
+Request body - [C@1316b22
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 6
+Waiting for request - 5
+Waiting for request - 2
+Waiting for request - 7
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 11
+Waiting for request - 15
+Waiting for request - 14
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 24
+Waiting for request - 23
+Waiting for request - 20
+Waiting for request - 25
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 27
+Waiting for request - 26
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 77
+Waiting for request - 75
+Waiting for request - 41
+Waiting for request - 40
+Waiting for request - 39
+Waiting for request - 38
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 76
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 83
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 98
+Waiting for request - 99
+Waiting for request - 78
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 95
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:23
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:23
+POST request found
+valid post headers found
+Request body - [C@295fd4
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 2
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 13
+Waiting for request - 12
+Waiting for request - 14
+Waiting for request - 11
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 25
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 24
+Waiting for request - 23
+Waiting for request - 19
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 35
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 34
+Waiting for request - 33
+Waiting for request - 36
+Waiting for request - 29
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 65
+Waiting for request - 53
+Waiting for request - 51
+Waiting for request - 48
+Waiting for request - 45
+Waiting for request - 42
+Waiting for request - 52
+Waiting for request - 61
+Waiting for request - 55
+Waiting for request - 68
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 54
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 62
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 98
+Waiting for request - 99
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 97
+Waiting for request - 90
+Waiting for request - 96
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 85
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 74
+Waiting for request - 80
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 69
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 67
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 66
+Waiting for request - 49
+Waiting for request - 50
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:23
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:23
+POST request found
+valid post headers found
+Request body - name1=value1&name2=valu
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:24
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:24
+POST request found
+valid post headers found
+Request body - name1=value1&name2=value
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 1
+Waiting for request - 1
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 25
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 18
+Waiting for request - 80
+Waiting for request - 13
+Waiting for request - 7
+Waiting for request - 11
+Waiting for request - 5
+Waiting for request - 0
+Waiting for request - 20
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 77
+Waiting for request - 73
+Waiting for request - 70
+Waiting for request - 17
+Waiting for request - 16
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 27
+Waiting for request - 26
+Waiting for request - 22
+Waiting for request - 21
+Waiting for request - 19
+Waiting for request - 1
+Waiting for request - 3
+Waiting for request - 2
+Waiting for request - 4
+Waiting for request - 12
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 8
+Waiting for request - 6
+Waiting for request - 15
+Waiting for request - 14
+Waiting for request - 69
+Waiting for request - 96
+Waiting for request - 93
+Waiting for request - 90
+Waiting for request - 86
+Waiting for request - 82
+Waiting for request - 29
+Waiting for request - 32
+Waiting for request - 35
+Waiting for request - 38
+Waiting for request - 41
+Waiting for request - 44
+Waiting for request - 47
+Waiting for request - 50
+Waiting for request - 53
+Waiting for request - 56
+Waiting for request - 97
+Waiting for request - 98
+Waiting for request - 76
+Waiting for request - 57
+Waiting for request - 55
+Waiting for request - 54
+Waiting for request - 52
+Waiting for request - 51
+Waiting for request - 49
+Waiting for request - 48
+Waiting for request - 46
+Waiting for request - 45
+Waiting for request - 43
+Waiting for request - 42
+Waiting for request - 40
+Waiting for request - 39
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 34
+Waiting for request - 33
+Waiting for request - 31
+Waiting for request - 30
+Waiting for request - 28
+Waiting for request - 81
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 58
+Waiting for request - 61
+Waiting for request - 64
+Waiting for request - 67
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 68
+Waiting for request - 66
+Waiting for request - 65
+Waiting for request - 63
+Waiting for request - 62
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:24
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:24
+POST request found
+valid post headers found
+Request body - name1=value1&name2=value
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST request found
+valid post headers found
+Request body - name1=value1&name2=value2
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 1
+Waiting for request - 1
+Exception while parsing web xml
+java.net.UnknownHostException: java.sun.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:178)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:997)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:851)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1301)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:643)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.startEntity(XMLEntityManager.java:1297)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.startDTDEntity(XMLEntityManager.java:1264)
+	at com.sun.org.apache.xerces.internal.impl.XMLDTDScannerImpl.setInputSource(XMLDTDScannerImpl.java:263)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(XMLDocumentScannerImpl.java:1164)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(XMLDocumentScannerImpl.java:1050)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:964)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:648)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:332)
+	at javax.xml.parsers.SAXParser.parse(SAXParser.java:328)
+	at edu.upenn.cis.cis455.webserver.HttpServer.parseWebdotxml(HttpServer.java:126)
+	at edu.upenn.cis.cis455.webserver.HttpServer.main(HttpServer.java:76)
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 5
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 2
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 16
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 25
+Waiting for request - 31
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 30
+Waiting for request - 29
+Waiting for request - 32
+Waiting for request - 24
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 52
+Waiting for request - 45
+Waiting for request - 60
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 51
+Waiting for request - 50
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 73
+Waiting for request - 68
+Waiting for request - 71
+Waiting for request - 67
+Waiting for request - 74
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 72
+Waiting for request - 75
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 76
+Waiting for request - 82
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 92
+Waiting for request - 97
+Waiting for request - 44
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp/hello.txt, headers={host=[localhost:8080]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/temp/hello.txt
+[B@1a27335
+[B@1a27335
+Thread 0 going back into threadpool
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 7
+Waiting for request - 6
+Waiting for request - 5
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 10
+Waiting for request - 15
+Waiting for request - 21
+Waiting for request - 20
+Waiting for request - 19
+Waiting for request - 18
+Waiting for request - 17
+Waiting for request - 16
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 14
+Waiting for request - 66
+Waiting for request - 42
+Waiting for request - 67
+Waiting for request - 65
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 44
+Waiting for request - 39
+Waiting for request - 58
+Waiting for request - 40
+Waiting for request - 57
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 46
+Waiting for request - 53
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 54
+Waiting for request - 49
+Waiting for request - 84
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 52
+Waiting for request - 38
+Waiting for request - 24
+Waiting for request - 30
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 98
+Waiting for request - 88
+Waiting for request - 94
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 85
+Waiting for request - 83
+Waiting for request - 82
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 45
+Waiting for request - 43
+Waiting for request - 41
+Waiting for request - 68
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 5
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 2
+Waiting for request - 1
+Waiting for request - 8
+Waiting for request - 0
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 13
+Waiting for request - 12
+Waiting for request - 11
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 23
+Waiting for request - 27
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 68
+Waiting for request - 39
+Waiting for request - 69
+Waiting for request - 65
+Waiting for request - 63
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 67
+Waiting for request - 66
+Waiting for request - 64
+Waiting for request - 73
+Waiting for request - 77
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 85
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 82
+Waiting for request - 81
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 70
+Waiting for request - 62
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 5
+Waiting for request - 2
+Waiting for request - 1
+Waiting for request - 3
+Waiting for request - 8
+Waiting for request - 0
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 4
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 24
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 23
+Waiting for request - 22
+Waiting for request - 18
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 34
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 33
+Waiting for request - 28
+Waiting for request - 35
+Waiting for request - 32
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 39
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 83
+Waiting for request - 81
+Waiting for request - 96
+Waiting for request - 80
+Waiting for request - 97
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 98
+Waiting for request - 99
+Waiting for request - 82
+Waiting for request - 48
+Waiting for request - 45
+Waiting for request - 42
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 14
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 13
+Waiting for request - 12
+Waiting for request - 8
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 18
+Waiting for request - 17
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 34
+Waiting for request - 33
+Waiting for request - 32
+Waiting for request - 31
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 30
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 40
+Waiting for request - 50
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 65
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 66
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 73
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 81
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 1
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 2
+Waiting for request - 2
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 3
+parsing request
+string builder created
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: image/png,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: image/png,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /favicon.ico
+Pattern - .*
+Resource - /favicon.ico
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /favicon.ico
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 3
+Waiting for request - 3
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 4
+parsing request
+string builder created
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /favicon.ico
+Pattern - .*
+Resource - /favicon.ico
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /favicon.ico
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 4
+Waiting for request - 4
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 5
+parsing request
+Daemon thread sleeping on request queue
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 5
+Waiting for request - 5
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 6
+parsing request
+string builder created
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Pattern - .*
+Resource - /temp/
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 6
+Waiting for request - 6
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 7
+parsing request
+string builder created
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Pattern - .*
+Resource - /temp/
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 7
+Waiting for request - 7
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 8
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 8
+Waiting for request - 8
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 10
+Waiting for request - 9
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 27
+Waiting for request - 29
+Waiting for request - 26
+Waiting for request - 25
+Waiting for request - 24
+Waiting for request - 30
+Waiting for request - 23
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 22
+Waiting for request - 28
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 39
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 72
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 67
+Waiting for request - 66
+Waiting for request - 65
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 58
+Waiting for request - 57
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 54
+Waiting for request - 53
+Waiting for request - 52
+Waiting for request - 51
+Waiting for request - 50
+Waiting for request - 49
+Waiting for request - 48
+Waiting for request - 47
+Waiting for request - 46
+Waiting for request - 45
+Waiting for request - 44
+Waiting for request - 37
+Waiting for request - 42
+Waiting for request - 36
+Waiting for request - 38
+Waiting for request - 71
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 84
+Waiting for request - 80
+Waiting for request - 85
+Waiting for request - 83
+Waiting for request - 87
+Waiting for request - 90
+Waiting for request - 86
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 43
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 2
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 9
+Waiting for request - 8
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 33
+Waiting for request - 32
+Waiting for request - 35
+Waiting for request - 34
+Waiting for request - 29
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 55
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 43
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 46
+Waiting for request - 40
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 56
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 70
+Waiting for request - 64
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 68
+Waiting for request - 73
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 69
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 99
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 98
+Waiting for request - 97
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 94
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Cookie: name=ankit; age=23
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Cookie: name=ankit; age=23
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+Exception while processing the request 
+java.lang.ClassCastException: [Ljava.lang.Object; cannot be cast to [Ljavax.servlet.http.Cookie;
+	at edu.upenn.cis.cis455.servlet.Request.getCookies(Request.java:85)
+	at edu.upenn.cis.cis455.servlet.WebServlet.doGet(WebServlet.java:31)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:163)
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 4
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 14
+Waiting for request - 13
+Waiting for request - 15
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 10
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 9
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 26
+Waiting for request - 25
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 33
+Waiting for request - 38
+Waiting for request - 32
+Waiting for request - 31
+Waiting for request - 39
+Waiting for request - 30
+Waiting for request - 34
+Waiting for request - 56
+Waiting for request - 53
+Waiting for request - 50
+Waiting for request - 47
+Waiting for request - 44
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 42
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 43
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 72
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 66
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 82
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 76
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 91
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 85
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 60
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Cookie: name=ankit; age=23
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Cookie: name=ankit; age=23
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+javax.servlet.http.Cookie@1475479
+javax.servlet.http.Cookie@1fb0bfb
+Servlet in WebServlet
+NullPointerException while reading from socket 
+java.lang.NullPointerException
+	at java.lang.String.getBytes(String.java:915)
+	at edu.upenn.cis.cis455.servlet.Response.flushBuffer(Response.java:336)
+	at edu.upenn.cis.cis455.servlet.WebServlet.doGet(WebServlet.java:43)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at edu.upenn.cis.cis455.thread.ServerThread.run(ServerThread.java:163)
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET http://localhost:8080/ HTTP/1.0
+GET http://localhost:8080/ HTTP/1.0
+Absolute url in GET request - http://localhost:8080/
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 6
+Waiting for request - 5
+Waiting for request - 1
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 0
+Waiting for request - 2
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 18
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 12
+Waiting for request - 21
+Waiting for request - 20
+Waiting for request - 19
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 29
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 32
+Waiting for request - 38
+Waiting for request - 47
+Waiting for request - 43
+Waiting for request - 40
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 39
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 57
+Waiting for request - 49
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 56
+Waiting for request - 58
+Waiting for request - 83
+Waiting for request - 82
+Waiting for request - 85
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 91
+Waiting for request - 74
+Waiting for request - 73
+Waiting for request - 93
+Waiting for request - 72
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 67
+Waiting for request - 66
+Waiting for request - 65
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 99
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 98
+Waiting for request - 97
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 90
+Waiting for request - 92
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 48
+Waiting for request - 84
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST request found
+valid post headers found
+Request body - name1=value1&name2=value2
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Cookie: name=ankit; age=23
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Cookie: name=ankit; age=23
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+name=ankit
+age=23
+Servlet in WebServlet
+Thread going back into threadpool 2
+Waiting for request - 2
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 7
+Waiting for request - 6
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 8
+Waiting for request - 5
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 16
+Waiting for request - 15
+Waiting for request - 12
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 21
+Waiting for request - 23
+Waiting for request - 22
+Waiting for request - 17
+Waiting for request - 20
+Waiting for request - 24
+Waiting for request - 26
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 25
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 41
+Waiting for request - 40
+Waiting for request - 30
+Waiting for request - 37
+Waiting for request - 93
+Waiting for request - 88
+Waiting for request - 86
+Waiting for request - 81
+Waiting for request - 39
+Waiting for request - 79
+Waiting for request - 90
+Waiting for request - 53
+Waiting for request - 83
+Waiting for request - 91
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 47
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 80
+Waiting for request - 82
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 87
+Waiting for request - 89
+Waiting for request - 92
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 48
+Waiting for request - 51
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 52
+Waiting for request - 99
+Waiting for request - 44
+Waiting for request - 38
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 27
+Waiting for request - 43
+Waiting for request - 94
+Waiting for request - 42
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 97
+Waiting for request - 98
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST / HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST request found
+valid post headers found
+Request body - name1=value1&name2=value2
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+POST /temp/ HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST /temp/ HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST request found
+valid post headers found
+Request body - name1=value1&name2=value2
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Pattern - .*
+Resource - /temp/
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Thread going back into threadpool 1
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 8
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 2
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 5
+Waiting for request - 7
+Waiting for request - 6
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 18
+Waiting for request - 24
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 23
+Waiting for request - 17
+Waiting for request - 22
+Waiting for request - 26
+Waiting for request - 25
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 33
+Waiting for request - 32
+Waiting for request - 31
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 39
+Waiting for request - 52
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 98
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 66
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 73
+Waiting for request - 67
+Waiting for request - 65
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 53
+Waiting for request - 51
+Waiting for request - 48
+Waiting for request - 95
+Waiting for request - 47
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 45
+Waiting for request - 42
+Waiting for request - 46
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 54
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 43
+Waiting for request - 44
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+POST /temp/ HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST /temp/ HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+POST request found
+valid post headers found
+Request body - name1=value1&name2=value2
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Pattern - .*
+Resource - /temp/
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+value1
+Servlet in WebServlet - DO POST
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /temp/?name1=value1&name2=value2 HTTP/1.1
+host: localhost:8080
+GET /temp/?name1=value1&name2=value2 HTTP/1.1
+host: localhost:8080
+Pattern - /temp.*
+Resource - /temp/?name1=value1&name2=value2
+Match found
+updatin
+Pattern - .*
+Resource - /temp/?name1=value1&name2=value2
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - name1=value1&name2=value2
+Client socket - 127.0.0.1
+Cookies - 
+value1
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1

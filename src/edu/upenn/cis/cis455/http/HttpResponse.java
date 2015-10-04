@@ -70,7 +70,16 @@ public class HttpResponse
 		{
 			for(Map.Entry<String, ArrayList<String>> header : headers.entrySet())
 			{
-				response.append(header.getKey()+":"+header.getValue()+"\r\n");
+				StringBuilder headers = new StringBuilder();
+				for(int i=0;i<header.getValue().size();i++)
+				{
+					headers.append(header.getValue().get(i));
+					if(i<header.getValue().size()-1)
+					{
+						headers.append(",");
+					}
+				}
+				response.append(header.getKey()+":"+headers.toString()+"\r\n");
 			}
 		}
 		response.append("\r\n");
@@ -130,6 +139,13 @@ public class HttpResponse
 
 	public void setData(String data) {
 		this.data = data;
+	}
+
+	public void reset() {
+		this.responseCode = "";
+		this.responseCodeString = "";
+		this.headers.clear();
+		this.data = "";
 	}
 	
 }

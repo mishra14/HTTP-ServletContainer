@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.Cookie;
+
 import org.apache.log4j.Logger;
 
 /*
@@ -30,6 +32,7 @@ public class HttpRequest
 	private String servletPath;
 	private String pathInfo;
 	private String queryString;
+	private String requestBody;
 	
 	public HttpRequest(String httpRequest)
 	{
@@ -97,6 +100,7 @@ public class HttpRequest
 	{
 		if(servletUrl!=null)
 		{
+			logger.info("Servlet URl - "+servletUrl);
 			if(servletUrl.contains(".*"))
 			{
 				if(servletUrl.startsWith(".*"))
@@ -112,12 +116,19 @@ public class HttpRequest
 			{
 				servletPath = servletUrl;
 			}
+			logger.info("Servlet PATH - "+servletPath);
 			String path = resource.substring(servletPath.length());
 			if(path.contains("?"))
 			{
 				pathInfo = path.split("\\?")[0];
 				queryString = path.split("\\?")[1];
 			}
+			else
+			{
+				pathInfo = path;
+			}
+			logger.info("Path info - "+pathInfo);
+			logger.info("quesry string - "+queryString);
 		}
 	}
 	
@@ -174,7 +185,10 @@ public class HttpRequest
 		return "HttpRequest [operation=" + operation + ", protocol=" + protocol
 				+ ", version=" + version + ", resource=" + resource
 				+ ", headers=" + headers + ", validRequest=" + validRequest
-				+ "]";
+				+ ", servletUrl=" + servletUrl + ", contextPath=" + contextPath
+				+ ", servletPath=" + servletPath + ", pathInfo=" + pathInfo
+				+ ", queryString=" + queryString + ", requestBody="
+				+ requestBody + "]";
 	}
 
 	public String getServletUrl() {
@@ -216,7 +230,48 @@ public class HttpRequest
 	public void setQueryString(String queryString) {
 		this.queryString = queryString;
 	}
-	
-	
 
+	public String getRequestBody() {
+		return requestBody;
+	}
+
+	public void setRequestBody(String requestBody) {
+		this.requestBody = requestBody;
+	}
+
+	public HashMap<String,ArrayList<String>> getParams() {
+		String paramString=null;
+		HashMap<String,ArrayList<String>> parameters =  new HashMap<String,ArrayList<String>>();
+		if(operation.equalsIgnoreCase("GET"))
+		{
+			paramString = queryString;
+		}
+		else if(operation.equalsIgnoreCase("POST"))
+		{
+			paramString = requestBody;
+		}
+		if(paramString!=null)
+		{
+			for(String parameter : paramString.split("&"))
+			{
+				if(parameter.contains("="))
+				{
+					String name = parameter.split("=")[0].trim();
+					String value = parameter.split("=")[1].trim();
+					if(parameters.containsKey(name))
+					{
+						parameters.get(name).add(value);
+					}
+					else
+					{
+						ArrayList<String> values = new ArrayList<String>();
+						values.add(value);
+						parameters.put(name, values);
+					}
+				}
+			}
+		}
+		return parameters;
+	}
+	
 }

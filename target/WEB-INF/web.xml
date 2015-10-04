@@ -16,4 +16,13 @@
          <url-pattern>/temp/*</url-pattern>
      </servlet-mapping>
      
+     <servlet>
+         <servlet-name>DummyServlet</servlet-name>
+         <servlet-class>edu.upenn.cis.cis455.servlet.DummyServlet</servlet-class>
+     </servlet>
+
+     <servlet-mapping>
+         <servlet-name>DummyServlet</servlet-name>
+         <url-pattern>/*</url-pattern>
+     </servlet-mapping>
 </web-app>

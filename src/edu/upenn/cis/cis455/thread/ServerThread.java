@@ -120,18 +120,20 @@ public class ServerThread extends Thread {
 							}
 							if(HttpServer.getUrlPatterns()!=null)
 							{
-								int longestLength=0;
+								int longestLength=-1;
 								String longestMatch="";
 								for(Map.Entry<String, String> entry : HttpServer.getUrlPatterns().entrySet())
 								{
-									System.out.println("Pattern - "+entry.getKey());
-									System.out.println("Resource - "+httpRequest.getResource());
+									logger.info("Pattern - "+entry.getKey());
+									logger.info("Resource - "+httpRequest.getResource());
 									Pattern urlPattern = Pattern.compile(entry.getKey());
 									if(urlPattern.matcher(httpRequest.getResource()).matches())
 									{
+										logger.info("Match found");
 										int length = entry.getKey().contains("*")?entry.getKey().indexOf("*")-1:entry.getKey().length();
 										if(length>longestLength)
 										{
+											logger.info("updatin");
 											longestLength = length;
 											longestMatch = entry.getKey();
 										}
@@ -139,19 +141,47 @@ public class ServerThread extends Thread {
 								}
 
 								//send request to servlet 
-								if(HttpServer.getServlets().containsKey(longestMatch))
+								if(HttpServer.getUrlPatterns().containsKey(longestMatch))
 								{
-									System.out.println("Matching - "+HttpServer.getServlets().get(longestMatch));
-									httpRequest.setServletUrl(longestMatch);
-									httpRequest.updatePaths();
-									Request request = new Request(httpRequest);
-									Response response = new Response(new HttpResponse());
-									request.setSocket(socket);
-									response.setSocket(socket);
-									logger.info("Client socket - "+request.getRemoteAddr());
-									HttpServer.getServlets().get(longestMatch).service(request, response);
-									continue;
+									String servletName = HttpServer.getUrlPatterns().get(longestMatch);
+									if(HttpServer.getServlets().containsKey(servletName))
+									{
+										System.out.println("Longest Matching - "+HttpServer.getServlets().get(servletName));
+										httpRequest.setServletUrl(longestMatch);
+										httpRequest.updatePaths();
+										httpResponse = new HttpResponse();
+										httpResponse.setProtocol(httpRequest.getProtocol());
+										httpResponse.setVersion(httpRequest.getVersion());
+										httpResponse.setResponseCode("200");	//Assume OK by default
+										httpResponse.setResponseCodeString("OK");
+										Request request = new Request(httpRequest);
+										Response response = new Response(httpResponse);
+										request.setparameters(httpRequest.getParams());
+										request.setSocket(socket);
+										response.setSocket(socket);
+										logger.info("Client socket - "+request.getRemoteAddr());
+										HttpServer.getServlets().get(servletName).service(request, response);
+										
+										in.close();
+										inputStreamReader.close();
+										socketInputStream.close();
+										out.flush();
+										out.close();		//close the output buffer
+										httpRequest=null;	//clear the http request object
+										httpResponse=null;	//clear the http response object
+										socket.close();
+										continue;
+									}
+									else
+									{
+										logger.warn("Matching servlet name not in servlet Map - "+servletName +" using url - "+longestMatch);
+									}
 								}
+								else
+								{
+									logger.warn("Matching url pattern not in url pattern map - "+longestMatch);
+								}
+								
 								
 							}
 							Map<String, ArrayList<String>> headers=new HashMap<String, ArrayList<String>>();
@@ -512,6 +542,8 @@ public class ServerThread extends Thread {
 				logger.error("NullPointerException while reading from socket ",e);
 			} catch (ServletException e) {
 				logger.error("ServletException while sending request to servlet ",e);
+			} catch (Exception e) {
+				logger.error("Exception while processing the request ",e);
 			}
 			finally
 			{
@@ -529,7 +561,7 @@ public class ServerThread extends Thread {
 		logger.warn("Thread Shutting down - "+id);
 	}
 
-	private HttpRequest parseRequest(BufferedReader in) throws IOException, NullPointerException {
+	private HttpRequest parseRequest(BufferedReader in) throws IOException, NullPointerException, NumberFormatException{
 
 		logger.info("parsing request");
 		String inLineString="";
@@ -541,13 +573,34 @@ public class ServerThread extends Thread {
 				logger.info("string builder created");
 			}
 			requestString.append(inLineString + "\n");
-			logger.warn(inLineString);
+			logger.info(inLineString);
 		}
 		if (requestString != null) // the request was valid
 		{
 			httpRequest = new HttpRequest(requestString.toString());
+			if(httpRequest.getOperation().equalsIgnoreCase("post"))
+			{
+				logger.info("POST request found");
+				if(httpRequest.getHeaders().containsKey("content-length") && httpRequest.getHeaders().containsKey("content-type"))
+				{
+					logger.info("valid post headers found");
+					int bodyLength = Integer.parseInt(httpRequest.getHeaders().get("content-length").get(0));
+					char[] body = new char[bodyLength];
+					if(in.read(body)!= bodyLength)
+					{
+						logger.warn("Error while reading POST request body");
+					}
+					else
+					{
+						String requestBody = new String(body);
+						logger.info("Request body - "+requestBody);
+						httpRequest.setRequestBody(requestBody);
+					}
+					
+				}
+			}
 		}
-
+		
 		return httpRequest;
 	}
 	

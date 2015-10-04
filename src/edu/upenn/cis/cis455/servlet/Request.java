@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
@@ -27,7 +28,7 @@ import edu.upenn.cis.cis455.webserver.HttpServer;
  */
 public class Request implements HttpServletRequest {
 
-	private Properties m_params = new Properties();
+	private HashMap<String, ArrayList<String>> parameters = new HashMap<String, ArrayList<String>>();
 	private Properties m_props = new Properties();
 	private Session m_session = null;
 	private String m_method;
@@ -68,8 +69,22 @@ public class Request implements HttpServletRequest {
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#getCookies()
 	 */
-	public Cookie[] getCookies() {
-		return (Cookie[]) cookies.toArray();
+	public Cookie[] getCookies() 
+	{
+		cookies = new ArrayList<Cookie>();
+		if(httpRequest.getHeaders().containsKey("cookie"))
+		{
+			for(String cookieString : httpRequest.getHeaders().get("cookie"))
+			{
+				String[] cookiePairs = cookieString.split(";");
+				for(String cookiePair : cookiePairs)
+				{
+					cookies.add(new Cookie(cookiePair.split("=")[0].trim(),cookiePair.split("=")[1].trim()));
+				}
+			}
+		}
+		Cookie[] cookieArray = ((ArrayList<Cookie>)cookies).toArray(new Cookie[cookies.size()]);
+		return cookieArray;
 	}
 
 	/* (non-Javadoc)
@@ -357,38 +372,50 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getInputStream()
 	 */
 	public ServletInputStream getInputStream() throws IOException {
-		// TODO Auto-generated method stub
+		// not to do
 		return null;
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getParameter(java.lang.String)
 	 */
-	public String getParameter(String arg0) {
-		return m_params.getProperty(arg0);
+	public String getParameter(String parameter) {
+		if(parameters.containsKey(parameter))
+		{
+			return parameters.get(parameter).get(0);
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getParameterNames()
 	 */
 	public Enumeration getParameterNames() {
-		return m_params.keys();
+		return Collections.enumeration(parameters.keySet());
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getParameterValues(java.lang.String)
 	 */
-	public String[] getParameterValues(String arg0) {
-		
-		return null;
+	public String[] getParameterValues(String parameter) {
+		if(parameters.containsKey(parameter))
+		{
+			return parameters.get(parameter).toArray(new String[parameters.get(parameter).size()]);
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getParameterMap()
 	 */
 	public Map getParameterMap() {
-		// TODO Auto-generated method stub
-		return null;
+		return parameters;
 	}
 
 	/* (non-Javadoc)
@@ -568,7 +595,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getLocalName()
 	 */
 	public String getLocalName() {
-		// TODO Auto-generated method stub
 		return HttpServer.getDaemonSocket().getInetAddress().getHostName();
 	}
 
@@ -576,7 +602,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getLocalAddr()
 	 */
 	public String getLocalAddr() {
-		// TODO Auto-generated method stub
 		return HttpServer.getDaemonSocket().getInetAddress().getHostAddress();
 	}
 
@@ -592,23 +617,24 @@ public class Request implements HttpServletRequest {
 	}
 	
 	void setParameter(String key, String value) {
-		m_params.setProperty(key, value);
+		if(parameters.containsKey(key))
+		{
+			parameters.get(key).add(value);
+		}
+		else
+		{
+			ArrayList<String> values = new ArrayList<String>();
+			values.add(value);
+			parameters.put(key, values);
+		}
 	}
 	
 	void clearParameters() {
-		m_params.clear();
+		parameters.clear();
 	}
 	
 	boolean hasSession() {
 		return ((m_session != null) && m_session.isValid());
-	}
-
-	public Properties getM_params() {
-		return m_params;
-	}
-
-	public void setM_params(Properties m_params) {
-		this.m_params = m_params;
 	}
 
 	public Properties getM_props() {
@@ -653,6 +679,10 @@ public class Request implements HttpServletRequest {
 
 	public void setCookies(ArrayList<Cookie> cookies) {
 		this.cookies = cookies;
+	}
+
+	public void setparameters(HashMap<String, ArrayList<String>> params) {
+		this.parameters = params;		
 	}
 	
 	

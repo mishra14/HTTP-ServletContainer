@@ -62866,3 +62866,3459 @@ value1
 Servlet in WebServlet
 Thread going back into threadpool 1
 Waiting for request - 1
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 73
+Waiting for request - 80
+Waiting for request - 20
+Waiting for request - 23
+Waiting for request - 26
+Waiting for request - 18
+Waiting for request - 33
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 15
+Waiting for request - 14
+Waiting for request - 13
+Waiting for request - 74
+Waiting for request - 72
+Waiting for request - 10
+Waiting for request - 6
+Waiting for request - 5
+Waiting for request - 12
+Waiting for request - 11
+Waiting for request - 9
+Waiting for request - 37
+Waiting for request - 31
+Waiting for request - 30
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 4
+Waiting for request - 1
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 97
+Waiting for request - 98
+Waiting for request - 96
+Waiting for request - 99
+Waiting for request - 29
+Name - ThreadPool
+Free Size - 100
+Waiting for request - 8
+Waiting for request - 7
+Waiting for request - 32
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 28
+Waiting for request - 27
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 25
+Waiting for request - 24
+Waiting for request - 82
+Waiting for request - 22
+Waiting for request - 21
+Waiting for request - 81
+Waiting for request - 19
+Total Size - 100
+Daemon thread sleeping on request queue
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+GET /temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp/
+Connection: keep-alive
+If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Pattern - /temp.*
+Resource - /temp/hello.txt
+Match found
+updatin
+Pattern - .*
+Resource - /temp/hello.txt
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /hello.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 2
+Waiting for request - 7
+Waiting for request - 1
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 0
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 10
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 24
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 26
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 25
+Waiting for request - 34
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 33
+Waiting for request - 32
+Waiting for request - 36
+Waiting for request - 35
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 47
+Waiting for request - 45
+Waiting for request - 44
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 43
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 40
+Waiting for request - 46
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 93
+Waiting for request - 99
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 85
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 82
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 50
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 76
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 67
+Waiting for request - 66
+Waiting for request - 65
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 62
+Waiting for request - 61
+Waiting for request - 60
+Waiting for request - 59
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 98
+Waiting for request - 96
+Waiting for request - 97
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Pattern - .*
+Resource - /temp/
+Match found
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+Main thread waiting on daemonSocket.accept
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 2
+Waiting for request - 2
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 3
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 3
+Waiting for request - 3
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet, .*=DummyServlet}, tempServletName=DummyServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 5
+Waiting for request - 4
+Waiting for request - 0
+Waiting for request - 10
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 9
+Waiting for request - 3
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 19
+Waiting for request - 18
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 20
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 32
+Waiting for request - 31
+Waiting for request - 27
+Waiting for request - 26
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 33
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 39
+Waiting for request - 38
+Waiting for request - 62
+Waiting for request - 40
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 58
+Waiting for request - 61
+Waiting for request - 57
+Waiting for request - 53
+Waiting for request - 56
+Waiting for request - 54
+Waiting for request - 51
+Waiting for request - 66
+Waiting for request - 47
+Waiting for request - 55
+Waiting for request - 68
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 67
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 65
+Waiting for request - 50
+Waiting for request - 52
+Waiting for request - 75
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 69
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+Main thread waiting on daemonSocket.accept
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Pattern - .*
+Resource - /
+Match found
+updatin
+Servlet URl - .*
+Servlet PATH - 
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 2
+Waiting for request - 1
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 7
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 17
+Waiting for request - 16
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 20
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 28
+Waiting for request - 27
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 33
+Waiting for request - 32
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 38
+Waiting for request - 37
+Waiting for request - 39
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 58
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 50
+Waiting for request - 47
+Waiting for request - 44
+Waiting for request - 41
+Waiting for request - 57
+Waiting for request - 40
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 61
+Waiting for request - 71
+Waiting for request - 64
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 72
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 82
+Waiting for request - 77
+Waiting for request - 73
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 84
+Waiting for request - 74
+Waiting for request - 83
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 98
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 97
+Waiting for request - 96
+Waiting for request - 94
+Waiting for request - 95
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:17:49 GMT], Content-Length=[213], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:[text/html; charset=utf-8]
+Date:[Sun, 04 Oct 2015 20:17:49 GMT]
+Content-Length:[213]
+Connection:[Close]
+
+<html><body>/<br/><a href="http://localhost:8080//index.html">index.html</a><br/><a href="http://localhost:8080//tempFile.txt">tempFile.txt</a><br/><a href="http://localhost:8080//temp">temp</a><br/></body></html>
+Thread 1 going back into threadpool
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:17:59 GMT], Content-Length=[213], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:[text/html; charset=utf-8]
+Date:[Sun, 04 Oct 2015 20:17:59 GMT]
+Content-Length:[213]
+Connection:[Close]
+
+<html><body>/<br/><a href="http://localhost:8080//index.html">index.html</a><br/><a href="http://localhost:8080//tempFile.txt">tempFile.txt</a><br/><a href="http://localhost:8080//temp">temp</a><br/></body></html>
+Thread 2 going back into threadpool
+Waiting for request - 2
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 10
+Waiting for request - 4
+Waiting for request - 8
+Waiting for request - 11
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 9
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 17
+Waiting for request - 16
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 37
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 34
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 88
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 85
+Waiting for request - 83
+Waiting for request - 81
+Waiting for request - 89
+Waiting for request - 40
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 67
+Waiting for request - 64
+Waiting for request - 62
+Waiting for request - 59
+Waiting for request - 56
+Waiting for request - 53
+Waiting for request - 97
+Waiting for request - 45
+Waiting for request - 42
+Waiting for request - 82
+Waiting for request - 84
+Waiting for request - 78
+Waiting for request - 99
+Waiting for request - 94
+Waiting for request - 41
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 98
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 96
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 95
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 93
+Waiting for request - 63
+Waiting for request - 92
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 76
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 77
+Waiting for request - 79
+Waiting for request - 80
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:24:26 GMT], Content-Length=[213], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:24:26 GMT
+Content-Length:213
+Connection:Close
+
+<html><body>/<br/><a href="http://localhost:8080//index.html">index.html</a><br/><a href="http://localhost:8080//tempFile.txt">tempFile.txt</a><br/><a href="http://localhost:8080//temp">temp</a><br/></body></html>
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET //tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET //tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - //tempFile.txt
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=//tempFile.txt, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www//tempFile.txt
+[B@1876148
+[B@1876148
+Thread 1 going back into threadpool
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 2
+parsing request
+string builder created
+GET //temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET //temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - //temp
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=//temp, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www//temp
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:24:33 GMT], Content-Length=[659], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:24:33 GMT
+Content-Length:659
+Connection:Close
+
+<html><body>//temp<br/><a href="http://localhost:8080//temp/hello.txt">hello.txt</a><br/><a href="http://localhost:8080//temp/requests.txt">requests.txt</a><br/><a href="http://localhost:8080//temp/Example.jpg">Example.jpg</a><br/><a href="http://localhost:8080//temp/other.jpg">other.jpg</a><br/><a href="http://localhost:8080//temp/giphy.gif">giphy.gif</a><br/><a href="http://localhost:8080//temp/test_1.jpg">test_1.jpg</a><br/><a href="http://localhost:8080//temp/pnggrad8rgb.png">pnggrad8rgb.png</a><br/><a href="http://localhost:8080//temp/inside">inside</a><br/><a href="http://localhost:8080//temp/pdf-sample.pdf">pdf-sample.pdf</a><br/></body></html>
+Thread 2 going back into threadpool
+Waiting for request - 2
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 3
+parsing request
+string builder created
+GET //temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080//temp
+Connection: keep-alive
+GET //temp/hello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080//temp
+Connection: keep-alive
+Pattern - /temp.*
+Resource - //temp/hello.txt
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=//temp/hello.txt, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080//temp], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www//temp/hello.txt
+[B@617029
+[B@617029
+Thread 3 going back into threadpool
+Waiting for request - 3
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 4
+parsing request
+Daemon thread sleeping on request queue
+string builder created
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 4
+Waiting for request - 4
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 5
+parsing request
+Daemon thread sleeping on request queue
+string builder created
+GET //temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET //temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - //temp/
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=//temp/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www//temp/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:24:54 GMT], Content-Length=[669], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:24:54 GMT
+Content-Length:669
+Connection:Close
+
+<html><body>//temp/<br/><a href="http://localhost:8080//temp//hello.txt">hello.txt</a><br/><a href="http://localhost:8080//temp//requests.txt">requests.txt</a><br/><a href="http://localhost:8080//temp//Example.jpg">Example.jpg</a><br/><a href="http://localhost:8080//temp//other.jpg">other.jpg</a><br/><a href="http://localhost:8080//temp//giphy.gif">giphy.gif</a><br/><a href="http://localhost:8080//temp//test_1.jpg">test_1.jpg</a><br/><a href="http://localhost:8080//temp//pnggrad8rgb.png">pnggrad8rgb.png</a><br/><a href="http://localhost:8080//temp//inside">inside</a><br/><a href="http://localhost:8080//temp//pdf-sample.pdf">pdf-sample.pdf</a><br/></body></html>
+Thread 5 going back into threadpool
+Waiting for request - 5
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 6
+parsing request
+string builder created
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp/
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - /
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 6
+Waiting for request - 6
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 7
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /tempFile.txt
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - File.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 7
+Waiting for request - 7
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 6
+Waiting for request - 5
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 8
+Waiting for request - 2
+Waiting for request - 7
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 14
+Waiting for request - 13
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 28
+Waiting for request - 27
+Waiting for request - 30
+Waiting for request - 29
+Waiting for request - 24
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 31
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 40
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 41
+Waiting for request - 36
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 50
+Waiting for request - 56
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 49
+Waiting for request - 57
+Waiting for request - 55
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 63
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 78
+Waiting for request - 84
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 83
+Waiting for request - 82
+Waiting for request - 77
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 93
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /tempFile.txt
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - File.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 0
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:27:05 GMT], Content-Length=[210], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:27:05 GMT
+Content-Length:210
+Connection:Close
+
+<html><body>/<br/><a href="http://localhost:8080/index.html">index.html</a><br/><a href="http://localhost:8080/tempFile.txt">tempFile.txt</a><br/><a href="http://localhost:8080/temp">temp</a><br/></body></html>
+Thread 1 going back into threadpool
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /tempFile.txt
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - File.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 2
+Waiting for request - 2
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 3
+parsing request
+string builder created
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /index.html
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/index.html, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/index.html
+[B@1cf4b61
+[B@1cf4b61
+Thread 3 going back into threadpool
+Waiting for request - 3
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 4
+parsing request
+string builder created
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - 
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 4
+Waiting for request - 4
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 5
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /tempFile.txt
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - File.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 5
+Waiting for request - 5
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 6
+parsing request
+string builder created
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /index.html
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/index.html, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/index.html
+[B@13bb3ec
+[B@13bb3ec
+Thread 6 going back into threadpool
+Waiting for request - 6
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 7
+parsing request
+string builder created
+GET /control HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /control HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /control
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/control, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/control
+0 WAITING
+1 WAITING
+2 WAITING
+3 WAITING
+4 WAITING
+5 WAITING
+6 WAITING
+7 RUNNABLE
+8 WAITING
+9 WAITING
+10 WAITING
+11 WAITING
+12 WAITING
+13 WAITING
+14 WAITING
+15 WAITING
+16 WAITING
+17 WAITING
+18 WAITING
+19 WAITING
+20 WAITING
+21 WAITING
+22 WAITING
+23 WAITING
+24 WAITING
+25 WAITING
+26 WAITING
+27 WAITING
+28 WAITING
+29 WAITING
+30 WAITING
+31 WAITING
+32 WAITING
+33 WAITING
+34 WAITING
+35 WAITING
+36 WAITING
+37 WAITING
+38 WAITING
+39 WAITING
+40 WAITING
+41 WAITING
+42 WAITING
+43 WAITING
+44 WAITING
+45 WAITING
+46 WAITING
+47 WAITING
+48 WAITING
+49 WAITING
+50 WAITING
+51 WAITING
+52 WAITING
+53 WAITING
+54 WAITING
+55 WAITING
+56 WAITING
+57 WAITING
+58 WAITING
+59 WAITING
+60 WAITING
+61 WAITING
+62 WAITING
+63 WAITING
+64 WAITING
+65 WAITING
+66 WAITING
+67 WAITING
+68 WAITING
+69 WAITING
+70 WAITING
+71 WAITING
+72 WAITING
+73 WAITING
+74 WAITING
+75 WAITING
+76 WAITING
+77 WAITING
+78 WAITING
+79 WAITING
+80 WAITING
+81 WAITING
+82 WAITING
+83 WAITING
+84 WAITING
+85 WAITING
+86 WAITING
+87 WAITING
+88 WAITING
+89 WAITING
+90 WAITING
+91 WAITING
+92 WAITING
+93 WAITING
+94 WAITING
+95 WAITING
+96 WAITING
+97 WAITING
+98 WAITING
+99 WAITING
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Date=[Sun, 04 Oct 2015 20:27:23 GMT], Content-type=[null; charset=utf-8], Content-Length=[1826], Connection=[Close]}]
+HTTP/1.1 200 OK
+Date:Sun, 04 Oct 2015 20:27:23 GMT
+Content-type:null; charset=utf-8
+Content-Length:1826
+Connection:Close
+
+<html><body>/control<br/>Ankit Mishra<br/>mankit<br/><br/>ThreadPool Stats - <br/>Total Threads = 100<br/>Free Threads = 99<br/>Busy Threads = 1<br/><a href="http://localhost:8080/shutdown">Shut Down Server</a><br/><br/>List of all threads - <br/>0 WAITING<br/>1 WAITING<br/>2 WAITING<br/>3 WAITING<br/>4 WAITING<br/>5 WAITING<br/>6 WAITING<br/>7 RUNNABLE <a href="http://localhost:8080/control">http://localhost:8080/control</a><br/>8 WAITING<br/>9 WAITING<br/>10 WAITING<br/>11 WAITING<br/>12 WAITING<br/>13 WAITING<br/>14 WAITING<br/>15 WAITING<br/>16 WAITING<br/>17 WAITING<br/>18 WAITING<br/>19 WAITING<br/>20 WAITING<br/>21 WAITING<br/>22 WAITING<br/>23 WAITING<br/>24 WAITING<br/>25 WAITING<br/>26 WAITING<br/>27 WAITING<br/>28 WAITING<br/>29 WAITING<br/>30 WAITING<br/>31 WAITING<br/>32 WAITING<br/>33 WAITING<br/>34 WAITING<br/>35 WAITING<br/>36 WAITING<br/>37 WAITING<br/>38 WAITING<br/>39 WAITING<br/>40 WAITING<br/>41 WAITING<br/>42 WAITING<br/>43 WAITING<br/>44 WAITING<br/>45 WAITING<br/>46 WAITING<br/>47 WAITING<br/>48 WAITING<br/>49 WAITING<br/>50 WAITING<br/>51 WAITING<br/>52 WAITING<br/>53 WAITING<br/>54 WAITING<br/>55 WAITING<br/>56 WAITING<br/>57 WAITING<br/>58 WAITING<br/>59 WAITING<br/>60 WAITING<br/>61 WAITING<br/>62 WAITING<br/>63 WAITING<br/>64 WAITING<br/>65 WAITING<br/>66 WAITING<br/>67 WAITING<br/>68 WAITING<br/>69 WAITING<br/>70 WAITING<br/>71 WAITING<br/>72 WAITING<br/>73 WAITING<br/>74 WAITING<br/>75 WAITING<br/>76 WAITING<br/>77 WAITING<br/>78 WAITING<br/>79 WAITING<br/>80 WAITING<br/>81 WAITING<br/>82 WAITING<br/>83 WAITING<br/>84 WAITING<br/>85 WAITING<br/>86 WAITING<br/>87 WAITING<br/>88 WAITING<br/>89 WAITING<br/>90 WAITING<br/>91 WAITING<br/>92 WAITING<br/>93 WAITING<br/>94 WAITING<br/>95 WAITING<br/>96 WAITING<br/>97 WAITING<br/>98 WAITING<br/>99 WAITING<br/></body></html>
+Thread 7 going back into threadpool
+Waiting for request - 7
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 8
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:27:32 GMT], Content-Length=[210], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:27:32 GMT
+Content-Length:210
+Connection:Close
+
+<html><body>/<br/><a href="http://localhost:8080/index.html">index.html</a><br/><a href="http://localhost:8080/tempFile.txt">tempFile.txt</a><br/><a href="http://localhost:8080/temp">temp</a><br/></body></html>
+Thread 8 going back into threadpool
+Waiting for request - 8
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 9
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /tempFile.txt
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - File.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 9
+Waiting for request - 9
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 10
+parsing request
+string builder created
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /temp
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - 
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 10
+Waiting for request - 10
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 11
+parsing request
+string builder created
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Cache-Control: max-age=0
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Cache-Control: max-age=0
+Pattern - /temp.*
+Resource - /temp
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - 
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 11
+Waiting for request - 11
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 12
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /tempFile.txt
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - File.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 12
+Waiting for request - 12
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 13
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /tempFile.txt
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - File.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 13
+Waiting for request - 13
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 14
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp.*
+Resource - /tempFile.txt
+Match found
+updatin
+Servlet URl - /temp.*
+Servlet PATH - /temp
+Path info - File.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 14
+Waiting for request - 14
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp/*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 9
+Waiting for request - 8
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 22
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 21
+Waiting for request - 20
+Waiting for request - 24
+Waiting for request - 23
+Waiting for request - 16
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 29
+Waiting for request - 28
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 37
+Waiting for request - 36
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 70
+Waiting for request - 67
+Waiting for request - 64
+Waiting for request - 59
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 56
+Waiting for request - 53
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 47
+Waiting for request - 42
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 74
+Waiting for request - 50
+Waiting for request - 45
+Waiting for request - 44
+Waiting for request - 43
+Waiting for request - 41
+Waiting for request - 40
+Waiting for request - 46
+Waiting for request - 49
+Waiting for request - 48
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 55
+Waiting for request - 54
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 82
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 73
+Waiting for request - 89
+Waiting for request - 90
+Waiting for request - 88
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 95
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 98
+Waiting for request - 97
+Waiting for request - 96
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp/.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 2
+Waiting for request - 10
+Waiting for request - 9
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 8
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 17
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 14
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 26
+Waiting for request - 28
+Waiting for request - 25
+Waiting for request - 27
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 39
+Waiting for request - 46
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 45
+Waiting for request - 40
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 54
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 67
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 61
+Waiting for request - 68
+Waiting for request - 66
+Waiting for request - 65
+Waiting for request - 47
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 79
+Waiting for request - 74
+Waiting for request - 77
+Waiting for request - 80
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 78
+Waiting for request - 81
+Waiting for request - 82
+Waiting for request - 83
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 92
+Waiting for request - 90
+Waiting for request - 93
+Waiting for request - 88
+Waiting for request - 89
+Waiting for request - 91
+Waiting for request - 94
+Waiting for request - 95
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 98
+Waiting for request - 99
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp/.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 11
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 10
+Waiting for request - 9
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 26
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 20
+Waiting for request - 27
+Waiting for request - 23
+Waiting for request - 25
+Waiting for request - 24
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 39
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 38
+Waiting for request - 37
+Waiting for request - 33
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 45
+Waiting for request - 46
+Waiting for request - 50
+Waiting for request - 52
+Waiting for request - 49
+Waiting for request - 48
+Waiting for request - 47
+Waiting for request - 51
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 57
+Waiting for request - 56
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 66
+Waiting for request - 68
+Waiting for request - 67
+Waiting for request - 64
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 65
+Waiting for request - 71
+Waiting for request - 40
+Waiting for request - 72
+Waiting for request - 74
+Waiting for request - 80
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 81
+Waiting for request - 73
+Waiting for request - 82
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 86
+Waiting for request - 83
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 90
+Waiting for request - 96
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 93
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 89
+Waiting for request - 97
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 98
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /tempFile.txt
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/tempFile.txt, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/tempFile.txt
+[B@1a701c9
+[B@1a701c9
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Cache-Control: max-age=0
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Cache-Control: max-age=0
+Pattern - /temp/.*
+Resource - /tempFile.txt
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/tempFile.txt, headers={cache-control=[max-age=0], connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/tempFile.txt
+[B@10bc962
+[B@10bc962
+Thread 1 going back into threadpool
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+string builder created
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/temp
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:29:48 GMT], Content-Length=[640], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:29:48 GMT
+Content-Length:640
+Connection:Close
+
+<html><body>/temp<br/><a href="http://localhost:8080/temphello.txt">hello.txt</a><br/><a href="http://localhost:8080/temprequests.txt">requests.txt</a><br/><a href="http://localhost:8080/tempExample.jpg">Example.jpg</a><br/><a href="http://localhost:8080/tempother.jpg">other.jpg</a><br/><a href="http://localhost:8080/tempgiphy.gif">giphy.gif</a><br/><a href="http://localhost:8080/temptest_1.jpg">test_1.jpg</a><br/><a href="http://localhost:8080/temppnggrad8rgb.png">pnggrad8rgb.png</a><br/><a href="http://localhost:8080/tempinside">inside</a><br/><a href="http://localhost:8080/temppdf-sample.pdf">pdf-sample.pdf</a><br/></body></html>
+Thread 2 going back into threadpool
+Waiting for request - 2
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 3
+parsing request
+string builder created
+GET /temphello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /temphello.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temphello.txt
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temphello.txt, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/temp], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/temphello.txt
+requested file does not exist - /home/cis455/git/cis455homework1milestone2/./www/temphello.txt
+Thread 3 going back into threadpool
+Waiting for request - 3
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 4
+parsing request
+string builder created
+GET /tempExample.jpg HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /tempExample.jpg HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /tempExample.jpg
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/tempExample.jpg, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/temp], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/tempExample.jpg
+requested file does not exist - /home/cis455/git/cis455homework1milestone2/./www/tempExample.jpg
+Thread 4 going back into threadpool
+Waiting for request - 4
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 5
+parsing request
+string builder created
+GET /tempgiphy.gif HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /tempgiphy.gif HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /tempgiphy.gif
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/tempgiphy.gif, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/temp], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/tempgiphy.gif
+requested file does not exist - /home/cis455/git/cis455homework1milestone2/./www/tempgiphy.gif
+Thread 5 going back into threadpool
+Waiting for request - 5
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 6
+parsing request
+string builder created
+GET /temptest_1.jpg HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /temptest_1.jpg HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temptest_1.jpg
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temptest_1.jpg, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/temp], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/temptest_1.jpg
+requested file does not exist - /home/cis455/git/cis455homework1milestone2/./www/temptest_1.jpg
+Thread 6 going back into threadpool
+Waiting for request - 6
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 7
+parsing request
+string builder created
+GET /tempinside HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /tempinside HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /tempinside
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/tempinside, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/temp], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/tempinside
+requested file does not exist - /home/cis455/git/cis455homework1milestone2/./www/tempinside
+Thread 7 going back into threadpool
+Waiting for request - 7
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 8
+parsing request
+Daemon thread sleeping on request queue
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:30:49 GMT], Content-Length=[210], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:30:49 GMT
+Content-Length:210
+Connection:Close
+
+<html><body>/<br/><a href="http://localhost:8080/index.html">index.html</a><br/><a href="http://localhost:8080/tempFile.txt">tempFile.txt</a><br/><a href="http://localhost:8080/temp">temp</a><br/></body></html>
+Thread 8 going back into threadpool
+Waiting for request - 8
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 9
+parsing request
+string builder created
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /index.html
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/index.html, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/index.html
+[B@d51c6c
+[B@d51c6c
+Thread 9 going back into threadpool
+Waiting for request - 9
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp/.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 2
+Waiting for request - 1
+Waiting for request - 0
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 12
+Waiting for request - 7
+Waiting for request - 8
+Waiting for request - 9
+Waiting for request - 11
+Waiting for request - 10
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 18
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 28
+Waiting for request - 23
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 27
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 37
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 38
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 39
+Waiting for request - 98
+Waiting for request - 95
+Waiting for request - 92
+Waiting for request - 89
+Waiting for request - 86
+Waiting for request - 83
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 72
+Waiting for request - 73
+Waiting for request - 74
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 79
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 45
+Waiting for request - 42
+Waiting for request - 99
+Waiting for request - 82
+Waiting for request - 84
+Waiting for request - 85
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 93
+Waiting for request - 94
+Waiting for request - 60
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 46
+Main thread finished waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+Main thread waiting on daemonSocket.accept
+obtained request - 0
+parsing request
+string builder created
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /index.html
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/index.html, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/index.html
+[B@136b690
+[B@136b690
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 1
+parsing request
+Daemon thread sleeping on request queue
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:32:35 GMT], Content-Length=[213], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:32:35 GMT
+Content-Length:213
+Connection:Close
+
+<html><body>/<br/><a href="http://localhost:8080//index.html">index.html</a><br/><a href="http://localhost:8080//tempFile.txt">tempFile.txt</a><br/><a href="http://localhost:8080//temp">temp</a><br/></body></html>
+Thread 1 going back into threadpool
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+string builder created
+GET //index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET //index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - //index.html
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=//index.html, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www//index.html
+[B@130e79d
+[B@130e79d
+Thread 2 going back into threadpool
+Waiting for request - 2
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp/.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 0
+Waiting for request - 1
+Waiting for request - 2
+Waiting for request - 9
+Waiting for request - 6
+Waiting for request - 10
+Waiting for request - 8
+Waiting for request - 3
+Waiting for request - 4
+Waiting for request - 5
+Waiting for request - 7
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 20
+Waiting for request - 19
+Waiting for request - 18
+Waiting for request - 17
+Waiting for request - 16
+Waiting for request - 21
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 25
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 33
+Waiting for request - 39
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 38
+Waiting for request - 37
+Waiting for request - 62
+Waiting for request - 63
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 60
+Waiting for request - 59
+Waiting for request - 43
+Waiting for request - 67
+Waiting for request - 58
+Waiting for request - 57
+Waiting for request - 56
+Waiting for request - 55
+Waiting for request - 54
+Waiting for request - 53
+Waiting for request - 52
+Waiting for request - 51
+Waiting for request - 50
+Waiting for request - 49
+Waiting for request - 48
+Waiting for request - 47
+Waiting for request - 46
+Waiting for request - 45
+Waiting for request - 76
+Waiting for request - 44
+Waiting for request - 40
+Waiting for request - 41
+Waiting for request - 42
+Waiting for request - 32
+Waiting for request - 79
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 71
+Waiting for request - 82
+Waiting for request - 70
+Waiting for request - 69
+Waiting for request - 68
+Waiting for request - 66
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 85
+Waiting for request - 84
+Waiting for request - 83
+Waiting for request - 96
+Waiting for request - 97
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+Waiting for request - 61
+Waiting for request - 81
+Waiting for request - 80
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 0
+parsing request
+string builder created
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:33:36 GMT], Content-Length=[210], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:33:36 GMT
+Content-Length:210
+Connection:Close
+
+<html><body>/<br/><a href="http://localhost:8080/index.html">index.html</a><br/><a href="http://localhost:8080/tempFile.txt">tempFile.txt</a><br/><a href="http://localhost:8080/temp">temp</a><br/></body></html>
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /index.html
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/index.html, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/index.html
+[B@1bfd316
+[B@1bfd316
+Thread 1 going back into threadpool
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 2
+parsing request
+string builder created
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/temp
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:33:40 GMT], Content-Length=[649], Connection=[Close]}]
+Daemon thread sleeping on request queue
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:33:40 GMT
+Content-Length:649
+Connection:Close
+
+<html><body>/temp<br/><a href="http://localhost:8080/temp/hello.txt">hello.txt</a><br/><a href="http://localhost:8080/temp/requests.txt">requests.txt</a><br/><a href="http://localhost:8080/temp/Example.jpg">Example.jpg</a><br/><a href="http://localhost:8080/temp/other.jpg">other.jpg</a><br/><a href="http://localhost:8080/temp/giphy.gif">giphy.gif</a><br/><a href="http://localhost:8080/temp/test_1.jpg">test_1.jpg</a><br/><a href="http://localhost:8080/temp/pnggrad8rgb.png">pnggrad8rgb.png</a><br/><a href="http://localhost:8080/temp/inside">inside</a><br/><a href="http://localhost:8080/temp/pdf-sample.pdf">pdf-sample.pdf</a><br/></body></html>
+Thread 2 going back into threadpool
+Waiting for request - 2
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 3
+parsing request
+string builder created
+GET /temp/requests.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /temp/requests.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp/requests.txt
+Match found
+updatin
+Servlet URl - /temp/.*
+Servlet PATH - /temp/
+Path info - requests.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 3
+Waiting for request - 3
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 4
+parsing request
+string builder created
+GET /temp/requests.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /temp/requests.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp/requests.txt
+Match found
+updatin
+Servlet URl - /temp/.*
+Servlet PATH - /temp/
+Path info - requests.txt
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 4
+Waiting for request - 4
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 5
+parsing request
+string builder created
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /tempFile.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /tempFile.txt
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/tempFile.txt, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/tempFile.txt
+[B@2ac22a
+[B@2ac22a
+Thread 5 going back into threadpool
+Waiting for request - 5
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 6
+parsing request
+string builder created
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], referer=[http://localhost:8080/], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/temp
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:33:59 GMT], Content-Length=[649], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:33:59 GMT
+Content-Length:649
+Connection:Close
+
+<html><body>/temp<br/><a href="http://localhost:8080/temp/hello.txt">hello.txt</a><br/><a href="http://localhost:8080/temp/requests.txt">requests.txt</a><br/><a href="http://localhost:8080/temp/Example.jpg">Example.jpg</a><br/><a href="http://localhost:8080/temp/other.jpg">other.jpg</a><br/><a href="http://localhost:8080/temp/giphy.gif">giphy.gif</a><br/><a href="http://localhost:8080/temp/test_1.jpg">test_1.jpg</a><br/><a href="http://localhost:8080/temp/pnggrad8rgb.png">pnggrad8rgb.png</a><br/><a href="http://localhost:8080/temp/inside">inside</a><br/><a href="http://localhost:8080/temp/pdf-sample.pdf">pdf-sample.pdf</a><br/></body></html>
+Thread 6 going back into threadpool
+Waiting for request - 6
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={}, m_servletParams={}, m_urlPattern={/temp/.*=WebServlet}, tempServletName=WebServlet]
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 1
+Waiting for request - 8
+Waiting for request - 2
+Waiting for request - 0
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 11
+Waiting for request - 12
+Waiting for request - 13
+Waiting for request - 14
+Waiting for request - 16
+Waiting for request - 17
+Waiting for request - 15
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 24
+Waiting for request - 26
+Waiting for request - 25
+Waiting for request - 18
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 21
+Waiting for request - 28
+Waiting for request - 29
+Waiting for request - 30
+Waiting for request - 31
+Waiting for request - 32
+Waiting for request - 27
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 71
+Waiting for request - 70
+Waiting for request - 75
+Waiting for request - 74
+Waiting for request - 64
+Waiting for request - 63
+Waiting for request - 78
+Waiting for request - 77
+Waiting for request - 40
+Waiting for request - 39
+Waiting for request - 38
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 84
+Waiting for request - 46
+Waiting for request - 45
+Waiting for request - 44
+Waiting for request - 43
+Waiting for request - 49
+Waiting for request - 50
+Waiting for request - 51
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 54
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 67
+Waiting for request - 68
+Waiting for request - 69
+Waiting for request - 99
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 98
+Waiting for request - 97
+Waiting for request - 96
+Waiting for request - 95
+Waiting for request - 94
+Waiting for request - 93
+Waiting for request - 92
+Waiting for request - 91
+Waiting for request - 90
+Waiting for request - 89
+Waiting for request - 88
+Waiting for request - 87
+Waiting for request - 86
+Waiting for request - 85
+Waiting for request - 83
+Waiting for request - 82
+Waiting for request - 76
+Waiting for request - 81
+Waiting for request - 80
+Waiting for request - 79
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+obtained request - 0
+parsing request
+Daemon thread sleeping on request queue
+string builder created
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp
+Matching url pattern not in url pattern map - 
+HttpRequest [operation=GET, protocol=HTTP, version=1.1, resource=/temp, headers={connection=[keep-alive], accept-language=[en-US,en;q=0.5], host=[localhost:8080], accept=[text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8], user-agent=[Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0], accept-encoding=[gzip, deflate]}, validRequest=true, servletUrl=null, contextPath=, servletPath=null, pathInfo=null, queryString=null, requestBody=null]
+Requesting - ./www/temp
+./www
+HttpResponse [protocol=HTTP, version=1.1, responseCode=200, responseCodeString=OK, headers={Content-type=[text/html; charset=utf-8], Date=[Sun, 04 Oct 2015 20:44:46 GMT], Content-Length=[649], Connection=[Close]}]
+HTTP/1.1 200 OK
+Content-type:text/html; charset=utf-8
+Date:Sun, 04 Oct 2015 20:44:46 GMT
+Content-Length:649
+Connection:Close
+
+<html><body>/temp<br/><a href="http://localhost:8080/temp/hello.txt">hello.txt</a><br/><a href="http://localhost:8080/temp/requests.txt">requests.txt</a><br/><a href="http://localhost:8080/temp/Example.jpg">Example.jpg</a><br/><a href="http://localhost:8080/temp/other.jpg">other.jpg</a><br/><a href="http://localhost:8080/temp/giphy.gif">giphy.gif</a><br/><a href="http://localhost:8080/temp/test_1.jpg">test_1.jpg</a><br/><a href="http://localhost:8080/temp/pnggrad8rgb.png">pnggrad8rgb.png</a><br/><a href="http://localhost:8080/temp/inside">inside</a><br/><a href="http://localhost:8080/temp/pdf-sample.pdf">pdf-sample.pdf</a><br/></body></html>
+Thread 0 going back into threadpool
+Waiting for request - 0
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 1
+parsing request
+string builder created
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+GET /temp/ HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp/
+Match found
+updatin
+Servlet URl - /temp/.*
+Servlet PATH - /temp/
+Path info - 
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 1
+Waiting for request - 1
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 2
+parsing request
+string builder created
+GET /temp/other.jpg HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /temp/other.jpg HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp/other.jpg
+Match found
+updatin
+Servlet URl - /temp/.*
+Servlet PATH - /temp/
+Path info - other.jpg
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 2
+Waiting for request - 2
+Main thread finished waiting on daemonSocket.accept
+Main thread waiting on daemonSocket.accept
+Daemon thread waking on request queue
+Removed request
+Daemon thread sleeping on request queue
+obtained request - 3
+parsing request
+string builder created
+GET /temp/test_1.jpg HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+GET /temp/test_1.jpg HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:28.0) Gecko/20100101 Firefox/28.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/temp
+Connection: keep-alive
+Pattern - /temp/.*
+Resource - /temp/test_1.jpg
+Match found
+updatin
+Servlet URl - /temp/.*
+Servlet PATH - /temp/
+Path info - test_1.jpg
+quesry string - null
+Client socket - 127.0.0.1
+Cookies - 
+
+Servlet in WebServlet
+Thread going back into threadpool 3
+Waiting for request - 3

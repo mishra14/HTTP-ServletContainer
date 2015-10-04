@@ -3,9 +3,6 @@ package edu.upenn.cis.cis455.http;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.servlet.http.Cookie;
-
 import org.apache.log4j.Logger;
 
 /*

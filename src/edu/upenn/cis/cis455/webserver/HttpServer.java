@@ -34,6 +34,7 @@ public class HttpServer {
 	private static ServerSocket daemonSocket;
 	private static HashMap<String, String> urlPatterns;
 	private static HashMap<String,HttpServlet> servlets;
+	private static HashMap<String, Session> sessions;
 	
 public static void main(String[] args) {
 		
@@ -77,11 +78,13 @@ public static void main(String[] args) {
 			Context context = createContext(handler);
 			HashMap<String,HttpServlet> servlets = createServlets(handler, context);
 			urlPatterns = new HashMap<String, String>(handler.getM_urlPattern());
-			Session session = null;
+			sessions = new HashMap<String, Session>();
 			logger.info(servlets.toString());
 			logger.info(handler.getM_servletParams().toString());
 			logger.info(handler.getM_servlets());
 			logger.info(handler.toString());
+			logger.info(urlPatterns);
+			logger.info(sessions);
 		} catch (Exception e) {
 			logger.error("Exception while parsing web xml", e);
 		}

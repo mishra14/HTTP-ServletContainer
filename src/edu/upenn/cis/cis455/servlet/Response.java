@@ -335,6 +335,9 @@ public class Response implements HttpServletResponse {
 			response.append(stringWriter.getBuffer());
 			socket.getOutputStream().write(response.toString().getBytes());
 			commited=true;
+			bufferedPrintWriter.close();
+			stringWriter.close();
+			socket.getOutputStream().close();
 		}
 	}
 

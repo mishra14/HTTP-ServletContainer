@@ -272,8 +272,8 @@ public class Request implements HttpServletRequest {
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#getSession(boolean)
 	 */
-	public HttpSession getSession(boolean arg0) {
-		if (arg0) {
+	public HttpSession getSession(boolean createSession) {
+		if (createSession) {
 			if (! hasSession()) {
 				m_session = new Session();
 			}

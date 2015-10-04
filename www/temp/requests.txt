@@ -9,7 +9,20 @@ Accept-Encoding: gzip, deflate
 Referer: http://localhost:8080/temp/
 Connection: keep-alive
 If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
+Cookie: name=ankit; age=23
 If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
 
 
 GET / HTTP/1.0
+
+POST /temp/ HTTP/1.1
+content-type:application/x-www-form-urlencoded;charset=utf-8
+host: localhost:8080
+content-length:25
+
+name1=value1&name2=value2
+
+
+GET /temp/?name1=value1&name2=value2 HTTP/1.1
+host: localhost:8080
+

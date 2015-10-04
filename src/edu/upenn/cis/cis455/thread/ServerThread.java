@@ -212,7 +212,7 @@ public class ServerThread extends Thread {
 									for(File file : filesInDirectory)
 									{
 										if(!file.getName().endsWith("~"))
-											dataBuilder.append("<a href=\"http://localhost:"+parentThreadPool.getPort()+httpRequest.getResource()+"/"+file.getName()+"\">"+file.getName()+"</a><br/>");
+											dataBuilder.append("<a href=\"http://localhost:"+parentThreadPool.getPort()+httpRequest.getResource()+((httpRequest.getResource().endsWith("/"))?"":"/")+file.getName()+"\">"+file.getName()+"</a><br/>");
 									}
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();

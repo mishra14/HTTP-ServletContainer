@@ -76,7 +76,7 @@ public class Handler extends DefaultHandler{
 			}
 			if(value.contains("/*"))
 			{
-				value=value.replace("/*", ".*");
+				value=value.replace("*", ".*");
 			}
 			m_urlPattern.put(value, tempServletName);
 			m_state = 0;

@@ -1,6 +1,8 @@
 package edu.upenn.cis.cis455.servlet;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.Properties;
+import java.util.UUID;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
@@ -11,20 +13,32 @@ import javax.servlet.http.HttpSessionContext;
  */
 public class Session implements HttpSession {
 
+	private Date creationDate;
+	private String id;
+	private Date lastAccessed;
+	private Context context;
+	private Properties m_props = new Properties();
+	private boolean m_valid = true;
+	private int maxInactiveInterval = -1;
+	
+	public Session()
+	{
+		creationDate = new Date();
+		lastAccessed = new Date();
+		id = UUID.randomUUID().toString();
+	}
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#getCreationTime()
 	 */
 	public long getCreationTime() {
-		// TODO Auto-generated method stub
-		return 0;
+		return creationDate.getTime();
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#getId()
 	 */
 	public String getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return id;
 	}
 
 	/* (non-Javadoc)
@@ -32,7 +46,7 @@ public class Session implements HttpSession {
 	 */
 	public long getLastAccessedTime() {
 		// TODO Auto-generated method stub
-		return 0;
+		return lastAccessed.getTime();
 	}
 
 	/* (non-Javadoc)
@@ -40,14 +54,14 @@ public class Session implements HttpSession {
 	 */
 	public ServletContext getServletContext() {
 		// TODO Auto-generated method stub
-		return null;
+		return context;
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#setMaxInactiveInterval(int)
 	 */
-	public void setMaxInactiveInterval(int arg0) {
-		// TODO Auto-generated method stub
+	public void setMaxInactiveInterval(int interval) {
+		maxInactiveInterval = interval;
 
 	}
 
@@ -55,31 +69,36 @@ public class Session implements HttpSession {
 	 * @see javax.servlet.http.HttpSession#getMaxInactiveInterval()
 	 */
 	public int getMaxInactiveInterval() {
-		// TODO Auto-generated method stub
-		return 0;
+		return maxInactiveInterval;
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#getSessionContext()
 	 */
 	public HttpSessionContext getSessionContext() {
-		// TODO Auto-generated method stub
+		// deprecated
 		return null;
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#getAttribute(java.lang.String)
 	 */
-	public Object getAttribute(String arg0) {
-		// TODO Auto-generated method stub
-		return m_props.get(arg0);
+	public Object getAttribute(String name) {
+		if(m_props.containsKey(name))
+		{
+			return m_props.get(name);
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#getValue(java.lang.String)
 	 */
 	public Object getValue(String arg0) {
-		// TODO Auto-generated method stub
+		// deprecated
 		return m_props.get(arg0);
 	}
 
@@ -87,43 +106,76 @@ public class Session implements HttpSession {
 	 * @see javax.servlet.http.HttpSession#getAttributeNames()
 	 */
 	public Enumeration getAttributeNames() {
-		// TODO Auto-generated method stub
-		return m_props.keys();
+		if(isValid())
+		{
+			return m_props.keys();
+		}
+		else
+		{
+			throw new IllegalStateException("Invalid session");
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#getValueNames()
 	 */
 	public String[] getValueNames() {
-		// TODO Auto-generated method stub
+		// deprecated
 		return null;
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#setAttribute(java.lang.String, java.lang.Object)
 	 */
-	public void setAttribute(String arg0, Object arg1) {
-		m_props.put(arg0, arg1);
+	public void setAttribute(String name, Object value) {
+		if(isValid())
+		{
+			if(value==null)
+			{
+				removeAttribute(name);
+			}
+			else
+			{
+				m_props.put(name, value);
+			}
+		}
+		else
+		{
+			throw new IllegalStateException("Invalidated session");
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#putValue(java.lang.String, java.lang.Object)
 	 */
 	public void putValue(String arg0, Object arg1) {
+		// deprecated
 		m_props.put(arg0, arg1);
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#removeAttribute(java.lang.String)
 	 */
-	public void removeAttribute(String arg0) {
-		m_props.remove(arg0);
+	public void removeAttribute(String name) {
+		if(isValid())
+		{
+			if(name !=null && m_props.containsKey(name))
+			{
+				m_props.remove(name);
+
+			}
+		}
+		else
+		{
+			throw new IllegalStateException("Operation on invalid sesion");
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#removeValue(java.lang.String)
 	 */
 	public void removeValue(String arg0) {
+		// deprecated
 		m_props.remove(arg0);
 	}
 
@@ -145,7 +197,5 @@ public class Session implements HttpSession {
 	boolean isValid() {
 		return m_valid;
 	}
-	
-	private Properties m_props = new Properties();
-	private boolean m_valid = true;
+
 }

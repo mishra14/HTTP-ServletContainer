@@ -51,7 +51,16 @@ public class HttpResponse
 		{
 			for(Map.Entry<String, ArrayList<String>> header : headers.entrySet())
 			{
-				response.append(header.getKey()+":"+header.getValue()+"\r\n");
+				StringBuilder headerString = new StringBuilder();
+				for( int i=0;i<header.getValue().size();i++)
+				{
+					headerString.append(header.getValue().get(i));
+					if(i<header.getValue().size()-1)
+					{
+						headerString.append(", ");
+					}
+				}
+				response.append(header.getKey()+":"+headerString.toString()+"\r\n");
 			}
 		}
 		response.append("\r\n");
@@ -70,16 +79,16 @@ public class HttpResponse
 		{
 			for(Map.Entry<String, ArrayList<String>> header : headers.entrySet())
 			{
-				StringBuilder headers = new StringBuilder();
-				for(int i=0;i<header.getValue().size();i++)
+				StringBuilder headerString = new StringBuilder();
+				for( int i=0;i<header.getValue().size();i++)
 				{
-					headers.append(header.getValue().get(i));
+					headerString.append(header.getValue().get(i));
 					if(i<header.getValue().size()-1)
 					{
-						headers.append(",");
+						headerString.append(", ");
 					}
 				}
-				response.append(header.getKey()+":"+headers.toString()+"\r\n");
+				response.append(header.getKey()+":"+headerString.toString()+"\r\n");
 			}
 		}
 		response.append("\r\n");

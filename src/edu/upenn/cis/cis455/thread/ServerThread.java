@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 
 import org.apache.log4j.Logger;
 
@@ -157,6 +158,23 @@ public class ServerThread extends Thread {
 										Request request = new Request(httpRequest);
 										Response response = new Response(httpResponse);
 										request.setparameters(httpRequest.getParams());
+										request.setCookies(httpRequest.getCookiesFromHeaders());
+										for(Cookie cookie : request.getCookies())
+										{
+											if(cookie.getName().equalsIgnoreCase("JSESSIONID"))
+											{
+												logger.info("Found Session id in httpRequest cookies - "+cookie.getValue());
+												synchronized(HttpServer.getSessions())
+												{
+													if(HttpServer.getSessions().containsKey(cookie.getValue()))
+													{
+														logger.info("Found Session with session id - "+cookie.getValue());
+														request.setM_session(HttpServer.getSessions().get(cookie.getValue()));
+													}
+												}
+												break;
+											}
+										}
 										request.setSocket(socket);
 										response.setSocket(socket);
 										logger.info("Client socket - "+request.getRemoteAddr());

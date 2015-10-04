@@ -203,6 +203,10 @@ public static void main(String[] args) {
 	public static HashMap<String, HttpServlet> getServlets() {
 		return servlets;
 	}
+
+	public static HashMap<String, Session> getSessions() {
+		return sessions;
+	}
 	
 	
 }

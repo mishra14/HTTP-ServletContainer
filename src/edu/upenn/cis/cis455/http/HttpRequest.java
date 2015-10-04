@@ -3,6 +3,9 @@ package edu.upenn.cis.cis455.http;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.servlet.http.Cookie;
+
 import org.apache.log4j.Logger;
 
 /*
@@ -271,4 +274,20 @@ public class HttpRequest
 		return parameters;
 	}
 	
+	public ArrayList<Cookie> getCookiesFromHeaders()
+	{
+		ArrayList<Cookie> cookies = new ArrayList<Cookie>();
+		if(headers.containsKey("cookie"))
+		{
+			for(String cookieString : headers.get("cookie"))
+			{
+				String[] cookiePairs = cookieString.split(";");
+				for(String cookiePair : cookiePairs)
+				{
+					cookies.add(new Cookie(cookiePair.split("=")[0].trim(),cookiePair.split("=")[1].trim()));
+				}
+			}
+		}
+		return cookies;
+	}
 }

@@ -35,7 +35,7 @@ public class Request implements HttpServletRequest {
 	private String urlpattern;
 	private HttpRequest httpRequest;
 	private Socket socket;
-	private ArrayList<Cookie> cookies = new ArrayList<Cookie>();
+	private ArrayList<Cookie> cookies;
 	private String characterEncoding = "ISO-8859-1";
 	private Locale locale;
 	public Request() {
@@ -71,18 +71,6 @@ public class Request implements HttpServletRequest {
 	 */
 	public Cookie[] getCookies() 
 	{
-		cookies = new ArrayList<Cookie>();
-		if(httpRequest.getHeaders().containsKey("cookie"))
-		{
-			for(String cookieString : httpRequest.getHeaders().get("cookie"))
-			{
-				String[] cookiePairs = cookieString.split(";");
-				for(String cookiePair : cookiePairs)
-				{
-					cookies.add(new Cookie(cookiePair.split("=")[0].trim(),cookiePair.split("=")[1].trim()));
-				}
-			}
-		}
 		Cookie[] cookieArray = ((ArrayList<Cookie>)cookies).toArray(new Cookie[cookies.size()]);
 		return cookieArray;
 	}
@@ -276,6 +264,10 @@ public class Request implements HttpServletRequest {
 		if (createSession) {
 			if (! hasSession()) {
 				m_session = new Session();
+				synchronized(HttpServer.getSessions())
+				{
+					HttpServer.getSessions().put(m_session.getId(), m_session);
+				}
 			}
 		} else {
 			if (! hasSession()) {

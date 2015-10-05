@@ -32,6 +32,18 @@ public class WebServlet extends HttpServlet {
 		  {
 			  logger.info(cookie.getName()+"="+cookie.getValue());
 		  }
+		  if(request.getSession()==null)
+		  {
+			  logger.info("No valid session, requesting a new one");
+			  request.getSession(true);
+			  logger.info("New session id - "+request.getSession(false).getId());
+		  }
+		  else
+		  {
+			  logger.info("Session id - "+request.getSession(false).getId());
+		  }
+		  logger.info("setting session time out to 8 seconds for - "+request.getSession(false).getId());
+		  request.getSession(false).setMaxInactiveInterval(8);
 		  logger.info(request.getParameter("name1"));
 		  logger.info("Servlet in WebServlet");
 	      // Set response content type

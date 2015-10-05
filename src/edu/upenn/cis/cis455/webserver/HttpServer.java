@@ -5,7 +5,11 @@ import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.servlet.http.HttpServlet;
 import javax.xml.parsers.SAXParser;
@@ -25,6 +29,7 @@ public class HttpServer {
 	private static final Logger logger = Logger.getLogger(HttpServer.class);
 	private static final int ARGS_LENGTH=3;
 	private static final int THREAD_POOL_SIZE=100;
+	private static final long SESSION_VALIDATION_PERIOD = 5000;
 	private static int port;
 	private static String homeDirectory;
 	private static String webXmlPath;
@@ -35,6 +40,30 @@ public class HttpServer {
 	private static HashMap<String, String> urlPatterns;
 	private static HashMap<String,HttpServlet> servlets;
 	private static HashMap<String, Session> sessions;
+	private static Timer timer;
+	private static TimerTask validateSessions = new TimerTask() {
+		
+		@Override
+		public void run() 
+		{
+			synchronized(sessions)
+			{
+				logger.info("Validating Sessions");
+				for(Map.Entry<String, Session> sessionEntry : sessions.entrySet())
+				{
+					Session session = sessionEntry.getValue();
+					Date current = new Date();
+					
+					if((current.getTime() - session.getLastAccessedTime())>(session.getMaxInactiveInterval()*1000))
+					{
+						logger.info("Session id - "+session.getId()+" has expired - Invalidating and removing it fromt he session map");
+						session.invalidate();
+						sessions.remove(sessionEntry.getKey());
+					}
+				}
+			}
+		}
+	};
 	
 public static void main(String[] args) {
 		
@@ -85,6 +114,9 @@ public static void main(String[] args) {
 			logger.info(handler.toString());
 			logger.info(urlPatterns);
 			logger.info(sessions);
+			logger.info("Starting session validator thread");
+			timer = new Timer();
+			timer.schedule(validateSessions, 0, SESSION_VALIDATION_PERIOD);
 		} catch (Exception e) {
 			logger.error("Exception while parsing web xml", e);
 		}
@@ -104,16 +136,20 @@ public static void main(String[] args) {
 			logger.warn("Main Thread waiting for Daemon thread to shut down");
 			daemonSocket.close();
 			daemonThread.join();
+			timer.cancel();
 		}
-		catch (IOException e){
+		catch (IOException e)
+		{
 			if(daemonThread.getThreadPool().isRun())
 			{
 				logger.error("IO exception while opening serversocket",e);
 			}
 		} 
-		catch (InterruptedException e) {
+		catch (InterruptedException e) 
+		{
 			logger.error("Exception while joining daemon thread",e);
 		}
+		
 		logger.warn("Main Thread Shutting down");
 		System.exit(0);
 	}

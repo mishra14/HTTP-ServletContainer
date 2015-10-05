@@ -27,6 +27,7 @@ import edu.upenn.cis.cis455.http.HttpRequest;
 import edu.upenn.cis.cis455.http.HttpResponse;
 import edu.upenn.cis.cis455.servlet.Request;
 import edu.upenn.cis.cis455.servlet.Response;
+import edu.upenn.cis.cis455.servlet.Session;
 import edu.upenn.cis.cis455.webserver.HttpServer;
 
 public class ServerThread extends Thread {
@@ -169,7 +170,9 @@ public class ServerThread extends Thread {
 													if(HttpServer.getSessions().containsKey(cookie.getValue()))
 													{
 														logger.info("Found Session with session id - "+cookie.getValue());
-														request.setM_session(HttpServer.getSessions().get(cookie.getValue()));
+														Session session = HttpServer.getSessions().get(cookie.getValue());
+														session.updateLastAccessedTime();
+														request.setM_session(session);
 													}
 												}
 												break;

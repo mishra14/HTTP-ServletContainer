@@ -45,10 +45,12 @@ public class Session implements HttpSession {
 	 * @see javax.servlet.http.HttpSession#getLastAccessedTime()
 	 */
 	public long getLastAccessedTime() {
-		// TODO Auto-generated method stub
 		return lastAccessed.getTime();
 	}
-
+	
+	public void updateLastAccessedTime() {
+		lastAccessed = new Date();
+	}
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpSession#getServletContext()
 	 */
@@ -190,11 +192,17 @@ public class Session implements HttpSession {
 	 * @see javax.servlet.http.HttpSession#isNew()
 	 */
 	public boolean isNew() {
-		// TODO Auto-generated method stub
-		return false;
+		if(getLastAccessedTime()>getCreationTime())
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
 	}
 
-	boolean isValid() {
+	public boolean isValid() {
 		return m_valid;
 	}
 

@@ -37931,3 +37931,147 @@ requested file does not exist - /home/cis455/git/cis455homework1milestone2/./www
 Thread 1 going back into threadpool
 Waiting for request - 1
 Session id - dff0a29e-d9ab-467c-9e85-f2f639f335d1 has expired - Invalidating and removing it fromt he session map
+{DummyServlet=WebServlet [message=Dummy servlet], WebServlet=WebServlet [message=Hello World]}
+{}
+{DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}
+{display-name=Homework 1 Servlet - CIS 555}
+Handler [m_state=0, m_servletName=DummyServlet, m_paramName=null, m_servlets={DummyServlet=edu.upenn.cis.cis455.servlet.DummyServlet, WebServlet=edu.upenn.cis.cis455.servlet.WebServlet}, m_contextParams={display-name=Homework 1 Servlet - CIS 555}, m_servletParams={}, m_urlPattern={/temp=WebServlet, /temp/.*=WebServlet}, tempServletName=WebServlet]
+Homework 1 Servlet - CIS 555
+Starting session validator thread
+Main thread waiting on daemonSocket.accept
+Thread pool has 100 free threads
+Waiting for request - 5
+Waiting for request - 6
+Waiting for request - 7
+Waiting for request - 4
+Waiting for request - 3
+Waiting for request - 1
+Waiting for request - 8
+Waiting for request - 2
+Waiting for request - 0
+Waiting for request - 9
+Waiting for request - 10
+Waiting for request - 13
+Waiting for request - 12
+Waiting for request - 11
+Waiting for request - 14
+Waiting for request - 15
+Waiting for request - 16
+Waiting for request - 18
+Waiting for request - 17
+Waiting for request - 19
+Waiting for request - 20
+Waiting for request - 22
+Waiting for request - 23
+Waiting for request - 25
+Waiting for request - 21
+Waiting for request - 24
+Waiting for request - 29
+Waiting for request - 26
+Waiting for request - 27
+Waiting for request - 31
+Waiting for request - 30
+Waiting for request - 28
+Waiting for request - 32
+Waiting for request - 33
+Waiting for request - 34
+Waiting for request - 35
+Waiting for request - 36
+Waiting for request - 37
+Waiting for request - 38
+Waiting for request - 54
+Waiting for request - 52
+Waiting for request - 53
+Waiting for request - 51
+Waiting for request - 39
+Waiting for request - 50
+Waiting for request - 43
+Waiting for request - 44
+Waiting for request - 42
+Waiting for request - 41
+Waiting for request - 45
+Waiting for request - 40
+Waiting for request - 46
+Waiting for request - 47
+Waiting for request - 48
+Waiting for request - 49
+Waiting for request - 55
+Waiting for request - 56
+Waiting for request - 57
+Waiting for request - 58
+Waiting for request - 59
+Waiting for request - 60
+Waiting for request - 61
+Waiting for request - 62
+Waiting for request - 69
+Waiting for request - 64
+Waiting for request - 65
+Waiting for request - 66
+Waiting for request - 68
+Waiting for request - 67
+Waiting for request - 63
+Waiting for request - 70
+Waiting for request - 71
+Waiting for request - 74
+Waiting for request - 73
+Waiting for request - 72
+Waiting for request - 75
+Waiting for request - 76
+Waiting for request - 77
+Waiting for request - 78
+Waiting for request - 84
+Waiting for request - 79
+Waiting for request - 85
+Waiting for request - 82
+Waiting for request - 80
+Waiting for request - 81
+Waiting for request - 83
+Waiting for request - 86
+Waiting for request - 87
+Waiting for request - 88
+Waiting for request - 95
+Waiting for request - 90
+Waiting for request - 91
+Waiting for request - 92
+Waiting for request - 94
+Waiting for request - 89
+Waiting for request - 96
+Waiting for request - 93
+Waiting for request - 97
+Waiting for request - 98
+Name - ThreadPool
+Free Size - 100
+Total Size - 100
+Daemon thread sleeping on request queue
+Waiting for request - 99
+invalid request - 
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0
+GET / HTTP/1.0

@@ -466,7 +466,7 @@ public class Response implements HttpServletResponse {
 	 * @see javax.servlet.ServletResponse#setLocale(java.util.Locale)
 	 */
 	public void setLocale(Locale newLocale) {
-		if(!commited && bufferedPrintWriter ==null && characterEncoding == null)
+		if(!commited && bufferedPrintWriter == null && characterEncoding == null)
 		{ 
 			locale=newLocale;
 		}

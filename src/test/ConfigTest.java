@@ -32,8 +32,6 @@ public class ConfigTest {
 	 public void testGetServletContext() {
 		 
 		 String name = "Test Config";
-		 String key = "testKey";
-		 String value = "testValue";
 		 Context context = new Context();
 	    Config config = new Config(name, context);
 	    assertEquals(context, config.getServletContext());

@@ -3,6 +3,7 @@ package edu.upenn.cis.cis455.webserver;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.StringWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
@@ -16,7 +17,10 @@ import javax.servlet.http.HttpServlet;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.apache.log4j.HTMLLayout;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.WriterAppender;
 
 import edu.upenn.cis.cis455.queue.Queue;
 import edu.upenn.cis.cis455.servlet.Context;
@@ -43,6 +47,9 @@ public class HttpServer {
 	private static HashMap<String, Session> sessions;
 	private static Timer timer;
 	private static Context context;	
+	private static WriterAppender appender;
+	private static StringWriter writer;
+	
 	private static TimerTask validateSessions = new TimerTask() {
 		@Override
 		public void run() 
@@ -130,6 +137,11 @@ public static void main(String[] args) {
 			logger.info(handler.toString());
 			logger.info(context.getServletContextName());
 			logger.info("Starting session validator thread");
+			writer = new StringWriter();
+			appender = new WriterAppender(new HTMLLayout(), writer);
+			appender.setName("CONTROL_PAGE_APPENDER");
+			appender.setThreshold(org.apache.log4j.Level.ERROR);
+			Logger.getRootLogger().addAppender(appender);
 			timer = new Timer();
 			timer.schedule(validateSessions, 0, SESSION_VALIDATION_PERIOD);
 		} catch (Exception e) {
@@ -261,6 +273,14 @@ public static void main(String[] args) {
 
 	public static Context getContext() {
 		return context;
+	}
+
+	public static WriterAppender getAppender() {
+		return appender;
+	}
+
+	public static StringWriter getWriter() {
+		return writer;
 	}
 	
 	

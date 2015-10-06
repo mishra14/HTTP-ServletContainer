@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.upenn.cis.cis455.http.HTTP;
 import edu.upenn.cis.cis455.http.HttpResponse;
+import edu.upenn.cis.cis455.webserver.HttpServer;
 
 /**
  * @author tjgreen
@@ -150,15 +151,36 @@ public class Response implements HttpServletResponse {
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#sendRedirect(java.lang.String)
 	 */
-	public void sendRedirect(String arg0) throws IOException {
-		System.out.println("[DEBUG] redirect to " + arg0 + " requested");
-		System.out.println("[DEBUG] stack trace: ");
-		Exception e = new Exception();
-		StackTraceElement[] frames = e.getStackTrace();
-		for (int i = 0; i < frames.length; i++) {
-			System.out.print("[DEBUG]   ");
-			System.out.println(frames[i].toString());
+	public void sendRedirect(String location) throws IOException 
+	{
+		String newUrl;
+		if(location.startsWith("/"))
+		{
+			newUrl = "http://localhost:"+HttpServer.getPort()+location;
 		}
+		else
+		{
+			if(request.getHttpRequest().getResource().contains("?"))
+			{
+				newUrl="http://localhost:"+HttpServer.getPort()+request.getHttpRequest().getResource().split("\\?")[0]+"/"+location;
+			}
+			else
+			{
+				newUrl="http://localhost:"+HttpServer.getPort()+request.getHttpRequest().getResource()+"/"+location;
+			}
+
+		}
+		addHeader("location", location);
+		System.out.println("Sending to - "+newUrl);
+		String data = "<html><body>303: Moved to <a href = \""+newUrl+"\">"+newUrl+"</a></body></html>";
+		setBufferSize(data.length());
+		stringWriter = new StringWriter(bufferSize);
+		bufferedPrintWriter = new BufferedPrintWriter(stringWriter, false, this);
+		setStatus(303);
+		setContentLength(data.length());
+		setContentType("text/html");
+		bufferedPrintWriter.println(data);
+		flushBuffer();
 	}
 
 	/* (non-Javadoc)
@@ -396,6 +418,7 @@ public class Response implements HttpServletResponse {
 			response.append(httpResponse.getResponseStringHeadersOnly());
 			response.append(stringWriter.getBuffer());
 			socket.getOutputStream().write(response.toString().getBytes());
+			System.out.println(this+"\n"+stringWriter.getBuffer().toString());
 			commited=true;
 			bufferedPrintWriter.close();
 			stringWriter.close();
@@ -466,6 +489,15 @@ public class Response implements HttpServletResponse {
 	}
 	public void setHttpResponse(HttpResponse httpResponse) {
 		this.httpResponse = httpResponse;
+	}
+	@Override
+	public String toString() {
+		return "Response [socket=" + socket + ", httpResponse=" + httpResponse
+				+ ", characterEncoding=" + characterEncoding + ", commited="
+				+ commited + ", stringWriter=" + stringWriter
+				+ ", bufferedPrintWriter=" + bufferedPrintWriter
+				+ ", bufferSize=" + bufferSize + ", locale=" + locale
+				+ ", request=" + request + ", cookies=" + cookies + "]";
 	}
 	
 	

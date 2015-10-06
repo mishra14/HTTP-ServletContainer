@@ -453,6 +453,8 @@ public class ServerThread extends Thread {
 										}
 										dataBuilder.append("<br/>");
 									}
+									dataBuilder.append("<br/><br/>Error Logs - <br/>");
+									dataBuilder.append(HttpServer.getWriter().getBuffer().toString());
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
 									values = new ArrayList<String>();

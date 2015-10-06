@@ -49,6 +49,7 @@ public class WebServlet extends HttpServlet {
 		  logger.info("parameters - "+request.getParameterMap());
 		  logger.info(request.getParameter("name1"));
 		  logger.info("Servlet in WebServlet");
+		  response.sendRedirect("inside");
 	      // Set response content type
 		  //logger.info("Error codes - "+HTTP.getResponseCodes());
 		  Cookie cookie = new Cookie("Name", "Ankit");

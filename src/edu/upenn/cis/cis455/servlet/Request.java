@@ -1,6 +1,7 @@
 package edu.upenn.cis.cis455.servlet;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
 import java.net.Socket;
 import java.security.Principal;
@@ -223,7 +224,13 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#getRequestedSessionId()
 	 */
 	public String getRequestedSessionId() {
-		// TODO Auto-generated method stub
+		for(Cookie cookie : cookies)
+		{
+			if(cookie.getName().equalsIgnoreCase("JSESSIONID"))
+			{
+				return cookie.getValue();
+			}
+		}
 		return null;
 	}
 
@@ -288,23 +295,40 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#isRequestedSessionIdValid()
 	 */
 	public boolean isRequestedSessionIdValid() {
-		// TODO Auto-generated method stub
-		return false;
+		String sessionId = getRequestedSessionId();
+		synchronized(HttpServer.getSessions())
+		{
+			if(sessionId != null && HttpServer.getSessions().containsKey(sessionId) && HttpServer.getSessions().get(sessionId).isValid())
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#isRequestedSessionIdFromCookie()
 	 */
 	public boolean isRequestedSessionIdFromCookie() {
-		// TODO Auto-generated method stub
-		return false;
+		String sessionId = getRequestedSessionId();
+		if(sessionId != null)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletRequest#isRequestedSessionIdFromURL()
 	 */
 	public boolean isRequestedSessionIdFromURL() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -312,7 +336,6 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.http.HttpServletRequest#isRequestedSessionIdFromUrl()
 	 */
 	public boolean isRequestedSessionIdFromUrl() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -348,16 +371,28 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getContentLength()
 	 */
 	public int getContentLength() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(httpRequest.getHeaders().containsKey("content-length"))
+		{
+			return Integer.valueOf(httpRequest.getHeaders().get("content-length").get(0));
+		}
+		else
+		{
+			return -1;
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.ServletRequest#getContentType()
 	 */
 	public String getContentType() {
-		// TODO Auto-generated method stub
-		return null;
+		if(httpRequest.getHeaders().containsKey("content-type"))
+		{
+			return httpRequest.getHeaders().get("content-type").get(0);
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 	/* (non-Javadoc)
@@ -472,8 +507,9 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getReader()
 	 */
 	public BufferedReader getReader() throws IOException {
-		// TODO Auto-generated method stub
-		return null;
+		StringReader stringReader = new StringReader(httpRequest.getRequestBody());
+		BufferedReader reader = new BufferedReader(stringReader);
+		return reader;
 	}
 
 	/* (non-Javadoc)
@@ -503,8 +539,7 @@ public class Request implements HttpServletRequest {
 	 * @see javax.servlet.ServletRequest#getRemoteHost()
 	 */
 	public String getRemoteHost() {
-		// TODO Auto-generated method stub
-		return null;
+		return socket.getInetAddress().getHostName();
 	}
 
 	/* (non-Javadoc)

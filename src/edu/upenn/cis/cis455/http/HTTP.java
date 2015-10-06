@@ -29,12 +29,12 @@ public class HTTP {
 	private static final String KEY_412 = "412";
 	private static final String KEY_500 = "500";
 	private static final String KEY_POST = "POST";
-	private static final String CONTENT_TYPE_KEY="Content-type";
-	private static final String CONTENT_LENGTH_KEY="Content-Length";
-	private static final String LAST_MODIFIED_KEY="Last-Modified";
-	private static final String DATE_KEY="Date";
-	private static final String CONNECTION_KEY="Connection";
-	private static final String ACCEPT_KEY = "Accept";
+	private static final String CONTENT_TYPE_KEY="content-type";
+	private static final String CONTENT_LENGTH_KEY="content-length";
+	private static final String LAST_MODIFIED_KEY="last-modified";
+	private static final String DATE_KEY="date";
+	private static final String CONNECTION_KEY="connection";
+	private static final String ACCEPT_KEY = "accept";
 	private static SimpleDateFormat httpDateFormat;
 	private static ArrayList <SimpleDateFormat> httpDateFormats;
 	private static Map<String, ArrayList<String>> errorHeaders;

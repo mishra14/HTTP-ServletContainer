@@ -3,10 +3,17 @@ package edu.upenn.cis.cis455.thread;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Map;
+
+import javax.servlet.http.HttpServlet;
 
 import org.apache.log4j.Logger;
 
 import edu.upenn.cis.cis455.queue.Queue;
+import edu.upenn.cis.cis455.servlet.Session;
+import edu.upenn.cis.cis455.webserver.HttpServer;
 
 public class DaemonThread extends Thread{
 
@@ -122,6 +129,15 @@ public class DaemonThread extends Thread{
 			} catch (InterruptedException e) {
 				logger.error("Exception while joining thread pool threads",e);
 			}
+		}
+		logger.warn("Daemon thread shutting down servlets");
+		Iterator<Map.Entry<String, HttpServlet>> iterator = HttpServer.getServlets().entrySet().iterator();
+		while(iterator.hasNext())
+		{
+			Map.Entry<String, HttpServlet> servletEntry = iterator.next();
+			HttpServlet servlet = servletEntry.getValue();
+			servlet.destroy();
+			iterator.remove();
 		}
 		logger.warn("Daemon Thread Shutting down");
 	}

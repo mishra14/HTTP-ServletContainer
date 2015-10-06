@@ -9,6 +9,8 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
 import javax.servlet.ServletContext;
 
+import edu.upenn.cis.cis455.webserver.HttpServer;
+
 public class Context implements ServletContext{
 	
 
@@ -31,7 +33,7 @@ public class Context implements ServletContext{
 	}
 	
 	public ServletContext getContext(String name) {
-		return null;
+		return this;
 	}
 	
 	public String getInitParameter(String name) {
@@ -61,7 +63,7 @@ public class Context implements ServletContext{
 	}
 	
 	public String getRealPath(String path) {
-		return null;
+		return "http://localhost:"+HttpServer.getPort()+path;
 	}
 	
 	public RequestDispatcher getRequestDispatcher(String name) {
@@ -81,7 +83,7 @@ public class Context implements ServletContext{
 	}
 	
 	public String getServerInfo() {
-		return "Test Harness";
+		return "JavaServer Web Dev Kit/1.0";
 	}
 	
 	public Servlet getServlet(String name) {
@@ -89,7 +91,7 @@ public class Context implements ServletContext{
 	}
 	
 	public String getServletContextName() {
-		return "Test Harness";
+		return initParams.get("display-name");
 	}
 	
 	public Enumeration getServletNames() {
@@ -118,7 +120,14 @@ public class Context implements ServletContext{
 	}
 	
 	public void setAttribute(String name, Object object) {
-		attributes.put(name, object);
+		if(object == null)
+		{
+			removeAttribute(name);
+		}
+		else
+		{
+			attributes.put(name, object);
+		}
 	}
 	
 	public void setInitParam(String name, String value) {

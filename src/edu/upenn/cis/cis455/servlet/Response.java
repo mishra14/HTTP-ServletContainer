@@ -30,8 +30,11 @@ public class Response implements HttpServletResponse {
 	private BufferedPrintWriter bufferedPrintWriter;
 	private int bufferSize=0;
 	private Locale locale = Locale.getDefault();
-	public Response(HttpResponse httpResponse)
+	private Request request;
+	private ArrayList<Cookie> cookies = new ArrayList<Cookie>();
+	public Response(HttpResponse httpResponse, Request request)
 	{
+		this.request = request;
 		this.httpResponse = httpResponse;
 	}
 	/* (non-Javadoc)
@@ -57,6 +60,7 @@ public class Response implements HttpServletResponse {
 			values.add(cookieHeader.toString());
 			httpResponse.getHeaders().put(headerName, values);
 		}
+		cookies.add(cookie);
 	}
 
 	/* (non-Javadoc)
@@ -97,16 +101,49 @@ public class Response implements HttpServletResponse {
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#sendError(int, java.lang.String)
 	 */
-	public void sendError(int arg0, String arg1) throws IOException {
-		// TODO Auto-generated method stub
+	public void sendError(int errorCode, String errorString) throws IOException {
+		if(isCommitted())
+		{
+			throw new IllegalStateException("Sending error after commiting the response");
+		}
+		else
+		{
+			String data = "<html><body>"+errorCode+" : "+errorString+"</body></html>";
+			
+			setBufferSize(data.length());
+			stringWriter = new StringWriter(bufferSize);
+			bufferedPrintWriter = new BufferedPrintWriter(stringWriter, false, this);
+			setStatus(errorCode);
+			httpResponse.setResponseCodeString(errorString);
+			setContentLength(data.length());
+			setContentType("text/html");
+			bufferedPrintWriter.println(data);
+			flushBuffer();
+		}
 
 	}
 
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServletResponse#sendError(int)
 	 */
-	public void sendError(int arg0) throws IOException {
-		// TODO Auto-generated method stub
+	public void sendError(int errorCode) throws IOException {
+		if(isCommitted())
+		{
+			throw new IllegalStateException("Sending error after commiting the response");
+		}
+		else
+		{
+			String data = "<html><body>"+errorCode+"</body></html>";
+			
+			setBufferSize(data.length());
+			stringWriter = new StringWriter(bufferSize);
+			bufferedPrintWriter = new BufferedPrintWriter(stringWriter, false, this);
+			setStatus(errorCode);
+			setContentLength(data.length());
+			setContentType("text/html");
+			bufferedPrintWriter.println(data);
+			flushBuffer();
+		}
 
 	}
 
@@ -209,9 +246,13 @@ public class Response implements HttpServletResponse {
 		if(statusCode >=200 && statusCode<600)
 		{
 			httpResponse.setResponseCode(String.valueOf(statusCode));
-			if(HTTP.getResponseCodes().containsKey(statusCode))
+			if(HTTP.getResponseCodes().containsKey(httpResponse.getResponseCode()))
 			{
-				httpResponse.setResponseCodeString(HTTP.getResponseCodes().get(statusCode));
+				httpResponse.setResponseCodeString(HTTP.getResponseCodes().get(httpResponse.getResponseCode()));
+			}
+			else
+			{
+				httpResponse.setResponseCodeString("");
 			}
 		}
 
@@ -222,7 +263,6 @@ public class Response implements HttpServletResponse {
 	 */
 	public void setStatus(int arg0, String arg1) {
 		//deprecated
-
 	}
 
 	/* (non-Javadoc)
@@ -330,6 +370,28 @@ public class Response implements HttpServletResponse {
 	public void flushBuffer() throws IOException {
 		if(!commited)
 		{
+			if(!httpResponse.getHeaders().containsKey("content-length"))
+			{
+				setContentLength(stringWriter.getBuffer().length());
+			}
+			Session session = (Session)request.getSession(false);
+			if(request.getSession(false) != null && session.isValid())
+			{
+				boolean sessionSet = false;
+				for(Cookie cookie : cookies)
+				{
+					if(cookie.getName().equalsIgnoreCase("JSESSIONID") && cookie.getValue().equals(session.getId()))
+					{
+						sessionSet = true;
+					}
+				}
+				if(!sessionSet)
+				{
+					Cookie sessionCookie = new Cookie("JSESSIONID",session.getId());
+					sessionCookie.setMaxAge(session.getMaxInactiveInterval());
+					addCookie(sessionCookie);
+				}
+			}
 			StringBuilder response = new StringBuilder();
 			response.append(httpResponse.getResponseStringHeadersOnly());
 			response.append(stringWriter.getBuffer());
@@ -382,8 +444,7 @@ public class Response implements HttpServletResponse {
 	 */
 	public void setLocale(Locale newLocale) {
 		if(!commited && bufferedPrintWriter ==null && characterEncoding == null)
-		{
-			//TODO add encoding 
+		{ 
 			locale=newLocale;
 		}
 	}

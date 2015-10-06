@@ -33,6 +33,8 @@ public class Handler extends DefaultHandler{
 			m_state = 5;
 		} else if(qName.compareTo("url-pattern") == 0) {
 			m_state = (m_state == 15) ? 25 : 35;
+		} else if(qName.compareTo("display-name") == 0) {
+			m_state = 6;
 		}
 		System.out.println("Start element "+qName+" "+m_state);
 	}
@@ -43,6 +45,9 @@ public class Handler extends DefaultHandler{
 			m_state = 0;
 		} else if (m_state == 2) {
 			m_servlets.put(m_servletName, value);
+			m_state = 0;
+		} else if (m_state == 6) {
+			m_contextParams.put("display-name", value);
 			m_state = 0;
 		} else if (m_state == 10 || m_state == 20) {
 			m_paramName = value;
@@ -77,8 +82,14 @@ public class Handler extends DefaultHandler{
 			if(value.contains("/*"))
 			{
 				value=value.replace("*", ".*");
+				m_urlPattern.put(value, tempServletName);
+				value=value.replace("/.*", "");
+				m_urlPattern.put(value, tempServletName);
 			}
-			m_urlPattern.put(value, tempServletName);
+			else
+			{
+				m_urlPattern.put(value, tempServletName);
+			}
 			m_state = 0;
 		} else if(m_state == 35) {
 			m_state=0;

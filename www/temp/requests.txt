@@ -9,7 +9,7 @@ Accept-Encoding: gzip, deflate
 Referer: http://localhost:8080/temp/
 Connection: keep-alive
 If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
-Cookie: name=ankit; age=23; JSESSIONID=afbdskbvkv
+Cookie: name=ankit; age=23; JSESSIONID= 27bf22a1-eff4-4612-9fe3-718d71ca1730
 If-Unmodified-Since : Sun, 20 Sep 2015 09:30:00 GMT
 
 
@@ -26,3 +26,6 @@ name1=value1&name2=value2
 GET /temp/?name1=value1&name2=value2 HTTP/1.1
 host: localhost:8080
 
+
+GET /temp/hello.txt HTTP/1.0
+Cookie: name=ankit

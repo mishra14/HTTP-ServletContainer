@@ -240,15 +240,22 @@ public class HttpRequest
 	}
 
 	public HashMap<String,ArrayList<String>> getParams() {
+		logger.info("Getting request params");
 		String paramString=null;
 		HashMap<String,ArrayList<String>> parameters =  new HashMap<String,ArrayList<String>>();
 		if(operation.equalsIgnoreCase("GET"))
 		{
+			logger.info("GET headers found with queryString - "+queryString);
 			paramString = queryString;
 		}
-		else if(operation.equalsIgnoreCase("POST"))
+		else if(operation.equalsIgnoreCase("POST") && headers.containsKey("content-length") && headers.containsKey("content-type") && headers.get("content-type").size()>0 && headers.get("content-type").get(0).trim().startsWith("application/x-www-form-urlencoded"))
 		{
+			logger.info("POST headers found with body - "+requestBody);
 			paramString = requestBody;
+		}
+		else
+		{
+			logger.info("Request headers - "+headers);
 		}
 		if(paramString!=null)
 		{

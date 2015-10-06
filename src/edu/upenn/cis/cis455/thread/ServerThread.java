@@ -33,7 +33,7 @@ import edu.upenn.cis.cis455.webserver.HttpServer;
 public class ServerThread extends Thread {
 
 	private static final Logger logger = Logger.getLogger(ServerThread.class);
-	private static final String CONTENT_TYPE_KEY="Content-type";
+	private static final String CONTENT_TYPE_KEY="Content-Type";
 	private static final String CONTENT_LENGTH_KEY="Content-Length";
 	private static final String DATE_KEY="Date";
 	private static final String CONNECTION_KEY="Connection";
@@ -126,10 +126,20 @@ public class ServerThread extends Thread {
 								String longestMatch="";
 								for(Map.Entry<String, String> entry : HttpServer.getUrlPatterns().entrySet())
 								{
-									logger.info("Pattern - "+entry.getKey());
-									logger.info("Resource - "+httpRequest.getResource());
+
 									Pattern urlPattern = Pattern.compile(entry.getKey());
-									if(urlPattern.matcher(httpRequest.getResource()).matches())
+									String resource;											
+									if(httpRequest.getResource().contains("?"))
+									{
+										resource = httpRequest.getResource().split("\\?")[0];
+									}
+									else
+									{
+										resource = httpRequest.getResource();
+									}
+									logger.info("Pattern - "+entry.getKey());
+									logger.info("Resource - "+resource);
+									if(urlPattern.matcher(resource).matches())
 									{
 										logger.info("Match found");
 										int length = entry.getKey().contains("*")?entry.getKey().indexOf("*")-1:entry.getKey().length();
@@ -151,13 +161,14 @@ public class ServerThread extends Thread {
 										System.out.println("Longest Matching - "+HttpServer.getServlets().get(servletName));
 										httpRequest.setServletUrl(longestMatch);
 										httpRequest.updatePaths();
+										logger.info("Updated paths - "+httpRequest.toString());
 										httpResponse = new HttpResponse();
 										httpResponse.setProtocol(httpRequest.getProtocol());
 										httpResponse.setVersion(httpRequest.getVersion());
 										httpResponse.setResponseCode("200");	//Assume OK by default
 										httpResponse.setResponseCodeString("OK");
 										Request request = new Request(httpRequest);
-										Response response = new Response(httpResponse);
+										Response response = new Response(httpResponse, request);
 										request.setparameters(httpRequest.getParams());
 										request.setCookies(httpRequest.getCookiesFromHeaders());
 										for(Cookie cookie : request.getCookies())
@@ -421,6 +432,7 @@ public class ServerThread extends Thread {
 								
 								if(httpRequest.getResource().equalsIgnoreCase("/control"))
 								{
+									logger.warn("control requested");
 									StringBuilder dataBuilder=new StringBuilder();
 									dataBuilder.append("<html><body>"+httpRequest.getResource()+"<br/>Ankit Mishra<br/>mankit<br/><br/>");
 									dataBuilder.append("ThreadPool Stats - <br/>Total Threads = "+parentThreadPool.getThreadList().size()+"<br/>");
@@ -444,7 +456,7 @@ public class ServerThread extends Thread {
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
 									values = new ArrayList<String>();
-									values.add(Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+									values.add("text/html; charset=utf-8");
 									headers.put(CONTENT_TYPE_KEY, values);
 									values = new ArrayList<String>();
 									values.add(""+data.length());
@@ -479,17 +491,14 @@ public class ServerThread extends Thread {
 								}
 								else if(httpRequest.getResource().equalsIgnoreCase("/shutdown"))
 								{
-									//indicate to all threads that a shut down has been initiated
-									parentThreadPool.setRun(false);
-									//interrupt daemon and main threads
-									parentThreadPool.getDaemonThread().interrupt();
+									logger.warn("Shutdown initiated");
 									StringBuilder dataBuilder=new StringBuilder();
 									dataBuilder.append("<html><body>"+httpRequest.getResource()+"<br/>Ankit Mishra<br/>mankit<br/><br/>");
 									dataBuilder.append("This page has started the server shutdown <br/>");
 									dataBuilder.append("</body></html>");
 									data=dataBuilder.toString();
 									values = new ArrayList<String>();
-									values.add(Files.probeContentType(resourceFile.toPath())+"; charset=utf-8");
+									values.add("text/html; charset=utf-8");
 									headers.put(CONTENT_TYPE_KEY, values);
 									values = new ArrayList<String>();
 									values.add(""+data.length());
@@ -520,6 +529,10 @@ public class ServerThread extends Thread {
 									}
 									logger.info(httpResponse.toString());
 									logger.info(httpResponse.getResponseString());
+									//indicate to all threads that a shut down has been initiated
+									parentThreadPool.setRun(false);
+									//interrupt daemon and main threads
+									parentThreadPool.getDaemonThread().interrupt();
 								}
 								else
 								{
@@ -602,7 +615,7 @@ public class ServerThread extends Thread {
 			if(httpRequest.getOperation().equalsIgnoreCase("post"))
 			{
 				logger.info("POST request found");
-				if(httpRequest.getHeaders().containsKey("content-length") && httpRequest.getHeaders().containsKey("content-type"))
+				if(httpRequest.getHeaders().containsKey("content-length"))
 				{
 					logger.info("valid post headers found");
 					int bodyLength = Integer.parseInt(httpRequest.getHeaders().get("content-length").get(0));

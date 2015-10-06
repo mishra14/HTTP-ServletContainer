@@ -7,6 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -41,26 +42,40 @@ public class HttpServer {
 	private static HashMap<String,HttpServlet> servlets;
 	private static HashMap<String, Session> sessions;
 	private static Timer timer;
+	private static Context context;	
 	private static TimerTask validateSessions = new TimerTask() {
-		
 		@Override
 		public void run() 
 		{
 			synchronized(sessions)
 			{
-				logger.info("Validating Sessions");
-				for(Map.Entry<String, Session> sessionEntry : sessions.entrySet())
+				//logger.info("Validating Sessions");
+				Iterator<Map.Entry<String, Session>> iterator = sessions.entrySet().iterator();
+				while(iterator.hasNext())
+				{
+					Map.Entry<String, Session> sessionEntry = iterator.next();
+					Session session = sessionEntry.getValue();
+					Date current = new Date();
+					
+					if((session.getMaxInactiveInterval()!=-1) && (current.getTime() - session.getLastAccessedTime())>(session.getMaxInactiveInterval()*1000))
+					{
+						logger.info("Session id - "+session.getId()+" has expired - Invalidating and removing it fromt he session map");
+						session.invalidate();
+						iterator.remove();
+					}
+				}
+/*				for(Map.Entry<String, Session> sessionEntry : sessions.entrySet())
 				{
 					Session session = sessionEntry.getValue();
 					Date current = new Date();
 					
-					if((current.getTime() - session.getLastAccessedTime())>(session.getMaxInactiveInterval()*1000))
+					if((session.getMaxInactiveInterval()!=-1) && (current.getTime() - session.getLastAccessedTime())>(session.getMaxInactiveInterval()*1000))
 					{
 						logger.info("Session id - "+session.getId()+" has expired - Invalidating and removing it fromt he session map");
 						session.invalidate();
 						sessions.remove(sessionEntry.getKey());
 					}
-				}
+				}*/
 			}
 		}
 	};
@@ -104,16 +119,16 @@ public static void main(String[] args) {
 		Handler handler;
 		try {
 			handler = parseWebdotxml(args[2]);
-			Context context = createContext(handler);
+			context = createContext(handler);
 			HashMap<String,HttpServlet> servlets = createServlets(handler, context);
 			urlPatterns = new HashMap<String, String>(handler.getM_urlPattern());
 			sessions = new HashMap<String, Session>();
 			logger.info(servlets.toString());
-			logger.info(handler.getM_servletParams().toString());
+			logger.info(handler.getM_servletParams());
 			logger.info(handler.getM_servlets());
+			logger.info(handler.getM_contextParams());
 			logger.info(handler.toString());
-			logger.info(urlPatterns);
-			logger.info(sessions);
+			logger.info(context.getServletContextName());
 			logger.info("Starting session validator thread");
 			timer = new Timer();
 			timer.schedule(validateSessions, 0, SESSION_VALIDATION_PERIOD);
@@ -242,6 +257,10 @@ public static void main(String[] args) {
 
 	public static HashMap<String, Session> getSessions() {
 		return sessions;
+	}
+
+	public static Context getContext() {
+		return context;
 	}
 	
 	

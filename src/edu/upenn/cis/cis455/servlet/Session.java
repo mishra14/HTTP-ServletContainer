@@ -8,6 +8,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionContext;
 
+import edu.upenn.cis.cis455.webserver.HttpServer;
+
 /**
  * @author Todd J. Green
  */
@@ -16,7 +18,6 @@ public class Session implements HttpSession {
 	private Date creationDate;
 	private String id;
 	private Date lastAccessed;
-	private Context context;
 	private Properties m_props = new Properties();
 	private boolean m_valid = true;
 	private int maxInactiveInterval = -1;
@@ -55,8 +56,7 @@ public class Session implements HttpSession {
 	 * @see javax.servlet.http.HttpSession#getServletContext()
 	 */
 	public ServletContext getServletContext() {
-		// TODO Auto-generated method stub
-		return context;
+		return HttpServer.getContext();
 	}
 
 	/* (non-Javadoc)

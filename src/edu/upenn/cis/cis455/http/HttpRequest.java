@@ -17,7 +17,11 @@ import org.apache.log4j.Logger;
  Accept-Encoding: gzip, deflate
  Connection: keep-alive 
  */
-
+/**
+ * HttpRequest class to hold a basic http request
+ * @author cis455
+ *
+ */
 public class HttpRequest 
 {
 	private static final Logger logger = Logger.getLogger(HttpRequest.class);

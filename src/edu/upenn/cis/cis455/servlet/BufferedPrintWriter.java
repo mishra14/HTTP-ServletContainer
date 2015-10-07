@@ -6,6 +6,11 @@ import java.io.Writer;
 
 import org.apache.log4j.Logger;
 
+/**
+ * This is a wrapper class for overriding the flush method of PrintWriter
+ * @author cis455
+ *
+ */
 public class BufferedPrintWriter extends PrintWriter{
 
 	private static final Logger logger = Logger.getLogger(BufferedPrintWriter.class);

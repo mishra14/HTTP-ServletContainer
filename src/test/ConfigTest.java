@@ -6,8 +6,16 @@ import org.junit.Test;
 import edu.upenn.cis.cis455.servlet.Config;
 import edu.upenn.cis.cis455.servlet.Context;
 
+/**
+ * Test class that tests Config class
+ * @author cis455
+ *
+ */
 public class ConfigTest {
 	
+	/**
+	 * test set init params and get init params method
+	 */
 	 @Test
 	  public void testSetAndGetInitParameters() {
 		 String name = "Test Config";
@@ -19,6 +27,9 @@ public class ConfigTest {
 	    assertEquals(value, config.getInitParameter(key));
 	    
 	 }
+	 /**
+	  * test get servlet name
+	  */
 	 @Test
 	 public void testGetServletName() {
 		 
@@ -27,7 +38,9 @@ public class ConfigTest {
 	    Config config = new Config(name, context);
 	    assertEquals(name, config.getServletName());
 	 }
-	 
+	 /**
+	  * test get servlet context
+	  */
 	 @Test
 	 public void testGetServletContext() {
 		 

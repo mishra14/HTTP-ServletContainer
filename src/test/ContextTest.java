@@ -4,8 +4,16 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import edu.upenn.cis.cis455.servlet.Context;
 
+/**
+ * Class to test the COntext class
+ * @author cis455
+ *
+ */
 public class ContextTest {
 	
+	/**
+	 * test set and get init params
+	 */
 	 @Test
 	  public void testSetAndGetInitParameters() {
 	
@@ -16,6 +24,9 @@ public class ContextTest {
 	    assertEquals(value, context.getInitParameter(key));
 	    
 	 }
+	 /**
+	  * test set and get attributes method
+	  */
 	 @Test
 	 public void testSetAndGetAttributes() {
 		 
@@ -26,6 +37,9 @@ public class ContextTest {
 	    assertEquals(value, context.getAttribute(key));
 	 }
 	 
+	 /**
+	  * test remove attribute
+	  */
 	 @Test
 	 public void testRemoveAttribute() {
 		 

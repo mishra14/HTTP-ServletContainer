@@ -12,6 +12,11 @@ import java.util.TimeZone;
 
 import org.apache.log4j.Logger;
 
+/**
+ * HTTP class to hold HTTP header names, error objects etc. Never instantiated.
+ * @author cis455
+ *
+ */
 public class HTTP {
 	
 	private static final Logger logger = Logger.getLogger(HTTP.class);

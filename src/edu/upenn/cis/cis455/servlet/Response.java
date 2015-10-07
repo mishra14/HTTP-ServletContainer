@@ -170,7 +170,7 @@ public class Response implements HttpServletResponse {
 			}
 
 		}
-		addHeader("location", location);
+		addHeader("location", newUrl);
 		System.out.println("Sending to - "+newUrl);
 		String data = "<html><body>303: Moved to <a href = \""+newUrl+"\">"+newUrl+"</a></body></html>";
 		setBufferSize(data.length());

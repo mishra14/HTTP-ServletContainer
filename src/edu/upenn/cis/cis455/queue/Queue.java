@@ -3,6 +3,11 @@ package edu.upenn.cis.cis455.queue;
 import java.net.Socket;
 import java.util.ArrayList;
 
+/**
+ * que class
+ * @author cis455
+ *
+ */
 public class Queue 
 {
 	private ArrayList<Socket> queue;

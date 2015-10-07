@@ -8,11 +8,13 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.log4j.Logger;
 
-import edu.upenn.cis.cis455.http.HTTP;
-
+/**
+ * Sample servlet for testing the container
+ * @author cis455
+ *
+ */
 public class WebServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -44,19 +46,16 @@ public class WebServlet extends HttpServlet {
 		  {
 			  logger.info("Session id - "+request.getSession(false).getId());
 		  }
+		  response.sendRedirect("inside");
 		  logger.info("setting session time out to 8 seconds for - "+request.getSession(false).getId());
 		  request.getSession(false).setMaxInactiveInterval(30);
 		  logger.info("parameters - "+request.getParameterMap());
 		  logger.info(request.getParameter("name1"));
 		  logger.info("Servlet in WebServlet");
-		  response.sendRedirect("inside");
-	      // Set response content type
-		  //logger.info("Error codes - "+HTTP.getResponseCodes());
 		  Cookie cookie = new Cookie("Name", "Ankit");
 		  response.addCookie(cookie);
-		  //response.sendError(500);
 	      response.setContentType("text/html");
-	      String html = "<html><body> Hi There</body></html>";
+	      String html = "<html><body> Hi There 2</body></html>";
 	      // Actual logic goes here.
 	      PrintWriter out = response.getWriter();
 	      out.println(html);
@@ -78,7 +77,7 @@ public class WebServlet extends HttpServlet {
 			logger.info("parameters - "+request.getParameterMap());
 			// Set response content type
 			response.setContentType("text/html");
-			String html = "<html><body> Hi There</body></html>";
+			String html = "<html><body> Hi There2</body></html>";
 			// Actual logic goes here.
 			PrintWriter out = response.getWriter();
 			out.println(html);

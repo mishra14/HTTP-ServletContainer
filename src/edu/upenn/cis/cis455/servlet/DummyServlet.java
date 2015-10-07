@@ -10,11 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+/**
+ * Dummy servlet to test container
+ * @author cis455
+ *
+ */
 public class DummyServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
-	private static final Logger logger = Logger.getLogger(WebServlet.class);
-	private String urlPattern;
+	private static final Logger logger = Logger.getLogger(DummyServlet.class);
 	private String message;
 
 	  public void init() throws ServletException
@@ -27,13 +31,14 @@ public class DummyServlet extends HttpServlet{
 	                    HttpServletResponse response)
 	            throws ServletException, IOException
 	  {
-		  logger.info("Servlet in WebServlet");
-	      // Set response content type
+		  logger.info("Servlet in dummy servlet");
 	      response.setContentType("text/html");
-
+	      String html = "<html><body> Dummy Servlet</body></html>";
 	      // Actual logic goes here.
 	      PrintWriter out = response.getWriter();
-	      out.println("<h1>" + message + "</h1>");
+	      out.println(html);
+	      //response.setContentLength(html.length());
+	      response.flushBuffer();
 	  }
 	  
 	  public void destroy()

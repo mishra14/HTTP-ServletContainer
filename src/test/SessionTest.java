@@ -5,8 +5,16 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import edu.upenn.cis.cis455.servlet.Session;
 
+/**
+ * Test class for Session class
+ * @author cis455
+ *
+ */
 public class SessionTest {
 	
+	/**
+	 * test a new session is new
+	 */
 	 @Test
 	 public void createdSessionShouldBeNew() {
 
@@ -14,7 +22,9 @@ public class SessionTest {
 	    assertEquals(true, session.isNew());
 	    
 	    }
-	 
+	 /**
+	  * test that a new session is valid
+	  */
 	 @Test
 	 public void createdSessionShouldBeValid() {
 
@@ -22,6 +32,9 @@ public class SessionTest {
 	    assertEquals(true, session.isValid());
 	    
 	    }
+	 /**
+	  * test set and set methods on session attributes
+	  */
 	 @Test
 	 public void testSetAndGetAttributes() {
 

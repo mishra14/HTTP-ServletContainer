@@ -19,7 +19,6 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.apache.log4j.HTMLLayout;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
 import org.apache.log4j.WriterAppender;
 
 import edu.upenn.cis.cis455.queue.Queue;
@@ -29,6 +28,12 @@ import edu.upenn.cis.cis455.servlet.Config;
 import edu.upenn.cis.cis455.servlet.Session;
 import edu.upenn.cis.cis455.thread.DaemonThread;
 
+/**
+ * Main class to start servlet container and server
+ * 
+ * @author cis455
+ *
+ */
 public class HttpServer {
 
 	private static final Logger logger = Logger.getLogger(HttpServer.class);
@@ -50,6 +55,9 @@ public class HttpServer {
 	private static WriterAppender appender;
 	private static StringWriter writer;
 	
+	/**
+	 * Timer task to invalidate sessions
+	 */
 	private static TimerTask validateSessions = new TimerTask() {
 		@Override
 		public void run() 
@@ -71,18 +79,6 @@ public class HttpServer {
 						iterator.remove();
 					}
 				}
-/*				for(Map.Entry<String, Session> sessionEntry : sessions.entrySet())
-				{
-					Session session = sessionEntry.getValue();
-					Date current = new Date();
-					
-					if((session.getMaxInactiveInterval()!=-1) && (current.getTime() - session.getLastAccessedTime())>(session.getMaxInactiveInterval()*1000))
-					{
-						logger.info("Session id - "+session.getId()+" has expired - Invalidating and removing it fromt he session map");
-						session.invalidate();
-						sessions.remove(sessionEntry.getKey());
-					}
-				}*/
 			}
 		}
 	};
@@ -122,7 +118,9 @@ public static void main(String[] args) {
 		{
 			homeDirectory=new String(homeDirectory.substring(0,homeDirectory.length()-1));
 		}		
-		
+		//create servlets
+		//create context
+		//parse web xml
 		Handler handler;
 		try {
 			handler = parseWebdotxml(args[2]);

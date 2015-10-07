@@ -5,6 +5,11 @@ import java.util.HashMap;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
+/**
+ * Handler class to parse web xml file
+ * @author cis455
+ *
+ */
 public class Handler extends DefaultHandler{
 
 	private int m_state = 0;

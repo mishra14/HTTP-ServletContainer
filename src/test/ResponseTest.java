@@ -7,8 +7,16 @@ import edu.upenn.cis.cis455.http.HttpResponse;
 import edu.upenn.cis.cis455.servlet.Request;
 import edu.upenn.cis.cis455.servlet.Response;
 
+/**
+ * Test class for Response class
+ * @author cis455
+ *
+ */
 public class ResponseTest {
 	
+	/**
+	 * test content type set and get methods
+	 */
 	 @Test
 	  public void contentTypeShouldReturnTheSetType() {
 
@@ -18,7 +26,9 @@ public class ResponseTest {
 	    response.setContentType("text/html");
 	    assertEquals("text/html", response.getContentType());
 	    }
-	 
+	 /**
+	  * test set status method
+	  */
 	 @Test
 	 public void testSetStatus() {
 		 

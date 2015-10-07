@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Httpresponse class to hold http response data
+ * @author cis455
+ *
+ */
 public class HttpResponse 
 {
 	private String protocol;

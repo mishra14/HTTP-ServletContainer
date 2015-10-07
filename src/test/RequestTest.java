@@ -7,7 +7,15 @@ import org.junit.Test;
 import edu.upenn.cis.cis455.http.HttpRequest;
 import edu.upenn.cis.cis455.servlet.Request;
 
+/**
+ * test class for Request class
+ * @author cis455
+ *
+ */
 public class RequestTest {
+	/**
+	 * check auth type 
+	 */
 	 @Test
 	  public void authTypeShouldReturnBasic() {
 	
@@ -15,7 +23,9 @@ public class RequestTest {
 	    assertEquals("BASIC", request.getAuthType());
 	    
 	 }
-	 
+	 /**
+	  * test get method
+	  */
 	 @Test
 	 public void getMethodShouldReturnGET() {
 		 
@@ -23,7 +33,9 @@ public class RequestTest {
 		 Request request = new Request(httpRequest);
 		 assertEquals("GET", request.getMethod());
 	 }
-	
+	/**
+	 * test get protocol
+	 */
 	 @Test
 	 public void getProtocolShouldReturnHTTP() {
 		 
@@ -31,7 +43,9 @@ public class RequestTest {
 		 Request request = new Request(httpRequest);
 		 assertEquals("HTTP/1.0", request.getProtocol());
 	 }
-	 
+	 /**
+	  * test get session with false param
+	  */
 	 @Test
 	 public void getSessionShouldNotCreateNewSession() {
 		 

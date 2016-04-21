@@ -1,24 +1,6 @@
-Full name:  Ankit Mishra
-SEAS login: mankit
+This repo is for a java based servlet engine - 
 
-Which features did you implement? 
-  Entire Assignment
-
-Did you complete any extra-credit tasks? If so, which ones?
-  Yes - event driven server; submitted separately;
-
-Any special instructions for building and running your solution?
-  None
-
-Did you personally write _all_ the code you are submitting
-(other than code from the course web page)?
-  [x] Yes
-  [ ] No
-
-Did you copy any code from the Internet, or from classmates?
-  [ ] Yes
-  [x] No
-
-Did you collaborate with anyone on this assignment?
-  [ ] Yes
-  [x] No
+Here, a Java class is provided that conforms to the “servlet” interface.  
+When an HTTP request comes in, methods like “doGet” (for GET requests) and “doPost” (for, surprise surprise, POST requests) are called.  
+The servlet engine supports only one web application at a time. 
+Therefore, you can simply add the class files for the web application to the classpath when you invoke the engine from the command line, and pass the location of the web.xml file as an argument. 
